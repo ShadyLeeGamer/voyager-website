@@ -1,0 +1,68 @@
+@media (min-width: 1440px)
+{
+    .thin-desktop
+    {
+        display: none;
+    }
+
+    .mobile
+    {
+        display: none;
+    }
+
+    .desktop.thin-desktop
+    {
+        display: inline;
+    }
+}
+
+@media (max-width: 1440px)
+{
+    .desktop
+    {
+        display: none;
+    }
+
+    .mobile
+    {
+        display: none;
+    }
+
+    .desktop.thin-desktop
+    {
+        display: inline;
+    }
+
+    .mobile.thin-desktop
+    {
+        display: inline;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .desktop
+    {
+        display: none;
+    }
+
+    .thin-desktop
+    {
+        display: none;
+    }
+
+    .desktop.thin-desktop
+    {
+        display: none;
+    }
+
+    .mobile
+    {
+        display: inline;
+    }
+
+    .mobile.thin-desktop
+    {
+        display: inline;
+    }
+}
