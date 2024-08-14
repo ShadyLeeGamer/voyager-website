@@ -27,6 +27,7 @@
     :root
     {
         --section-width: 430px;
+        --section-width: 80%;
     }
 }
 
@@ -58,7 +59,7 @@ body
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    font-weight: ligh1er;
+    font-weight: lighter;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
@@ -331,6 +332,8 @@ button
     background-repeat: no-repeat;
     height: 114.34px;
     width: 100%;
+    display: flex;
+    align-items: start;
 }
 
 .heading-line > span
@@ -340,6 +343,7 @@ button
     left: 95px;
     bottom: 60px;
     font-size: 48px;
+    text-align: center;
     text-wrap: nowrap;
 }
 
@@ -554,6 +558,7 @@ button
     background-color: black;
     font-size: 12px;
     transition: 0.35s ease-in-out;
+    overflow: hidden;
 }
 
 .off-screen-menu.active
@@ -703,6 +708,8 @@ button
     {
         background-image: url(../images/lines/mobile/heading-line.png);
         height: 36.5px;
+        max-width: 410px;
+        margin: 0 auto;
         padding-top: 30px;
         margin-bottom: 15px;
     }

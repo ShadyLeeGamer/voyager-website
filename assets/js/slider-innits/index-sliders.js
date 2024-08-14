@@ -41,7 +41,7 @@ function initProjectSlider()
       {
         breakpoint: 768,
         settings: {
-          centerPadding: "300px"
+          centerPadding: "10px"
         }
       }]
     });

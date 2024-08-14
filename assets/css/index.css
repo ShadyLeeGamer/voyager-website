@@ -77,12 +77,11 @@
     justify-content: center;
     align-items: center;
     gap: 100px;
-    width: 100%;
 }
 
 #project-slider .slick-list
 {
-    overflow: visible;
+    /* overflow: hidden; */
 }
 
 #project-slider .column
@@ -664,7 +663,8 @@ body > div
     #spotlight-plane
     {
         position: absolute;
-        width: 430px;
+        width: 100%;
+        max-width: 430px;
         height: 138px;
         bottom: 50px;
         bottom: 0;
@@ -672,6 +672,7 @@ body > div
         right: 0;
         margin: 0 auto;
         background-image: url(../images/header-section/mobile/spotlight-plane.png);
+        background-position: center;
     }
 
     #spotlight-plane::before,
@@ -735,7 +736,7 @@ body > div
         left: 0;
         right: 0;
         margin: 0 auto;
-        transform: rotate(180deg) translateY(30px);
+        transform: rotate(180deg);
         width: 183px;
         height: 68px;
         background-image: url(../images/lines/mobile/section-divider-center.png);
@@ -750,13 +751,13 @@ body > div
     .read-more-container .hide
     {
         position: absolute;
-        transform: translateY(-93%);
         left: 0;
         right: 0;
         margin: 0 auto;
-        width: 430px;
+        transform: translateY(-95%);
+        /* width: 430px; */
+        width: 100%;
         height: 131px;
-
         background-image: url(../images/service-section/mobile/read-more-hide.png);
     }
 
@@ -766,11 +767,8 @@ body > div
         background-image: url(../images/service-section/mobile/read-more-hide.png);
     }
 
-    .read-more-container > img
+    .read-more-container
     {
-        position: relative;
-        display: block;
-        margin: 0 auto;
     }
 
     .read-more-btn
@@ -779,8 +777,12 @@ body > div
         left: 0;
         right: 0;
         margin: 0 auto;
-        transform: translateY(-85px);
+        transform: translateY(-50px);
         text-transform: uppercase;
+    }
+
+    #project-slider .slick-current
+    {
     }
 
     #project-slider .slick-track > div:not(.slick-center) {
@@ -796,6 +798,7 @@ body > div
 /* Testimonial Slider */
 #testimonial-section
 {
+    overflow-x: hidden;
 }
 
 @media (min-width: 1440px)
@@ -958,6 +961,7 @@ body > div
     #project-slider
     {
         width: 900px;
+        width: 100%;
         display: inline-block;
         left: 50%;
         transform: translateX(-50%);
