@@ -68,11 +68,13 @@ body
 
 body > div
 {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6
@@ -451,6 +453,7 @@ button
     /* margin: 0 auto; */
     margin-top: 30px;
     margin-bottom: 30px;
+    /* overflow-x: hidden; */
 }
 
 
@@ -508,7 +511,7 @@ button
 {
     position: absolute;
     top: 25px;
-    left: 20px;
+    left: 10px;
     width: 26.29px;
     height: 15.29px;
     cursor: pointer;
@@ -635,16 +638,16 @@ button
 #language-dropdown
 {
     position: absolute;
-    top: 18px;
-    right: -3px;
+    top: 20px;
+    right: 2.5px;
     cursor: pointer;
     font-family: "Code Font Bold";
-    font-size: 34px;
+    font-size: 24px;
     color: var(--primary-brand);
 }
 
 #language-dropdown img {
-    transform: translate(-10px, -50%);
+    transform: translate(-5px, -20%);
 }
 
 

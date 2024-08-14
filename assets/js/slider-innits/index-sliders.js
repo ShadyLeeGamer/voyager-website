@@ -34,14 +34,14 @@ function initProjectSlider()
       nextArrow: $('#project-section .next-btn'),
       infinite: true,
       centerMode: true,
-      centerPadding: "250px",
+      centerPadding: "175px",
       autoplay: true,
       autoplaySpeed: 4000,
       responsive:[
       {
         breakpoint: 768,
         settings: {
-          centerPadding: "10px"
+          centerPadding: "50px"
         }
       }]
     });
