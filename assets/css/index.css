@@ -143,6 +143,12 @@
     width: 181px;
 }
 
+#project-slider .btn img
+{
+    width: 100%;
+}
+
+
 #project-slider .slick-slide
 {
     -webkit-transition: 0.5s ease-in-out;
@@ -315,7 +321,6 @@
 { 
     position: relative;
     width: 100%;
-    height: 100%;
     z-index: 1;
 }
 
@@ -375,6 +380,7 @@
     -webkit-transform: translate(-275px, 175px);
         -ms-transform: translate(-275px, 175px);
             transform: translate(-275px, 175px);
+    text-wrap: nowrap;
 }
 
 #header-bg-text-1,
@@ -672,18 +678,31 @@ body > div
     {
         display: none;
     }
+
+    .project-container
+    {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        width: 1280px;
+    }
 }
 
 @media (max-width: 1024px)
 {
     .grid-item
     {
+        position: relative;
         width: 305.5px;
         height: 221.5px;
     }
 
     .grid-item-bg
     {
+        position: relative;
+        width: 305.5px;
+        height: 221.5px;
         background-image: url(../images/service-section/mobile/panel-outline.png);
     }
 
@@ -862,7 +881,12 @@ body > div
         min-width: 50px;
         min-height: 50px;
         max-width: 100px;
-        margin: 15px;
+        -webkit-box-flex: 0.5;
+            -ms-flex-positive: 0.5;
+                flex-grow: 0.5;
+        margin-top: 20px;
+        margin-left: -10px;
+        margin-right: -10px;
         z-index: 1;
     }
 
@@ -929,6 +953,15 @@ body > div
             -ms-transform: translateY(-50px);
                 transform: translateY(-50px);
         text-transform: uppercase;
+    }
+
+    .project-container
+    {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        width: 430px;
     }
 
     #project-slider .slick-current
