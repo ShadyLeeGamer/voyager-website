@@ -59,6 +59,10 @@
     src: url("../fonts/neonize/neonize.ttf");
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body
 {
     margin: 0;
@@ -76,6 +80,9 @@ body
         -ms-flex-pack: center;
             justify-content: center;
     color: white;
+
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 body > div
@@ -208,7 +215,7 @@ button
     display: -ms-inline-flexbox;
     display: inline-flex;
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: 50%;
     right: 50%;
     -webkit-box-orient: horizontal;
@@ -847,6 +854,8 @@ button
         background-image: url(../images/lines/mobile/heading-line.png);
         height: 36.5px;
         max-width: 410px;
+        width: 80%;
+        width: 80%;
         margin: 0 auto;
         padding-top: 30px;
         margin-bottom: 15px;
