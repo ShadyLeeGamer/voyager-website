@@ -100,18 +100,18 @@
                     <img class="navbar-bg-right" src="assets/images/navbar/navbar-right.png">
                  </div>
                 <div class="navbar-tab-container">
-                    <a class="navbar-tab" href="#">About</a>
-                    <a class="navbar-tab" href="#">Services</a>
-                    <a class="navbar-tab" href="#">Contact</a>
+                    <a class="navbar-tab glow-hover" href="#service-section">About</a>
+                    <a class="navbar-tab glow-hover" href="#project-section">Services</a>
+                    <a class="navbar-tab glow-hover" href="#footer-section">Contact</a>
                 </div>
             </div>
             <div class="mobile">
                 <div class="off-screen-menu">
                     <div class="off-screen-menu-content">
                         <div class="navbar-tab-container">
-                            <a class="navbar-tab" href="#">About</a>
-                            <a class="navbar-tab" href="#">Services</a>
-                            <a class="navbar-tab" href="#">Details</a>
+                            <a class="navbar-tab glow-hover" href="#service-section">About</a>
+                            <a class="navbar-tab glow-hover" href="#project-section">Services</a>
+                            <a class="navbar-tab glow-hover" href="#footer-section">Contact</a>
                         </div>
                         <img class="white-bar" src="assets/images/decor/white-line.png">
                         <div class="details-container">
@@ -120,15 +120,15 @@
                                 <ul>
                                     <li>
                                         <img src="assets/images/contact/contact-location.png">
-                                        <a href="#">location address</a>
+                                        <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
                                     </li>
                                     <li>
                                         <img src="assets/images/contact/contact-phone.png">
-                                        <span>00000 000000</span>
+                                        <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
                                     </li>
                                     <li>
                                         <img src="assets/images/contact/contact-email.png">
-                                        <a href="#">email@address.com</a>
+                                        <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
                                     </li>
                                 </ul>
                             </div>
@@ -152,12 +152,12 @@
                 <a class="navbar-logo" href="#">
                     <img src="assets/images/branding/voyager-logo-1.png">
                 </a>
-                <div class="ham-menu">
+                <div class="ham-menu glow-hover">
                     <img src="assets/images/navbar/mobile/hamburger-bar.png">
                     <img src="assets/images/navbar/mobile/hamburger-bar.png">
                     <img src="assets/images/navbar/mobile/hamburger-bar.png">
                 </div>
-                <div id="language-dropdown">
+                <div class="language-dropdown glow-hover">
                     EN
                     <img src="assets/images/navbar/mobile/dropdown-icon.png">
                 </div>
@@ -177,134 +177,231 @@
                             <div id="voyager"></div>
                         </div>
                     </div>
-
-                    <span id="header-catchphrase">THE FUTURE IS AS YOU DREAMED IT</span>
-                    <span id="header-bg-text-1">VOYAGER X  VIDEO<br>VOLUMETRIC CAPTURE<br>3D VIRTUAL CONTENT<br>CREATIVE COLLABS</span>
-                    <span id="header-bg-text-2">VOYAGER X  VIDEO<br>VOLUMETRIC CAPTURE<br>3D VIRTUAL CONTENT<br>CREATIVE COLLABS</span>
-
-                    <div class="desktop thin-desktop">
-                        <img id="header-plane" src="assets/images/header-section/vaporwave-plane.png">
-                        <div class="panel-item">
-                            <img class="panel-item-img" src="assets/images/header-section/panel-img.png">
-                            <img class="panel-item-outline" src="assets/images/header-section/panel-outline.png">
-                            <div class="panel-item-overlay">
-                                <a href="#" class="btn">
-                                    <img src="assets/images/btns/btn-3-contained.png">
-                                    <span>Book Now</span>
-                                </a>
+                    <div class="decor-container">
+                        <img id="header-plane" class="desktop thin-desktop" src="assets/images/header-section/vaporwave-plane.png">
+                        <span class="catchphrase thin-desktop desktop">THE FUTURE IS AS YOU DREAMED IT</span>
+                        <div class="mouse-move-parallax" parallax-offset="8">
+                            <div class="panel-item desktop thin-desktop">
+                                <img class="panel-item-img" src="assets/images/header-section/panel-img.png">
+                                <img class="panel-item-outline" src="assets/images/header-section/panel-outline.png">
+                                <div class="panel-item-overlay">
+                                    <a href="#" class="btn glow-hover">
+                                        <img src="assets/images/btns/btn-3-contained.png">
+                                        <span>Book Now</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="mouse-move-parallax" parallax-offset="15">
+                            <span id="header-bg-text-1">VOYAGER X  VIDEO<br>VOLUMETRIC CAPTURE<br>3D VIRTUAL CONTENT<br>CREATIVE COLLABS</span>
+                        </div>
+                        <div class="mouse-move-parallax" parallax-offset="-5">
+                            <span id="header-bg-text-2">VOYAGER X  VIDEO<br>VOLUMETRIC CAPTURE<br>3D VIRTUAL CONTENT<br>CREATIVE COLLABS</span>
+                        </div>
 
-                    <div class="mobile">
-                        <a href="#" class="btn">
-                            <img src="assets/images/btns/mobile/book-now.png">
-                            <span>Book Now</span>
+                        <div class="mobile">
+                            <div id="spotlight-plane" class="repeat-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="body-content">
+                <div id="header-outside" class="mobile">
+                    <span class="catchphrase mobile">THE FUTURE IS AS YOU DREAMED IT</span>
+                    <a href="#" class="btn book-now glow-hover mobile">
+                        <img src="assets/images/btns/mobile/book-now.png">
+                        <span>Book Now</span>
+                    </a>
+                </div>
+
+                <div id="client-section" class="section">
+                    <div class="bg repeat-bar mobile"></div>
+                    <div class="section-divider top repeat-bar"></div>
+                    <div class="client-btn-container">
+                        <a class="client-btn panel-3d scroll-transition" href="https://www.dmu.ac.uk/home.aspx" target="_blank">
+                            <img class="hovered panel-3d-pop" src="assets/images/clients/dmu-colour.png">
+                            <img class="unhovered panel-3d-pop" src="assets/images/clients/dmu-mono.png">
                         </a>
-                        <div id="spotlight-plane" class="repeat-bar"></div>
+                        <a class="client-btn panel-3d scroll-transition" href="https://www.creativecollaborators.co.uk/" target="_blank">
+                            <img class="hovered panel-3d-pop" src="assets/images/clients/creative-collaborators-colour.png">
+                            <img class="unhovered panel-3d-pop" src="assets/images/clients/creative-collaborators-mono.png">
+                        </a>
+                        <a class="client-btn panel-3d scroll-transition" href="https://www.everythingbranded.co.uk/" target="_blank">
+                            <img class="hovered panel-3d-pop" src="assets/images/clients/everything-branded-colour.png">
+                            <img class="unhovered panel-3d-pop" src="assets/images/clients/everything-branded-mono.png">
+                        </a>
+                        <a class="client-btn panel-3d scroll-transition" href="https://lcbdepot.co.uk/" target="_blank">
+                            <img class="hovered panel-3d-pop" src="assets/images/clients/lcb-colour.png">
+                            <img class="unhovered panel-3d-pop" src="assets/images/clients/lcb-mono.png">
+                        </a>
+                        <a class="client-btn panel-3d scroll-transition" href="https://www.hqrecording.co.uk/" target="_blank">
+                            <img class="hovered panel-3d-pop" src="assets/images/clients/hq-recording-studio-colour.png">
+                            <img class="unhovered panel-3d-pop" src="assets/images/clients/hq-recording-studio-mono.png">
+                        </a>
+                    </div>
+                    <div class="section-divider bottom repeat-bar"></div>
+                </div>
+    
+                <div id="service-section" class="section scroll-transition">
+                    <div class="heading-line scroll-transition">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h2><span class="highlight">Our</span> Services</h2>
+                    </div>
+    
+                    <div class="content-container">
+                        <div class="grid-container">
+                            <div class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">01</span>
+                                <h3 class="panel-3d-pop highlight">Recording</h3>
+                                <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">02</span>
+                                <h3 class="panel-3d-pop highlight">Recording</h3>
+                                <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">03</span>
+                                <h3 class="panel-3d-pop highlight">Recording</h3>
+                                <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">04</span>
+                                <h3 class="panel-3d-pop highlight">Recording</h3>
+                                <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">05</span>
+                                <h3 class="panel-3d-pop highlight">Recording</h3>
+                                <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">06</span>
+                                <h3 class="panel-3d-pop highlight">Recording</h3>
+                                <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                        </div>
+                        <div class="read-more-container mobile">
+                            <div class="hide" src="assets/images/service-section/mobile/read-more-hide.png"></div>
+                            <div class="divider repeat-bar"></div>
+                            <button class="read-more-btn"></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div id="client-section" class="section">
-                <div 
-                class="section-divider top repeat-bar thin-desktop desktop"></div>
-                <div class="client-btn-container">
-                    <a class="client-btn panel-3d" href="https://www.dmu.ac.uk/home.aspx" target="_blank">
-                        <img class="hovered panel-3d-pop" src="assets/images/clients/dmu-colour.png">
-                        <img class="unhovered panel-3d-pop" src="assets/images/clients/dmu-mono.png">
-                    </a>
-                    <a class="client-btn panel-3d" href="https://www.creativecollaborators.co.uk/" target="_blank">
-                        <img class="hovered panel-3d-pop" src="assets/images/clients/creative-collaborators-colour.png">
-                        <img class="unhovered panel-3d-pop" src="assets/images/clients/creative-collaborators-mono.png">
-                    </a>
-                    <a class="client-btn panel-3d" href="https://www.everythingbranded.co.uk/" target="_blank">
-                        <img class="hovered panel-3d-pop" src="assets/images/clients/everything-branded-colour.png">
-                        <img class="unhovered panel-3d-pop" src="assets/images/clients/everything-branded-mono.png">
-                    </a>
-                    <a class="client-btn panel-3d" href="https://lcbdepot.co.uk/" target="_blank">
-                        <img class="hovered panel-3d-pop" src="assets/images/clients/lcb-colour.png">
-                        <img class="unhovered panel-3d-pop" src="assets/images/clients/lcb-mono.png">
-                    </a>
-                    <a class="client-btn panel-3d" href="https://www.hqrecording.co.uk/" target="_blank">
-                        <img class="hovered panel-3d-pop" src="assets/images/clients/hq-recording-studio-colour.png">
-                        <img class="unhovered panel-3d-pop" src="assets/images/clients/hq-recording-studio-mono.png">
-                    </a>
-                </div>
-                <div class="section-divider bottom repeat-bar"></div>
-            </div>
-
-            <div id="service-section" class="section">
-                <div class="heading-line">
-                    <span><span class="highlight">Our</span> Services</span>
-                </div>
-
-                <div class="content-container">
-                    <div class="grid-container">
-                        <div class="grid-item panel-3d">
-                            <div class="service-img panel-3d-push"></div>
-                            <div class="grid-item-bg glow-hover"></div>
-                            <div class="grid-item-decor panel-3d-pop"></div>
-                            <span class="service-no panel-3d-pop">01</span>
-                            <h3 class="panel-3d-pop highlight">Recording</h3>
-                            <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="grid-item panel-3d">
-                            <div class="service-img panel-3d-push"></div>
-                            <div class="grid-item-bg glow-hover"></div>
-                            <div class="grid-item-decor panel-3d-pop"></div>
-                            <span class="service-no panel-3d-pop">02</span>
-                            <h3 class="panel-3d-pop highlight">Recording</h3>
-                            <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="grid-item panel-3d">
-                            <div class="service-img panel-3d-push"></div>
-                            <div class="grid-item-bg glow-hover"></div>
-                            <div class="grid-item-decor panel-3d-pop"></div>
-                            <span class="service-no panel-3d-pop">03</span>
-                            <h3 class="panel-3d-pop highlight">Recording</h3>
-                            <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="grid-item panel-3d">
-                            <div class="service-img panel-3d-push"></div>
-                            <div class="grid-item-bg glow-hover"></div>
-                            <div class="grid-item-decor panel-3d-pop"></div>
-                            <span class="service-no panel-3d-pop">04</span>
-                            <h3 class="panel-3d-pop highlight">Recording</h3>
-                            <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="grid-item panel-3d">
-                            <div class="service-img panel-3d-push"></div>
-                            <div class="grid-item-bg glow-hover"></div>
-                            <div class="grid-item-decor panel-3d-pop"></div>
-                            <span class="service-no panel-3d-pop">05</span>
-                            <h3 class="panel-3d-pop highlight">Recording</h3>
-                            <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="grid-item panel-3d">
-                            <div class="service-img panel-3d-push"></div>
-                            <div class="grid-item-bg glow-hover"></div>
-                            <div class="grid-item-decor panel-3d-pop"></div>
-                            <span class="service-no panel-3d-pop">06</span>
-                            <h3 class="panel-3d-pop highlight">Recording</h3>
-                            <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+    
+                <div id="project-section" class="section">
+                    <div class="heading-line scroll-transition">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h2><span class="highlight">Your</span> Project Starts Here</h2>
+                    </div>
+    
+                    <div class="content-container">
+                        <div class="project-container slider-container">
+                            <button class="prev-btn">
+                                <img src="assets/images/slider/btn-arrow-prev.png">
+                                <img src="assets/images/slider/btn-arrow-prev.png">
+                            </button>
+                            <button class="next-btn">
+                                <img src="assets/images/slider/btn-arrow-next.png">
+                                <img src="assets/images/slider/btn-arrow-next.png">
+                            </button>
+                            <img class="wire-decor" src="assets/images/decor/wires-top.png">
+                            <div id="project-slider">
+                                <div class="column">
+                                    <img class="wire-decor" src="assets/images/decor/wires-top.png">
+                                    <div class="panel-item panel-3d scroll-transition">
+                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
+                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
+                                        <div class="panel-item-overlay panel-3d-pop">
+                                            <h4>Interactive Development</h4>
+                                            <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
+                                            <a href="#" class="btn">
+                                                <img src="assets/images/btns/btn-3-contained.png">
+                                                <span>READ MORE</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                                </div>
+                                <div class="column">
+                                    <img class="wire-decor" src="assets/images/decor/wires-top.png">
+                                    <div class="panel-item panel-3d scroll-transition">
+                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
+                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
+                                        <div class="panel-item-overlay panel-3d-pop">
+                                            <h4>Voycasts</h4>
+                                            <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
+                                            <a href="#" class="btn">
+                                                <img src="assets/images/btns/btn-3-contained.png">
+                                                <span>READ MORE</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                                </div>
+                                <div class="column">
+                                    <img class="wire-decor" src="assets/images/decor/wires-top.png">
+                                    <div class="panel-item panel-3d scroll-transition">
+                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
+                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
+                                        <div class="panel-item-overlay panel-3d-pop">
+                                            <h4>Custom Projects</h4>
+                                            <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
+                                            <a href="#" class="btn">
+                                                <img src="assets/images/btns/btn-3-contained.png">
+                                                <span>READ MORE</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                                </div>
+                            </div>
+                            <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
                         </div>
                     </div>
-                    <div class="read-more-container mobile">
-                        <div class="hide" src="assets/images/service-section/mobile/read-more-hide.png"></div>
-                        <div class="divider repeat-bar"></div>
-                        <button class="read-more-btn"></button>
-                    </div>
                 </div>
-            </div>
-
-            <div id="project-section" class="section">
-                <div class="heading-line">
-                    <span><span class="highlight">Your</span> Project Starts Here</span>
-                </div>
-
-                <div class="content-container">
-                    <div class="project-container slider-container">
+    
+                <div id="slideshow-section" class="section">
+                    <div class="section-divider top repeat-bar"></div>
+                    
+                    <div class="slider-img-bg"></div>
+                    <img class="slider-img-bg-overlay" src="assets/images/slideshow/outline-sides.png">
+    
+                    <div class="slideshow-container slider-container">
+                        <div class="thin-desktop desktop">
+                            <img class="outline" src="assets/images/slideshow/outline.png">
+                            <h2>CAPTION</h2>
+                            <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                        </div>
                         <button class="prev-btn">
                             <img src="assets/images/slider/btn-arrow-prev.png">
                             <img src="assets/images/slider/btn-arrow-prev.png">
@@ -313,149 +410,80 @@
                             <img src="assets/images/slider/btn-arrow-next.png">
                             <img src="assets/images/slider/btn-arrow-next.png">
                         </button>
-                        <img class="wire-decor" src="assets/images/decor/wires-top.png">
-                        <div id="project-slider">
-                            <div class="column">
-                                <img class="wire-decor" src="assets/images/decor/wires-top.png">
-                                <div class="panel-item panel-3d">
-                                    <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
-                                    <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
-                                    <div class="panel-item-overlay panel-3d-pop">
-                                        <h4>Interactive Development</h4>
-                                        <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
-                                        <a href="#" class="btn">
-                                            <img src="assets/images/btns/btn-3-contained.png">
-                                            <span>READ MORE</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                        <div id="slideshow-slider">
+                            <div class="slide">
+                                <img src="assets/images/slideshow/slide-leicester.png">
                             </div>
-                            <div class="column">
-                                <img class="wire-decor" src="assets/images/decor/wires-top.png">
-                                <div class="panel-item panel-3d">
-                                    <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
-                                    <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
-                                    <div class="panel-item-overlay panel-3d-pop">
-                                        <h4>Voycasts</h4>
-                                        <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
-                                        <a href="#" class="btn">
-                                            <img src="assets/images/btns/btn-3-contained.png">
-                                            <span>READ MORE</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
-                            </div>
-                            <div class="column">
-                                <img class="wire-decor" src="assets/images/decor/wires-top.png">
-                                <div class="panel-item panel-3d">
-                                    <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
-                                    <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
-                                    <div class="panel-item-overlay panel-3d-pop">
-                                        <h4>Custom Projects</h4>
-                                        <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
-                                        <a href="#" class="btn">
-                                            <img src="assets/images/btns/btn-3-contained.png">
-                                            <span>READ MORE</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                            <div class="slide">
+                                <img src="assets/images/bg.png">
                             </div>
                         </div>
-                        <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
                     </div>
+    
+                    <div class="section-divider bottom repeat-bar"></div>
                 </div>
-            </div>
-
-            <div id="slideshow-section" class="section">
-                <div class="section-divider top repeat-bar"></div>
                 
-                <div class="slider-img-bg"></div>
-                <img class="slider-img-bg-overlay" src="assets/images/slideshow/outline-sides.png">
-
-                <div class="slideshow-container slider-container">
-                    <div class="thin-desktop desktop">
-                        <img class="outline" src="assets/images/slideshow/outline.png">
-                        <h2>CAPTION</h2>
-                        <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                <div id="testimonial-section" class="section">
+                    <div class="heading-line scroll-transition">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h2><span class="highlight">Why</span> Voyager?</h2>
                     </div>
-                    <button class="prev-btn">
-                        <img src="assets/images/slider/btn-arrow-prev.png">
-                        <img src="assets/images/slider/btn-arrow-prev.png">
-                    </button>
-                    <button class="next-btn">
-                        <img src="assets/images/slider/btn-arrow-next.png">
-                        <img src="assets/images/slider/btn-arrow-next.png">
-                    </button>
-                    <div id="slideshow-slider">
-                        <div class="slide">
-                            <img src="assets/images/slideshow/slide-leicester.png">
-                        </div>
-                        <div class="slide">
-                            <img src="assets/images/bg.png">
+                    <div class="slider-container">
+                        <button class="prev-btn">
+                            <img src="assets/images/slider/btn-arrow-prev.png">
+                            <img src="assets/images/slider/btn-arrow-prev.png">
+                        </button>
+                        <button class="next-btn">
+                            <img src="assets/images/slider/btn-arrow-next.png">
+                            <img src="assets/images/slider/btn-arrow-next.png">
+                        </button>
+                        <div id="testimonial-slider">
+                            <div class="card panel-3d">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <h4 class="highlight panel-3d-pop">Anonymous</h4>
+                                <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="card panel-3d">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <h4 class="highlight panel-3d-pop">Anonymous</h4>
+                                <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="card panel-3d">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <h4 class="highlight panel-3d-pop">Anonymous</h4>
+                                <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="card panel-3d">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <h4 class="highlight panel-3d-pop">Anonymous</h4>
+                                <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="card panel-3d">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <h4 class="highlight panel-3d-pop">Anonymous</h4>
+                                <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
+                            <div class="card panel-3d">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <h4 class="highlight panel-3d-pop">Anonymous</h4>
+                                <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="section-divider bottom repeat-bar"></div>
+                </div>  
             </div>
-            
-            <div id="testimonial-section" class="section">
-                <div class="heading-line">
-                    <span><span class="highlight">Why</span> Voyager?</span>
-                </div>
-                <div class="slider-container">
-                    <button class="prev-btn">
-                        <img src="assets/images/slider/btn-arrow-prev.png">
-                        <img src="assets/images/slider/btn-arrow-prev.png">
-                    </button>
-                    <button class="next-btn">
-                        <img src="assets/images/slider/btn-arrow-next.png">
-                        <img src="assets/images/slider/btn-arrow-next.png">
-                    </button>
-                    <div id="testimonial-slider">
-                        <div class="card panel-3d">
-                            <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
-                            <h4 class="highlight panel-3d-pop">Anonymous</h4>
-                            <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="card panel-3d">
-                            <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
-                            <h4 class="highlight panel-3d-pop">Anonymous</h4>
-                            <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="card panel-3d">
-                            <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
-                            <h4 class="highlight panel-3d-pop">Anonymous</h4>
-                            <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="card panel-3d">
-                            <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
-                            <h4 class="highlight panel-3d-pop">Anonymous</h4>
-                            <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="card panel-3d">
-                            <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
-                            <h4 class="highlight panel-3d-pop">Anonymous</h4>
-                            <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <div class="card panel-3d">
-                            <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
-                            <h4 class="highlight panel-3d-pop">Anonymous</h4>
-                            <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                    </div>
-                </div>
-            </div>  
 
             <div id="footer-section" class="section">
                 <div id="footer-bg"></div>
                 <div id="footer-cta">
                     <div id="booking">
                         <img id="footer-logo" src="assets/images/branding/voyager-logo-2.png">
-                        <a href="#" class="btn">
+                        <a href="#" class="btn glow-hover">
                             <img src="assets/images/btns/btn-3-contained.png">
                             <span>BOOK NOW</span>
                         </a>
@@ -463,11 +491,11 @@
                     <div>
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Voycasts</a></li>
-                            <li><a href="#">Interactive Development</a></li>
-                            <li><a href="#">Custom Projects</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a class="glow-hover" href="#service-section">About</a></li>
+                            <li><a class="glow-hover" href="#project-section">Voycasts</a></li>
+                            <li><a class="glow-hover" href="#project-section">Interactive Development</a></li>
+                            <li><a class="glow-hover" href="#project-section">Custom Projects</a></li>
+                            <li><a class="glow-hover" href="#">Contact</a></li>
                         </ul>
                     </div>
                     <div class="opening-hours">
@@ -487,15 +515,15 @@
                         <ul>
                             <li>
                                 <img src="assets/images/contact/contact-location.png">
-                                <a href="#">location address</a>
+                                <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
                             </li>
                             <li>
                                 <img src="assets/images/contact/contact-phone.png">
-                                <span>00000 000000</span>
+                                <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
                             </li>
                             <li>
                                 <img src="assets/images/contact/contact-email.png">
-                                <a href="#">email@address.com</a>
+                                <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
                             </li>
                         </ul>
                     </div>
@@ -503,7 +531,7 @@
             </div>
         </div>
         
-        <script type="module" src="assets/js/preloader.js"></script>
+        <script type="module" src="assets/js/loader.js"></script>
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -519,5 +547,6 @@
         <script type="module" src="assets/js/panel-3d.js"></script>
         <script type="module" src="assets/js/read-more-btn.js"></script>
         <script type="module" src="assets/js/ham-menu.js"></script>
+        <script type="module" src="assets/js/mouse-move-parallax.js"></script>
     </body>
 </html>

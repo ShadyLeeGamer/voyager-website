@@ -83,8 +83,8 @@
 {
   .slideshow-container
   {
-    width: 90%;
-    height: auto;
+    width: 90vw;
+    height: calc(90vw * 0.57321304649);
   }
 
   .slideshow-container span
