@@ -363,7 +363,7 @@ button
 
 .glow-hover
 {
-    transition: filter 0.2s, color 0.2s;
+    transition: filter 0.2s;
 }
 
 .ham-menu.glow-hover:hover,
