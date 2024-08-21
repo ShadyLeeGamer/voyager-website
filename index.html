@@ -1,10 +1,34 @@
+<!--
+                                                                ..              
+                                                    ,,,,,,,,,,,,.   .           
+                                     ..,,,,,,,,    ,,,,,,,,,,,,   ...           
+                 ...................,,,,,,,,,,    .,,,,,,,,,,,   ....           
+         .......................,,,,,,,,,,,,,    .,,,********   ....            
+         ......................,,,,,,,,,,,,,.    ***********   ....             
+           ..................,,,,,,,,,,,,,,.    *********//   .....             
+             ..............                    ***/////////  .....              
+               ..........,,                   //////////// ......               
+                .......,,,,,,                //////////(( .......               
+                  ....,,,,,,,,.             //////(((((/ ...  .                 
+                    ,,,,,,,,,,,,           ////(((((((. ...   .                 
+                      ,,,,,,,,****        //((((((((  ....  ..                  
+                        ,,,,,******/     /(((((((##  .... ..                    
+                          ,,******//.   /((((((###  ...  .                      
+                           .*****//,   (((((((##(  ... ..                       
+                             ***//*   ((((((###. ... .                          
+                                //   /(((((###   . ..                           
+                                    /((((((##    ..                             
+                                   /((((((##  ...                               
+                                     ##(((#  ..                                 
+                                       %*(  .                                   
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Three.js</title>
+        <title>Voyager - Volcap VR</title>
         <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Bruno Ace' rel='stylesheet'>
 		<link href='https://fonts.googleapis.com/css?family=Exo 2' rel='stylesheet'>
@@ -86,19 +110,59 @@
               </div>
         </div>
 
+        <div id="cursor-glow-wrapper" class="thin-desktop desktop">
+            <div id="cursor-glow" class="thin-desktop desktop"></div>
+        </div>
+        <!-- <div class="cursor thin-desktop desktop"></div> -->
+
+        <!-- Popups -->
+        <form id="booking-form" class="popup">
+            <div class="content-container">
+                <div class="form-wrapper">
+                    <div class="close-btn glow-hover"></div>
+
+                    <img src="assets/images/branding/voyager-logo-3.png">
+
+                    <div class="side-decor-heading">
+                        <span></span>
+                        <h2>Aboard The List</h2>
+                        <span></span>
+                    </div>
+
+                    <div class="input-field">
+                        <input id="name" type="text" required="required">
+                        <span>Name</span>
+                    </div>
+                    <div class="input-field">
+                        <input id="email" type="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="input-field">
+                        <input id="phone-number" type="number" required="required">
+                        <span>Phone Number</span>
+                    </div>
+
+                    <a class="btn submit glow-hover" href="#">
+                        <img src="assets/images/btns/btn-3-contained.png">
+                        <span>Book Now</span>
+                    </a>
+                </div>
+            </div>
+        </form>
+
         <nav id="navbar">
             <div id="voyager-navbar-target">
-
             </div>
             <div class="desktop thin-desktop">
                 <a class="navbar-logo" href="#">
                     <img src="assets/images/branding/voyager-logo-1.png">
                 </a>
                 <!-- <img class="navbar-bg" src="assets/images/navbar/navbar.png"> -->
-                 <div class="navbar-bg">
+                <div class="navbar-bg">
                     <img class="navbar-bg-left" src="assets/images/navbar/navbar-left.png">
                     <img class="navbar-bg-right" src="assets/images/navbar/navbar-right.png">
-                 </div>
+                </div>
+                <span class="notice-bar">NOTICE BOARD ...................................................................................................................................................................................................................................................................................</span>
                 <div class="navbar-tab-container">
                     <a class="navbar-tab glow-hover" href="#service-section">About</a>
                     <a class="navbar-tab glow-hover" href="#project-section">Services</a>
@@ -171,21 +235,31 @@
             </div>
 
             <div id="header">
+
                 <div id="header-container">
+                    <!-- <img id="header-media" src="assets/images/oasis..jpeg"> -->
+                    <div id="header-screen">
+                        <img class="border" src="assets/images/screens/screen-border.png">
+                        <div class="mask">
+                            <video autoplay muted loop>
+                                <source src="assets/videos/reel.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
                     <div id="voyager-header-target">
                         <div id="voyager-navbar-mover">
                             <div id="voyager"></div>
                         </div>
                     </div>
                     <div class="decor-container">
-                        <img id="header-plane" class="desktop thin-desktop" src="assets/images/header-section/vaporwave-plane.png">
-                        <span class="catchphrase thin-desktop desktop">THE FUTURE IS AS YOU DREAMED IT</span>
+                        <h2 class="catchphrase thin-desktop desktop">THE FUTURE IS AS YOU DREAMED IT</h2>
                         <div class="mouse-move-parallax" parallax-offset="8">
                             <div class="panel-item desktop thin-desktop">
                                 <img class="panel-item-img" src="assets/images/header-section/panel-img.png">
                                 <img class="panel-item-outline" src="assets/images/header-section/panel-outline.png">
                                 <div class="panel-item-overlay">
-                                    <a href="#" class="btn glow-hover">
+                                    <a class="btn book-now glow-hover">
                                         <img src="assets/images/btns/btn-3-contained.png">
                                         <span>Book Now</span>
                                     </a>
@@ -198,18 +272,16 @@
                         <div class="mouse-move-parallax" parallax-offset="-5">
                             <span id="header-bg-text-2">VOYAGER X  VIDEO<br>VOLUMETRIC CAPTURE<br>3D VIRTUAL CONTENT<br>CREATIVE COLLABS</span>
                         </div>
-
-                        <div class="mobile">
-                            <div id="spotlight-plane" class="repeat-bar"></div>
-                        </div>
                     </div>
+
+                    <div class="particle-terrain"></div>
                 </div>
             </div>
 
             <div id="body-content">
                 <div id="header-outside" class="mobile">
-                    <span class="catchphrase mobile">THE FUTURE IS AS YOU DREAMED IT</span>
-                    <a href="#" class="btn book-now glow-hover mobile">
+                    <h2 class="catchphrase mobile">THE FUTURE IS AS YOU DREAMED IT</h2>
+                    <a class="btn book-now glow-hover mobile">
                         <img src="assets/images/btns/mobile/book-now.png">
                         <span>Book Now</span>
                     </a>
@@ -242,6 +314,10 @@
                     </div>
                     <div class="section-divider bottom repeat-bar"></div>
                 </div>
+
+                <!-- <div id="content-particle-terrain-wrapper">
+                    <div class="particle-terrain"></div>
+                </div> -->
     
                 <div id="service-section" class="section scroll-transition">
                     <div class="heading-line scroll-transition">
@@ -253,7 +329,6 @@
                         <span></span>
                         <h2><span class="highlight">Our</span> Services</h2>
                     </div>
-    
                     <div class="content-container">
                         <div class="grid-container">
                             <div class="grid-item panel-3d scroll-transition">
@@ -305,11 +380,11 @@
                                 <span class="description panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                             </div>
                         </div>
-                        <div class="read-more-container mobile">
-                            <div class="hide" src="assets/images/service-section/mobile/read-more-hide.png"></div>
-                            <div class="divider repeat-bar"></div>
-                            <button class="read-more-btn"></button>
-                        </div>
+                    </div>
+                    <div class="read-more-container mobile">
+                        <div class="hide" src="assets/images/service-section/mobile/read-more-hide.png"></div>
+                        <div class="divider repeat-bar"></div>
+                        <button class="read-more-btn"></button>
                     </div>
                 </div>
     
@@ -483,7 +558,7 @@
                 <div id="footer-cta">
                     <div id="booking">
                         <img id="footer-logo" src="assets/images/branding/voyager-logo-2.png">
-                        <a href="#" class="btn glow-hover">
+                        <a class="btn book-now glow-hover">
                             <img src="assets/images/btns/btn-3-contained.png">
                             <span>BOOK NOW</span>
                         </a>
@@ -532,21 +607,31 @@
         </div>
         
         <script type="module" src="assets/js/loader.js"></script>
+        <script type="module" src="assets/js/cursor.js"></script>
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script> -->
+
+        <!-- Third-party helpers -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-        <script type="module" src="assets/js/voyager-render.js"></script>
-        <script type="module" src="assets/js/voyager-navbar.js"></script>
-
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript" src="assets/js/slider-innits/index-sliders.js"></script>
 
+        <!-- Cloud -->
+        <script type="module" src="assets/js/booking-system.js"></script>
+
+        <!-- 3D -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+        <script type="module" src="assets/js/voyager-render.js"></script>
+        <script type="module" src="assets/js/voyager-navbar.js"></script>
+        <script type="module" src="assets/js/particle-terrain.js"></script>
+
+        <!-- Misc -->
         <script type="module" src="assets/js/panel-3d.js"></script>
         <script type="module" src="assets/js/read-more-btn.js"></script>
         <script type="module" src="assets/js/ham-menu.js"></script>
         <script type="module" src="assets/js/mouse-move-parallax.js"></script>
+        <script type="module" src="assets/js/parallax-scroll.js"></script>
     </body>
 </html>

@@ -3,9 +3,9 @@ const container = document.querySelector(".grid-container");
 const hide = document.querySelector(".read-more-container .hide");
 const btn = document.querySelector(".read-more-btn");
 const btnLabel = document.querySelector(".read-more-btn::after");
-const heightOpen = 1509;
+const heightOpen = 1650;
 // const heightOpen = container.offsetHeight;
-const heightClosed = 672.5;
+const heightClosed = 780;
 document.addEventListener('DOMContentLoaded', function()
 {
     var x = window.matchMedia("(min-width: 768px)")

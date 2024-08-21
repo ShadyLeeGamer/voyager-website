@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () =>
                 {
                     mover.style.setProperty('--voyager-move-start-position', `translate(${0}px, ${0}px)`);
                     mover.style.setProperty('--voyager-move-start-scale', "1");
-                    mover.style.setProperty('--voyager-move-end-scale', "0.095");
+                    mover.style.setProperty('--voyager-move-end-scale', "0.15");
                     mover.classList.add('move');
                     startRect = mover.getBoundingClientRect();
                     currentTarget = navbarTarget;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () =>
                 if (!mover.classList.contains('move'))
                 {
                     mover.style.setProperty('--voyager-move-start-position', `translate(${0}px, ${0}px)`);
-                    mover.style.setProperty('--voyager-move-start-scale', "0.095");
+                    mover.style.setProperty('--voyager-move-start-scale', "0.15");
                     mover.style.setProperty('--voyager-move-end-scale', "1");
                     startRect = mover.getBoundingClientRect();
                     currentTarget = headerTarget;
