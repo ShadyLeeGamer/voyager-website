@@ -162,7 +162,16 @@
                     <img class="navbar-bg-left" src="assets/images/navbar/navbar-left.png">
                     <img class="navbar-bg-right" src="assets/images/navbar/navbar-right.png">
                 </div>
-                <span class="notice-bar">NOTICE BOARD ...................................................................................................................................................................................................................................................................................</span>
+                <div class="notice-bar">
+                    <span>NOTICE BOARD</span>
+                    <div class="list-wrapper">
+                        <ul>
+                            <li>
+                                Voyager launches on September 20th
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="navbar-tab-container">
                     <a class="navbar-tab glow-hover" href="#service-section">About</a>
                     <a class="navbar-tab glow-hover" href="#project-section">Services</a>
@@ -221,10 +230,10 @@
                     <img src="assets/images/navbar/mobile/hamburger-bar.png">
                     <img src="assets/images/navbar/mobile/hamburger-bar.png">
                 </div>
-                <div class="language-dropdown glow-hover">
+                <!-- <div class="language-dropdown glow-hover">
                     EN
                     <img src="assets/images/navbar/mobile/dropdown-icon.png">
-                </div>
+                </div> -->
             </div>
         </nav>
 
@@ -619,7 +628,11 @@
         <script type="text/javascript" src="assets/js/slider-innits/index-sliders.js"></script>
 
         <!-- Cloud -->
-        <script type="module" src="assets/js/booking-system.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+        <script type="module" src="assets/js/db-connect.js"></script>
+        <!-- <script type="module" src="assets/js/booking-system.js"></script> -->
+        <script type="module" src="assets/js/notice-board.js"></script>
 
         <!-- 3D -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>

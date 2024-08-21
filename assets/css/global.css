@@ -5,7 +5,7 @@
     --confirm: #3DC81C;
     --error: #DC3D1C;
     --secondary-white: #DDDDDD;
-    --teriary-white: #A7A7A7;
+    --tertiary-white: #A7A7A7;
 }
 
 @media (min-width: 1440px)
@@ -323,15 +323,54 @@ input[type=number] {
     width: 269px;
 }
 
+
 .notice-bar {
     position: absolute;
+    display: inline;
     font-size: 14px;
     font-family: "Code Font Bold";
+    top: 80%;
     left: 420px;
-    top: 65px;
-    color: var(--primary-brand);
+    right: 10px;
     text-wrap: nowrap;
+    color: var(--primary-brand);
 }
+
+.notice-bar span {
+    position: absolute;
+    color: var(--primary-brand);
+}
+
+.notice-bar .list-wrapper {
+    position: absolute;
+    overflow: hidden;
+    left: 100px;
+    right: 0;
+}
+
+.notice-bar ul {
+    position: relative;
+    display: inline-flex;
+    left: 0;
+    animation: notice-bar-scroll 10s infinite linear;
+}
+
+.notice-bar ul li {
+    white-space: nowrap;
+    padding: 0px 25px;
+}
+
+/* TODO: Make scroll speed independant of list width */
+@keyframes notice-bar-scroll {
+    from {
+        left: calc(100vw - 545px);
+    }
+    to {
+        left: 0;
+        transform: translate(-100%);
+    }
+}
+
 
 .desktop .navbar-tab-container
 {
@@ -530,7 +569,7 @@ input[type=number] {
 .input-field span {
     transition: 0.25s;
     pointer-events: none;
-    color: var(--teriary-white);
+    color: var(--tertiary-white);
 }
 
 .input-field:focus-within {

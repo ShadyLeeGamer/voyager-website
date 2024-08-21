@@ -1,21 +1,3 @@
-// #region DB Connection
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { collection, addDoc, getFirestore } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js'
-
-const firebaseConfig = {
-apiKey: "AIzaSyAZIMfU0QNw9th2b57n2J4rl3stwE_ZZYk",
-authDomain: "voyager-56139.firebaseapp.com",
-projectId: "voyager-56139",
-storageBucket: "voyager-56139.appspot.com",
-messagingSenderId: "327151315718",
-appId: "1:327151315718:web:60e05e82f166e608890c87",
-measurementId: "G-2W3TZYHJQ1"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore();
-// #endregion
-
 const bookingForm = document.getElementById('booking-form');
 const openFormBtns = document.querySelectorAll('.book-now');
 openFormBtns.forEach(btn => {
