@@ -1,3 +1,5 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+
 const firebaseConfig = {
 apiKey: "AIzaSyAZIMfU0QNw9th2b57n2J4rl3stwE_ZZYk",
 authDomain: "voyager-56139.firebaseapp.com",
@@ -8,4 +10,4 @@ appId: "1:327151315718:web:60e05e82f166e608890c87",
 measurementId: "G-2W3TZYHJQ1"
 };
 
-const app = firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);

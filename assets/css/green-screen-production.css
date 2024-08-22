@@ -1,0 +1,188 @@
+#steps-section ul {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+#steps-section li {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+}
+
+#steps-section li > div {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#steps-section li img {
+    pointer-events: none;
+}
+
+#steps-section .panel-container {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    z-index: 3;
+}
+
+#steps-section .panel-container .outline {
+    position: relative;
+}
+
+#steps-section .panel-container .fill {
+    /* backdrop-filter: blur(10px); */
+    /* mask: radial-gradient( circle at calc(var(--x, .5) * 100% )  calc(var(--y, .5) * 100% ), transparent 50px, red 51px); */
+    /* mask-size: 100% 100%; */
+}
+
+#steps-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#steps-section .overlay > * {
+    position: absolute;
+}
+
+#steps-section .panel-container .decor {
+    left: -2px;
+    top: -4px;
+}
+
+#steps-section .panel-container .description {
+    top: 50%;
+    transform: translateY(calc(-50% + 35px));
+    width: 308px;
+    left: 8.5%;
+    font-size: 20px;
+}
+
+#steps-section .panel-container h3 {
+    top: 14%;
+    left: 32%;
+    width: 200px;
+    height: 55px;
+    font-size: 24px;
+    place-content: center;
+}
+
+#steps-section .step-text,
+#steps-section .step-number {
+    font-family: "Quantum";
+    color: var(--primary-brand);
+}
+
+#steps-section .step-text {
+    font-size: 24px;
+    top: 0.5%;
+    left: 4%
+}
+
+#steps-section .step-number {
+    font-size: 50px;
+    top: 3.5%;
+    left: 4%
+}
+
+#steps-section .panel-container.panel-3d {
+    cursor: auto;
+}
+
+#steps-section li .geometry {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+#steps-section li:nth-child(1n) .geometry {
+    top: -15%;
+    left: -2.5%;
+}
+
+#steps-section li:nth-child(2n) .geometry {
+    top: -25%;
+    left: -50.5%;
+}
+
+#steps-section li .media {
+    position: absolute;
+    border-radius: 25px;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    z-index: 1;
+}
+
+#steps-section li:nth-child(odd) .media {
+    left: 65%;
+    bottom: 10%;
+    transform: perspective(800px) rotateZ(-5deg) rotateY(-35deg);
+}
+
+#steps-section li:nth-child(even) .media {
+    left: -100%;
+    bottom: 10%;
+    transform: perspective(800px) rotateZ(5deg) rotateY(35deg);
+}
+
+@media (min-width: 1024px) {
+    #steps-section li:nth-child(odd) > div {
+        float: left;
+        margin-left: 100px;
+    }
+
+    #steps-section li:nth-child(even) > div {
+        float: right;
+        margin-right: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #steps-section ul {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #steps-section li {
+        display: flex;
+        place-content: center;
+    }
+
+    #steps-section li > div {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        /* left: 50%; */
+        /* transform: translateX(-50%); */
+    }
+
+    #steps-section li:nth-child(odd) .media,
+    #steps-section li:nth-child(even) .media {
+        position: relative;
+        top: -35px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: none;
+        width: 400px;
+    }
+}
+
+@media (max-width: 430px) {
+    #steps-section li > div {
+        scale: 0.8;
+    }
+}
+
