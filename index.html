@@ -35,12 +35,12 @@
         
         <!-- Helpers -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <!-- Reusable Elements -->
-		<link rel="stylesheet" href="assets/css/panel-3d.css"/>
-		<link rel="stylesheet" href="assets/css/slideshow.css"/>
         <!-- Main Elements -->
         <link rel="stylesheet" href="assets/css/global.css"/>
 		<link rel="stylesheet" href="assets/css/index.css"/>
+        <!-- Reusable Elements -->
+		<link rel="stylesheet" href="assets/css/panel-3d.css"/>
+		<link rel="stylesheet" href="assets/css/slideshow.css"/>
         <!-- Overrites -->
         <link rel="stylesheet" href="assets/css/display-overrite.css"/>
     </head>
@@ -87,7 +87,100 @@
             </div>
         </form>
 
-        <nav id="navbar"></nav>
+        <nav id="navbar">
+            <div id="voyager-navbar-target">
+            </div>
+            <div class="desktop thin-desktop">
+                <a class="navbar-logo" href="index.html">
+                    <img src="assets/images/branding/voyager-logo-1.png">
+                </a>
+                <!-- <img class="navbar-bg" src="assets/images/navbar/navbar.png"> -->
+                <div class="navbar-bg">
+                    <img class="navbar-bg-left" src="assets/images/navbar/navbar-left.png">
+                    <img class="navbar-bg-right" src="assets/images/navbar/navbar-right.png">
+                </div>
+                <div class="notice-board">
+                    <span>NOTICE BOARD</span>
+                    <div class="list-wrapper">
+                        <ul>
+                            <li>
+                                Voyager launches on September 20th
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-tab-container">
+                    <a class="glow-hover" href="about-us.html">About</a>
+                    <a class="glow-hover" href="#project-section">Services</a>
+                    <a class="glow-hover" href="#footer-section">Contact</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Projects</button>
+                        <div class="dropdown-content">
+                            <a class="glow-hover" href="about-us.html">Interactive Development</a>
+                            <a class="glow-hover" href="#project-section">Voycasts</a>
+                            <a class="glow-hover" href="#footer-section">Custom Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="off-screen-menu">
+                    <div class="off-screen-menu-content">
+                        <div class="navbar-tab-container">
+                            <a class="navbar-tab glow-hover" href="about-us.html">About</a>
+                            <a class="navbar-tab glow-hover" href="#project-section">Services</a>
+                            <a class="navbar-tab glow-hover" href="#footer-section">Contact</a>
+                        </div>
+                        <img class="white-bar" src="assets/images/decor/white-line.png">
+                        <div class="details-container">
+                            <div class="contact">
+                                <h4>Contact</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/contact/contact-location.png">
+                                        <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/contact/contact-phone.png">
+                                        <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/contact/contact-email.png">
+                                        <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="opening-hours">
+                                <h4>Opening Hours</h4>
+                                <ul>
+                                    <li><span class="week">Mon</span>00:00 - 00:00</li>
+                                    <li><span class="week">Tue</span>00:00 - 00:00</li>
+                                    <li><span class="week">Wed</span>00:00 - 00:00</li>
+                                    <li><span class="week">Thu</span>00:00 - 00:00</li>
+                                    <li><span class="week">Fri</span>00:00 - 00:00</li>
+                                    <li><span class="week">Sat</span>00:00 - 00:00</li>
+                                    <li><span class="week">Sun</span>00:00 - 00:00</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+                <div class="navbar-bg repeat-bar"></div>
+                <a class="navbar-logo" href="index.html">
+                    <img src="assets/images/branding/voyager-logo-1.png">
+                </a>
+                <div class="ham-menu glow-hover">
+                    <img src="assets/images/navbar/mobile/hamburger-bar.png">
+                    <img src="assets/images/navbar/mobile/hamburger-bar.png">
+                    <img src="assets/images/navbar/mobile/hamburger-bar.png">
+                </div>
+                <!-- <div class="language-dropdown glow-hover">
+                    EN
+                    <img src="assets/images/navbar/mobile/dropdown-icon.png">
+                </div> -->
+            </div>
+        </nav>
 
         <div class="thin-desktop desktop">
             <div class="side-text-left"></div>
@@ -98,14 +191,9 @@
             <div id="header">
                 <div id="header-container">
                     <!-- <img id="header-media" src="assets/images/oasis..jpeg"> -->
-                    <div id="header-screen">
-                        <img class="border" src="assets/images/screens/screen-border.png">
-                        <div class="mask">
-                            <video autoplay muted loop>
-                                <source src="assets/videos/reel.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
+                    <video id="bg-video" autoplay muted loop>
+                        <source src="assets/videos/reel.mp4" type="video/mp4">
+                    </video>
 
                     <div id="voyager-header-target">
                         <div id="voyager-navbar-mover">
@@ -138,8 +226,6 @@
                             <span id="header-bg-text-2">VOYAGER X  VIDEO<br>VOLUMETRIC CAPTURE<br>3D VIRTUAL CONTENT<br>CREATIVE COLLABS</span>
                         </div>
                     </div>
-
-                    <div class="particle-terrain"></div>
                 </div>
             </div>
 
@@ -156,33 +242,29 @@
                     <div class="bg repeat-bar mobile"></div>
                     <div class="section-divider top repeat-bar"></div>
                     <div class="client-btn-container">
-                        <a class="client-btn panel-3d scroll-transition" href="https://www.dmu.ac.uk/home.aspx" target="_blank">
-                            <img class="hovered panel-3d-pop" src="assets/images/clients/dmu-colour.png">
-                            <img class="unhovered panel-3d-pop" src="assets/images/clients/dmu-mono.png">
+                        <a class="client-btn scroll-transition" href="https://www.dmu.ac.uk/home.aspx" target="_blank">
+                            <img class="hovered" src="assets/images/clients/dmu-colour.png">
+                            <img class="unhovered" src="assets/images/clients/dmu-mono.png">
                         </a>
-                        <a class="client-btn panel-3d scroll-transition" href="https://www.creativecollaborators.co.uk/" target="_blank">
-                            <img class="hovered panel-3d-pop" src="assets/images/clients/creative-collaborators-colour.png">
-                            <img class="unhovered panel-3d-pop" src="assets/images/clients/creative-collaborators-mono.png">
+                        <a class="client-btn scroll-transition" href="https://www.creativecollaborators.co.uk/" target="_blank">
+                            <img class="hovered" src="assets/images/clients/creative-collaborators-colour.png">
+                            <img class="unhovered" src="assets/images/clients/creative-collaborators-mono.png">
                         </a>
-                        <a class="client-btn panel-3d scroll-transition" href="https://www.everythingbranded.co.uk/" target="_blank">
-                            <img class="hovered panel-3d-pop" src="assets/images/clients/everything-branded-colour.png">
-                            <img class="unhovered panel-3d-pop" src="assets/images/clients/everything-branded-mono.png">
+                        <a class="client-btn scroll-transition" href="https://www.everythingbranded.co.uk/" target="_blank">
+                            <img class="hovered" src="assets/images/clients/everything-branded-colour.png">
+                            <img class="unhovered" src="assets/images/clients/everything-branded-mono.png">
                         </a>
-                        <a class="client-btn panel-3d scroll-transition" href="https://lcbdepot.co.uk/" target="_blank">
-                            <img class="hovered panel-3d-pop" src="assets/images/clients/lcb-colour.png">
-                            <img class="unhovered panel-3d-pop" src="assets/images/clients/lcb-mono.png">
+                        <a class="client-btn scroll-transition" href="https://lcbdepot.co.uk/" target="_blank">
+                            <img class="hovered" src="assets/images/clients/lcb-colour.png">
+                            <img class="unhovered" src="assets/images/clients/lcb-mono.png">
                         </a>
-                        <a class="client-btn panel-3d scroll-transition" href="https://www.hqrecording.co.uk/" target="_blank">
-                            <img class="hovered panel-3d-pop" src="assets/images/clients/hq-recording-studio-colour.png">
-                            <img class="unhovered panel-3d-pop" src="assets/images/clients/hq-recording-studio-mono.png">
+                        <a class="client-btn scroll-transition" href="https://www.hqrecording.co.uk/" target="_blank">
+                            <img class="hovered" src="assets/images/clients/hq-recording-studio-colour.png">
+                            <img class="unhovered" src="assets/images/clients/hq-recording-studio-mono.png">
                         </a>
                     </div>
                     <div class="section-divider bottom repeat-bar"></div>
                 </div>
-
-                <!-- <div id="content-particle-terrain-wrapper">
-                    <div class="particle-terrain"></div>
-                </div> -->
     
                 <div id="service-section" class="section scroll-transition">
                     <div class="heading-line scroll-transition">
@@ -430,7 +512,6 @@
         <script type="module" src="assets/js/notice-board.js"></script>
         <script type="module" src="assets/js/booking-system.js"></script>
 
-        <script rel="modulepreload" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
         <script type="module" src="assets/js/voyager-render.js"></script>
         <script type="module" src="assets/js/voyager-navbar.js"></script>
 
@@ -443,8 +524,6 @@
 
             <script rel="modulepreload" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
             <script type="module" src="assets/js/slider-inits/index-sliders.js"></script>
-                
-            <script type="module" src="assets/js/particle-terrain.js"></script>
     
             <script type="module" src="assets/js/panel-3d.js"></script>
             <script type="module" src="assets/js/mouse-move-parallax.js"></script>

@@ -93,50 +93,23 @@
     gap: 200px;
 }
 
-#header-screen
-{
-    position: absolute;
-    width: 100%;
-    height: 85%;
-    /* max-height: 550px; */
-    top: -5px;
-    pointer-events: none;
-    z-index: -111;
-}
-
-#header-screen .border {
+#header #bg-video {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1;
-}
-
-#header-screen .mask
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-mask-image: url(../images/screens/screen-mask.png);
-            mask-image: url(../images/screens/screen-mask.png);
-    -webkit-mask-size: 100% 100%;
-            mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
+    object-fit: cover;
     pointer-events: none;
 }
 
-#header-screen video {
+#header::after {
+    content: "";
     position: absolute;
+    bottom: 0;
     width: 100%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    right: 0;
-    margin: 0 auto;
-    height: 100%;
-    -o-object-fit:cover;
-       object-fit:cover;
+    height: 35%;
+    background: linear-gradient(transparent, black);
+    z-index: 0;
+    pointer-events: none;
 }
 
 #voyager-header-target
@@ -479,20 +452,6 @@
     pointer-events: none;
 }
 
-#header .particle-terrain
-{
-    position: absolute;
-    width: 100%;
-    bottom: -25%;
-    z-index: 2;
-    /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 1) 25%); */
-}
-
-#body-content .particle-terrain
-{
-    position: absolute;
-}
-
 #content-particle-terrain-wrapper
 {
     position: relative;
@@ -576,9 +535,7 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
+    background: black;
 }
 
 #client-section .bg
@@ -879,14 +836,20 @@
 {
     #header-container
     {
-        width: 10000px;
+        width: 100%;
+        height: 100%;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
     }
 
-    #body-content {
-        padding-top: 30px;
+    #header #bg-video {
+        height: calc(100% + 40px);
+    }
+
+    #header {
+        padding-bottom: 20px;
+        z-index: -1;
     }
 }
 

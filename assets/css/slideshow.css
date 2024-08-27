@@ -69,14 +69,16 @@
 
 .slideshow-container .prev-btn
 {
-  top: 46.755%;
-  left: 0.9%;
+  top: 50%;
+  left: 0.8%;
+  transform: translateY(calc(-50% + 4px));
 }
 
 .slideshow-container .next-btn
 {
-  top: 46.5%;
-  right: -0.1%;
+  top: 50%;
+  right: -0.3%;
+  transform: translateY(calc(-50% + 3px));
 }
 
 @media (max-width: 1440px)

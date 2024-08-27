@@ -86,7 +86,7 @@ const navbarHtml =
         </div> -->
     </div>
 `;
-navbar.innerHTML = navbarHtml;
+// navbar.innerHTML = navbarHtml;
 
 const footer = document.getElementById('footer-section');
 const footerHtml =

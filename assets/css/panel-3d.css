@@ -16,7 +16,10 @@
     -webkit-perspective:none;
             perspective:none;
     cursor: pointer;
-    width: 100%;
+}
+
+.panel-3d * {
+    pointer-events: none;
 }
 
 .panel-3d .panel-3d-pop,
