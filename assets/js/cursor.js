@@ -29,22 +29,26 @@ document.addEventListener('mousemove', (e) => {
 //     });
 // });
 
-const clickableHoverTargets = document.querySelectorAll('.clickable, .grid-item, .panel-item, .btn, a');
-clickableHoverTargets.forEach(target => {
-    target.addEventListener('mouseenter', () => {
-        // if (!cursor.classList.contains('clickable-hovering')) {
-        //     cursor.classList.add('clickable-hovering');
-        // }
-        if (!glow.classList.contains('clickable-hovering')) {
-            glow.classList.add('clickable-hovering');
-        }
+function init() {
+    const clickableHoverTargets = document.querySelectorAll('.clickable, .grid-item, .panel-item, .btn, a');
+    clickableHoverTargets.forEach(target => {
+        window.addManagedEventListener(target, 'mouseenter', () => {
+            // if (!cursor.classList.contains('clickable-hovering')) {
+            //     cursor.classList.add('clickable-hovering');
+            // }
+            if (!glow.classList.contains('clickable-hovering')) {
+                glow.classList.add('clickable-hovering');
+            }
+        });
+        window.addManagedEventListener(target, 'mouseleave', () => {
+            // if (cursor.classList.contains('clickable-hovering')) {
+            //         cursor.classList.remove('clickable-hovering');
+            //     }
+            if (glow.classList.contains('clickable-hovering')) {
+                glow.classList.remove('clickable-hovering');
+            }
+        });
     });
-    target.addEventListener('mouseleave', () => {
-        // if (cursor.classList.contains('clickable-hovering')) {
-        //         cursor.classList.remove('clickable-hovering');
-        //     }
-        if (glow.classList.contains('clickable-hovering')) {
-            glow.classList.remove('clickable-hovering');
-        }
-    });
-});
+}
+
+export default { init };

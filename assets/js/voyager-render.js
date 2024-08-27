@@ -108,7 +108,7 @@ let rotationYSpinOffset = 0;
 const spinSpeed = 0.0035;
 const rotationSpeed = 0.02; // Adjust this for smoothness
 
-const maxRotX = 0.5;
+const maxRotX = 0.3;
 const minRotX = -0.5;
 
 function animate() {

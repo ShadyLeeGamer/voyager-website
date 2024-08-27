@@ -128,13 +128,18 @@
 
 #voyager-header-target
 {
-    width: calc(500px * var(--header-scale));
-    height: calc(500px * var(--header-scale));
+    width: calc(400px * var(--header-scale));
+    height: calc(400px * var(--header-scale));
     z-index: 4;
-    transform: translate(-55%, 30%);
+    transform: translate(-1.25%, 50%);
     
 }
 
+
+#header .book-now {
+    position: absolute;
+    transform: translate(-130px, 580%);
+}
 
 #project-section
 {
@@ -742,20 +747,6 @@
     padding-bottom: 70px;
 }
 
-#booking-form {
-}
-
-#booking-form .content-container {
-    background-image: url("../images/panels/popup-1.png");
-    padding-top: 30px;
-    padding-bottom: 30px;
-    /* backdrop-filter: blur(5px); */
-}
-
-#booking-form .btn {
-    margin: 20px;
-}
-
 
 @media (max-width: 1440px)
 {
@@ -771,8 +762,6 @@
         padding-top: 0;
         padding-bottom: 0;
     }
-
-
 }
 
 @media (min-width: 1280px)
@@ -868,6 +857,10 @@
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
+    }
+
+    #body-content {
+        padding-top: 30px;
     }
 }
 

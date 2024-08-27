@@ -31,10 +31,9 @@ openFormBtns.forEach(btn => {
 //         }
 //     });
 
-bookingForm
-    .querySelector('.close-btn')
-    .addEventListener('click', () => {
-        if (bookingForm.classList.contains('open')) {
-            bookingForm.classList.remove('open');
-        }
-    });
+const closeBtn = bookingForm.querySelector('.close-btn');
+closeBtn.addEventListener('click', () => {
+    if (bookingForm.classList.contains('open')) {
+        bookingForm.classList.remove('open');
+    }
+});

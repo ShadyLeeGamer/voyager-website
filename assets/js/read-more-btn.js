@@ -1,17 +1,16 @@
-let isOpen = false;
-const container = document.querySelector(".grid-container");
-const hide = document.querySelector(".read-more-container .hide");
-const btn = document.querySelector(".read-more-btn");
-const btnLabel = document.querySelector(".read-more-btn::after");
-const heightOpen = 1650;
-// const heightOpen = container.offsetHeight;
-const heightClosed = 780;
-document.addEventListener('DOMContentLoaded', function()
-{
+function init() {
+    let isOpen = false;
+    const container = document.querySelector(".grid-container");
+    const hide = document.querySelector(".read-more-container .hide");
+    const btn = document.querySelector(".read-more-btn");
+    const heightOpen = 1650;
+    // const heightOpen = container.offsetHeight;
+    const heightClosed = 780;
+    
     var x = window.matchMedia("(min-width: 768px)")
 
     updateHeight();
-    btn.addEventListener("click", toggleHeight);
+    window.addManagedEventListener(btn, "click", toggleHeight);
 
     function toggleHeight()
     {
@@ -32,9 +31,10 @@ document.addEventListener('DOMContentLoaded', function()
         btn.textContent = isOpen ? "Read Less" : "Read More";
     }
 
-    window.addEventListener('resize', () =>
+    window.addManagedEventListener(window, 'resize', () =>
     {
         updateHeight();
     });
-});
+}
 
+export default { init };

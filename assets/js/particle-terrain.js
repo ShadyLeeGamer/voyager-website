@@ -90,6 +90,7 @@ class Scene {
   
   }
 
+function init() {
   const textureLoader = new THREE.TextureLoader();
   textureLoader.crossOrigin = '';
   const material = new THREE.ShaderMaterial({
@@ -114,26 +115,30 @@ class Scene {
     depthTest: false,
     transparent: true
   });
+  
+  // let cameraPose = new ObjectPose(-20, 20, -100, 0, -180, 10);
+  let cameraPose = new ObjectPose(0, 0, -290, 0, -180, 5);
+  // let terrainPose = new ObjectPose(0, 0, 0, 0, -105, 0);
+  // let terrainPose = new ObjectPose(0, 0, 0, 0, 90, 0);
+  let terrainPose = new ObjectPose(0, 0, 0, -95, 0, -455);
+  
+  const headerScene = new Scene({
+    el: document.querySelector('#header .particle-terrain'),
+    material: material,
+    cameraPose: cameraPose,
+    planePose: terrainPose
+  });
+  
+  cameraPose = new ObjectPose(0, 410, -75, 0, -180, 0);
+  terrainPose = new ObjectPose(0, 0, 0, 0, 0, 0);
+  
+  // const contentBodyScene = new Scene({
+  //   el: document.querySelector('#body-content .particle-terrain'),
+  //   material: material,
+  //   cameraPose: cameraPose,
+  //   planePose: terrainPose
+  // });
+}
 
-// let cameraPose = new ObjectPose(-20, 20, -100, 0, -180, 10);
-let cameraPose = new ObjectPose(0, 0, -290, 0, -180, 5);
-// let terrainPose = new ObjectPose(0, 0, 0, 0, -105, 0);
-// let terrainPose = new ObjectPose(0, 0, 0, 0, 90, 0);
-let terrainPose = new ObjectPose(0, 0, 0, -95, 0, -455);
+export default { init };
 
-const headerScene = new Scene({
-  el: document.querySelector('#header .particle-terrain'),
-  material: material,
-  cameraPose: cameraPose,
-  planePose: terrainPose
-});
-
-cameraPose = new ObjectPose(0, 410, -75, 0, -180, 0);
-terrainPose = new ObjectPose(0, 0, 0, 0, 0, 0);
-
-// const contentBodyScene = new Scene({
-//   el: document.querySelector('#body-content .particle-terrain'),
-//   material: material,
-//   cameraPose: cameraPose,
-//   planePose: terrainPose
-// });

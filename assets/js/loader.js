@@ -1,27 +1,24 @@
-console.log("a");
-
-window.addEventListener("load", function()
-{
-    fadeOutPreloader();
-    startObservers();
-});
-  
-function fadeOutPreloader() {
-    const loader = document.getElementById('preloader-container');
-    var fadeEffect = setInterval(function () {  
-      if (!loader.style.opacity) {
-          loader.style.opacity = 1;
-      }
-      if (loader.style.opacity > 0) {
-          loader.style.opacity -= 0.1;
-      } else {
-          clearInterval(fadeEffect);
-          // loader.remove();
-        loader.style.display = "none";
-      }
-    }, 25);
+function init() {
+  console.log("loader");
+  // fadeOutPreloader();
+  startObservers();
 }
 
+// function fadeOutPreloader() {
+//     const loader = document.getElementById('preloader-container');
+//     var fadeEffect = setInterval(function () {  
+//       if (!loader.style.opacity) {
+//           loader.style.opacity = 1;
+//       }
+//       if (loader.style.opacity > 0) {
+//           loader.style.opacity -= 0.1;
+//       } else {
+//           clearInterval(fadeEffect);
+//           // loader.remove();
+//         loader.style.display = "none";
+//       }
+//     }, 25);
+// }
 
 function startObservers()
 {
@@ -65,10 +62,10 @@ function startObservers()
                 child.classList.add("scroll-transition");
                 if (!child.closest(".accordion"))
                 {
-                  child.addEventListener(child.nodeName == "IMG" ? "load" : "loadeddata", () =>
+                  window.addManagedEventListener(child, child.nodeName == "IMG" ? "load" : "loadeddata", () =>
                   {
                     child.classList.add("end");
-                    child.addEventListener("transitionend", () => {
+                    window.addManagedEventListener(child, "transitionend", () => {
                       child.classList.remove("scroll-transition");
                       child.classList.remove("end");
                     });
@@ -77,7 +74,7 @@ function startObservers()
               }
             }
 
-            target.addEventListener("transitionend", () => {
+            window.addManagedEventListener(target, "transitionend", () => {
               target.classList.remove("scroll-transition");
               target.classList.remove("end");
             });
@@ -98,10 +95,13 @@ function startObservers()
         element.classList.add("end");
         await new Promise(resolve => setTimeout(resolve, 150));
       }
-      // target.classList.remove("scroll-transition");
       APPEAR_ON_SCROLL.unobserve(target);
-            // for (var i = 0; i < listElements.length; i++) {
-      //   listElements[i].classList.remove("end");
-      // }
     }
 }
+
+function cleanup() {
+  
+}
+
+export default { init, cleanup };
+
