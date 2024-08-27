@@ -1511,7 +1511,7 @@ input[type=number] {
 
 /* Page Transitions */
 .transition-fade {
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: 0.25s;
     -o-transition: 0.25s;
     transition: 0.25s;
