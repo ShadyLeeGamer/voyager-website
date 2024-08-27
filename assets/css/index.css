@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media (min-width: 1536px)
 {
     :root #header
@@ -109,9 +116,12 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    mask-image: url(../images/screens/screen-mask.png);
-    mask-size: 100% 100%;
-    mask-repeat: no-repeat;
+    -webkit-mask-image: url(../images/screens/screen-mask.png);
+            mask-image: url(../images/screens/screen-mask.png);
+    -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
     pointer-events: none;
 }
 
@@ -119,11 +129,14 @@
     position: absolute;
     width: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     right: 0;
     margin: 0 auto;
     height: 100%;
-    object-fit:cover;
+    -o-object-fit:cover;
+       object-fit:cover;
 }
 
 #voyager-header-target
@@ -131,14 +144,18 @@
     width: calc(400px * var(--header-scale));
     height: calc(400px * var(--header-scale));
     z-index: 4;
-    transform: translate(-1.25%, 50%);
+    -webkit-transform: translate(-1.25%, 50%);
+        -ms-transform: translate(-1.25%, 50%);
+            transform: translate(-1.25%, 50%);
     
 }
 
 
 #header .book-now {
     position: absolute;
-    transform: translate(-130px, 580%);
+    -webkit-transform: translate(-130px, 580%);
+        -ms-transform: translate(-130px, 580%);
+            transform: translate(-130px, 580%);
 }
 
 #project-section
@@ -363,7 +380,9 @@
 
 #header-container .panel-item .btn
 {
-    transform: translateX(27%);
+    -webkit-transform: translateX(27%);
+        -ms-transform: translateX(27%);
+            transform: translateX(27%);
 }
 
 #header-container .panel-item .panel-item-img
@@ -383,7 +402,9 @@
     right: 0;
     margin: 0 auto;
     z-index: 3;
-    transform: translate(50%, 65%);
+    -webkit-transform: translate(50%, 65%);
+        -ms-transform: translate(50%, 65%);
+            transform: translate(50%, 65%);
 
     scale: var(--header-scale);
 }
@@ -405,7 +426,9 @@
 {
     font-size: 40px;
     position: absolute;
-    transform: translate(-50%, 410%);
+    -webkit-transform: translate(-50%, 410%);
+        -ms-transform: translate(-50%, 410%);
+            transform: translate(-50%, 410%);
     text-shadow: 0px 0px 20px var(--secondary-brand);
 }
 
@@ -421,7 +444,8 @@
 
 #header-bg-text-1
 {
-    transform: perspective(800px) rotateY(-10deg) rotateX(10deg);
+    -webkit-transform: perspective(800px) rotateY(-10deg) rotateX(10deg);
+            transform: perspective(800px) rotateY(-10deg) rotateX(10deg);
     top: -200px;
     left: 155px;
     
@@ -433,7 +457,8 @@
     position: absolute;
     font-family: "Neonize";
     font-size: 10px;
-    transform: perspective(800px) rotateY(40deg) rotateX(20deg);
+    -webkit-transform: perspective(800px) rotateY(40deg) rotateX(20deg);
+            transform: perspective(800px) rotateY(40deg) rotateX(20deg);
     left: -600px;
 }
 
@@ -552,7 +577,8 @@
     margin: 0 auto;
     width: 100%;
     background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
 }
 
 #client-section .bg
@@ -869,13 +895,17 @@
     {
         width: 200px;
         height: 200px;
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
     }
 
     #voyager
     {
         left: 50%;
-        transform: translate(-50%, -10%);
+        -webkit-transform: translate(-50%, -10%);
+            -ms-transform: translate(-50%, -10%);
+                transform: translate(-50%, -10%);
     }
 
     #header
@@ -910,7 +940,9 @@
 
     #header-container .decor-container {
         height: 50vh;
-        transform: translate(40%, 110%);
+        -webkit-transform: translate(40%, 110%);
+            -ms-transform: translate(40%, 110%);
+                transform: translate(40%, 110%);
     }
 
     #header .catchphrase
@@ -1367,4 +1399,3 @@
     left: 0;
     opacity: 1;
 }
-

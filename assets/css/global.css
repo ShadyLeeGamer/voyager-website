@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root
 {
     --primary-brand: #E79023;
@@ -80,7 +87,10 @@ body
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -206,11 +216,17 @@ input[type=number] {
     height: 20px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.125);
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
     transition: 0.1s;
     pointer-events: none;
     z-index: 1000;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
+    -webkit-transition-duration: 200ms;
+         -o-transition-duration: 200ms;
+            transition-duration: 200ms;
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
     scale: 0.75;
 }
 
@@ -233,8 +249,11 @@ input[type=number] {
     width: 125px;
     aspect-ratio: 1;
     overflow: visible;
-    filter: blur(50px);
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
     opacity: 1;
+    -webkit-transition: opacity 0.75s;
+    -o-transition: opacity 0.75s;
     transition: opacity 0.75s;
     pointer-events: none;
 }
@@ -247,9 +266,12 @@ input[type=number] {
     border-radius: 50%;
     pointer-events: none;
     /* background: linear-gradient(to right, var(--secondary-brand), white); */
+    background: -webkit-gradient(linear, left top, right top, from(var(--primary-brand)), to(var(--secondary-brand)));
+    background: -o-linear-gradient(left, var(--primary-brand), var(--secondary-brand));
     background: linear-gradient(to right, var(--primary-brand), var(--secondary-brand));
     z-index: -2;
-    animation: glow-rotate 15s infinite;
+    -webkit-animation: glow-rotate 15s infinite;
+            animation: glow-rotate 15s infinite;
 }
 
 #cursor-glow::after {
@@ -258,8 +280,12 @@ input[type=number] {
     width: 100%;
     height: 100%;
     opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
     transition: opacity 1s;
     z-index: 100;
+    background: -webkit-gradient(linear, left top, right top, from(var(--primary-brand)), to(var(--secondary-brand)));
+    background: -o-linear-gradient(left, var(--primary-brand), var(--secondary-brand));
     background: linear-gradient(to right, var(--primary-brand), var(--secondary-brand));
 }
 
@@ -269,6 +295,18 @@ input[type=number] {
 
 #cursor-glow-wrapper.clickable-hovering #cursor-glow::after {
     opacity: 1;
+}
+
+@-webkit-keyframes glow-rotate {
+    from {
+        rotate: 0deg;
+    }
+    50% {
+        scale: 1 1.5;
+    }
+    to {
+        rotate: 360deg;
+    }
 }
 
 @keyframes glow-rotate {
@@ -375,9 +413,12 @@ input[type=number] {
 
 .notice-board ul {
     position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     left: 0;
-    animation: notice-bar-scroll 15s infinite linear;
+    -webkit-animation: notice-bar-scroll 15s infinite linear;
+            animation: notice-bar-scroll 15s infinite linear;
 }
 
 .notice-board ul li {
@@ -389,13 +430,24 @@ input[type=number] {
 }
 
 /* TODO: Make scroll speed independant of list width */
+@-webkit-keyframes notice-bar-scroll {
+    from {
+        left: calc(100vw - 545px);
+    }
+    to {
+        left: 0;
+        -webkit-transform: translate(-100%);
+                transform: translate(-100%);
+    }
+}
 @keyframes notice-bar-scroll {
     from {
         left: calc(100vw - 545px);
     }
     to {
         left: 0;
-        transform: translate(-100%);
+        -webkit-transform: translate(-100%);
+                transform: translate(-100%);
     }
 }
 
@@ -581,6 +633,8 @@ input[type=number] {
 
 .btn
 {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
     cursor: pointer;
     color: white;
@@ -641,6 +695,8 @@ input[type=number] {
 }
 
 .input-field span {
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
     pointer-events: none;
     color: var(--tertiary-white);
@@ -906,13 +962,17 @@ input[type=number] {
 
 #booking .btn
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: -1em;
     z-index: 1;
 }
 
 #booking .btn span {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
 }
 
 
@@ -1203,9 +1263,13 @@ input[type=number] {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 100;
     display: none;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
     transition: opacity 0.5s;
     opacity: 0;
 }
@@ -1232,18 +1296,33 @@ input[type=number] {
 
 
 .form-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 70px;
     padding-right: 70px;
 }
 
 .side-decor-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .side-decor-heading h2 {
@@ -1393,6 +1472,8 @@ input[type=number] {
 /* Page Transitions */
 .transition-fade {
     opacity: 0;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
     pointer-events: none;
 }
@@ -1425,6 +1506,8 @@ html.is-animating .transition-fade {
     right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-animation: tiltSpin 8s linear infinite;
             animation: tiltSpin 8s linear infinite;

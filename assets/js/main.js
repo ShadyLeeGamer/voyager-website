@@ -9,7 +9,6 @@ const swup = new Swup({
 // Module load management
 let pageModules = [];
 async function initPageModules() {
-    console.log("loading modules...");
     const scriptTags = document.querySelectorAll('#modules > script');
     
     // Array to keep track of all the promises for dynamic imports
@@ -27,10 +26,10 @@ async function initPageModules() {
                 moduleInit();
             }
             else {
-                console.warn(`No init function found in module ${path}`);
+                // console.warn(`No init function found in module ${path}`);
             }
             pageModules.push(module.default || module);
-            console.log(`Loaded module: ${path}`);
+            // console.log(`Loaded module: ${path}`);
         } catch (error) {
             console.error(`Error loading module: ${path}`, error);
         }
@@ -58,7 +57,7 @@ function cleanupPageModules() {
             element.removeEventListener(eventName, callback);
         });
 
-        console.log(`Cleaned up module`);
+        // console.log(`Cleaned up module`);
     });
 
     // Clear the array after cleanup
