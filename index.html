@@ -45,7 +45,9 @@
         <link rel="stylesheet" href="assets/css/display-overrite.css"/>
     </head>
     <body>
-        <div id="preloader-container" class="transition-fade"></div>
+        <div id="preloader-container" class="transition-fade">
+            <img src="assets/gifs/loading.gif" alt="this slowpoke moves"  width="250" />
+        </div>
 
         <div id="cursor-glow-wrapper" class="thin-desktop desktop">
             <div id="cursor-glow" class="thin-desktop desktop"></div>
@@ -111,16 +113,29 @@
                 </div>
                 <div class="navbar-tab-container">
                     <a class="glow-hover" href="about-us.html">About</a>
-                    <a class="glow-hover" href="#project-section">Services</a>
-                    <a class="glow-hover" href="#footer-section">Contact</a>
                     <div class="dropdown">
-                        <button class="dropbtn">Projects</button>
+                        <button class="dropbtn"><a href="#service-section">Services</a></button>
+                        <div class="dropdown-content">
+                            <a class="glow-hover" href="about-us.html">Virtual Exhibits</a>
+                            <a class="glow-hover" href="#project-section">Immersive/3D Website</a>
+                            <a class="glow-hover" href="#footer-section">Virtual Experiences</a>
+                            <a class="glow-hover" href="#footer-section">Augmented Reality (AR)</a>
+                            <a class="glow-hover" href="#footer-section">Mobile Apps</a>
+                            <a class="glow-hover" href="green-screen-production.html">Green Screen Production</a>
+                        </div>
+                        <img src="assets/images/dropdown/icon.png">
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn main"><a href="#project-section">Podcasts</a></button>
                         <div class="dropdown-content">
                             <a class="glow-hover" href="about-us.html">Interactive Development</a>
-                            <a class="glow-hover" href="#project-section">Voycasts</a>
+                            <a class="glow-hover" href="#project-section">Podcasts</a>
                             <a class="glow-hover" href="#footer-section">Custom Projects</a>
                         </div>
+                        <img src="assets/images/dropdown/icon.png">
                     </div>
+                    <a class="glow-hover" href="#slideshow-section">Gallery</a>
+                    <a class="glow-hover" href="#footer-section">Contact</a>
                 </div>
             </div>
             <div class="mobile">
@@ -265,76 +280,7 @@
                     </div>
                     <div class="section-divider bottom repeat-bar"></div>
                 </div>
-    
-                <div id="service-section" class="section scroll-transition">
-                    <div class="heading-line scroll-transition">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <h2><span class="highlight">Our</span> Services</h2>
-                    </div>
-                    <div class="content-container">
-                        <div class="grid-container">
-                            <a class="grid-item panel-3d scroll-transition">
-                                <div class="service-img panel-3d-push"></div>
-                                <div class="grid-item-bg glow-hover"></div>
-                                <div class="grid-item-decor panel-3d-pop"></div>
-                                <span class="service-no panel-3d-pop">01</span>
-                                <h3 class="panel-3d-pop highlight">Virtual Exhibits</h3>
-                                <span class="description panel-3d-pop">Step into the future of exhibitions. Our virtual exhibits offer an interactive platform where your audience can explore curated spaces, view artwork or products, and engage with content in a fully immersive environment.</span>
-                            </a>
-                            <a class="grid-item panel-3d scroll-transition">
-                                <div class="service-img panel-3d-push"></div>
-                                <div class="grid-item-bg glow-hover"></div>
-                                <div class="grid-item-decor panel-3d-pop"></div>
-                                <span class="service-no panel-3d-pop">02</span>
-                                <h3 class="panel-3d-pop highlight">Immersive/3D Websites</h3>
-                                <span class="description panel-3d-pop">Take your online presence to the next level with our immersive 3D websites. These digital spaces are designed to captivate and engage visitors, providing them with a memorable and interactive browsing experience.</span>
-                            </a>
-                            <a class="grid-item panel-3d scroll-transition">
-                                <div class="service-img panel-3d-push"></div>
-                                <div class="grid-item-bg glow-hover"></div>
-                                <div class="grid-item-decor panel-3d-pop"></div>
-                                <span class="service-no panel-3d-pop">03</span>
-                                <h3 class="panel-3d-pop highlight">Virtual Experiences</h3>
-                                <span class="description panel-3d-pop">Whether it's a virtual event, a product launch, or a digital tour, we craft virtual experiences that resonate with your audience, offering unparalleled levels of interaction and engagement asd d.</span>
-                            </a>
-                            <a class="grid-item panel-3d scroll-transition">
-                                <div class="service-img panel-3d-push"></div>
-                                <div class="grid-item-bg glow-hover"></div>
-                                <div class="grid-item-decor panel-3d-pop"></div>
-                                <span class="service-no panel-3d-pop">04</span>
-                                <h3 class="panel-3d-pop highlight">Augmented Reality (AR)</h3>
-                                <span class="description panel-3d-pop">Enhance your real-world interactions with our innovative AR solutions. From product visualisation to interactive marketing campaigns, our AR services bring digital elements into the physical world, creating a seamless and engaging user experience.</span>
-                            </a>
-                            <a class="grid-item panel-3d scroll-transition">
-                                <div class="service-img panel-3d-push"></div>
-                                <div class="grid-item-bg glow-hover"></div>
-                                <div class="grid-item-decor panel-3d-pop"></div>
-                                <span class="service-no panel-3d-pop">05</span>
-                                <h3 class="panel-3d-pop highlight">Mobile Apps</h3>
-                                <span class="description panel-3d-pop">We design and develop mobile applications that integrate immersive technologies, making it easy for users to connect with your brand anytime, anywhere.</span>
-                            </a>
-                            <a class="grid-item panel-3d scroll-transition" href="green-screen-production.html">
-                                <div class="service-img panel-3d-push"></div>
-                                <div class="grid-item-bg glow-hover"></div>
-                                <div class="grid-item-decor panel-3d-pop"></div>
-                                <span class="service-no panel-3d-pop">06</span>
-                                <h3 class="panel-3d-pop highlight">Green Screen Production</h3>
-                                <span class="description panel-3d-pop">Elevate your content creation with our professional greenscreen production services. Whether for video content, live events, or virtual environments, we provide the expertise to bring your vision to life.</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="read-more-container mobile">
-                        <div class="hide" src="assets/images/service-section/mobile/read-more-hide.png"></div>
-                        <div class="divider repeat-bar"></div>
-                        <button class="read-more-btn"></button>
-                    </div>
-                </div>
-    
+
                 <div id="project-section" class="section">
                     <div class="heading-line scroll-transition">
                         <span></span>
@@ -364,7 +310,7 @@
                                         <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
                                         <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
                                         <div class="panel-item-overlay panel-3d-pop">
-                                            <h4>Interactive Development</h4>
+                                            <h4>Virtual Worlds</h4>
                                             <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
                                             <a href="#" class="btn">
                                                 <img src="assets/images/btns/btn-3-contained.png">
@@ -380,7 +326,7 @@
                                         <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
                                         <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
                                         <div class="panel-item-overlay panel-3d-pop">
-                                            <h4>Voycasts</h4>
+                                            <h4>Podcasts</h4>
                                             <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
                                             <a href="#" class="btn">
                                                 <img src="assets/images/btns/btn-3-contained.png">
@@ -396,7 +342,7 @@
                                         <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
                                         <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
                                         <div class="panel-item-overlay panel-3d-pop">
-                                            <h4>Custom Projects</h4>
+                                            <h4>Virtual Production</h4>
                                             <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
                                             <a href="#" class="btn">
                                                 <img src="assets/images/btns/btn-3-contained.png">
@@ -409,6 +355,75 @@
                             </div>
                             <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
                         </div>
+                    </div>
+                </div>
+    
+                <div id="service-section" class="section scroll-transition">
+                    <div class="heading-line scroll-transition">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h2><span class="highlight">Our</span> Services</h2>
+                    </div>
+                    <div class="content-container">
+                        <div class="grid-container">
+                            <a class="grid-item panel-3d scroll-transition" href="green-screen-production.html">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">01</span>
+                                <h3 class="panel-3d-pop highlight">Green Screen Production</h3>
+                                <span class="description panel-3d-pop">Elevate your content creation with our professional greenscreen production services. Whether for video content, live events, or virtual environments, we provide the expertise to bring your vision to life.</span>
+                            </a>
+                            <a class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">02</span>
+                                <h3 class="panel-3d-pop highlight">Virtual Exhibits</h3>
+                                <span class="description panel-3d-pop">Step into the future of exhibitions. Our virtual exhibits offer an interactive platform where your audience can explore curated spaces, view artwork or products, and engage with content in a fully immersive environment.</span>
+                            </a>
+                            <a class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">03</span>
+                                <h3 class="panel-3d-pop highlight">Virtual Experiences</h3>
+                                <span class="description panel-3d-pop">Whether it's a virtual event, a product launch, or a digital tour, we craft virtual experiences that resonate with your audience, offering unparalleled levels of interaction and engagement asd d.</span>
+                            </a>
+                            <a class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">04</span>
+                                <h3 class="panel-3d-pop highlight">Augmented Reality (AR)</h3>
+                                <span class="description panel-3d-pop">Enhance your real-world interactions with our innovative AR solutions. From product visualisation to interactive marketing campaigns, our AR services bring digital elements into the physical world, creating a seamless and engaging user experience.</span>
+                            </a>
+                            <a class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">05</span>
+                                <h3 class="panel-3d-pop highlight">Mobile Apps</h3>
+                                <span class="description panel-3d-pop">We design and develop mobile applications that integrate immersive technologies, making it easy for users to connect with your brand anytime, anywhere.</span>
+                            </a>
+                            <a class="grid-item panel-3d scroll-transition">
+                                <div class="service-img panel-3d-push"></div>
+                                <div class="grid-item-bg glow-hover"></div>
+                                <div class="grid-item-decor panel-3d-pop"></div>
+                                <span class="service-no panel-3d-pop">06</span>
+                                <h3 class="panel-3d-pop highlight">Immersive/3D Websites</h3>
+                                <span class="description panel-3d-pop">Take your online presence to the next level with our immersive 3D websites. These digital spaces are designed to captivate and engage visitors, providing them with a memorable and interactive browsing experience.</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="read-more-container mobile">
+                        <div class="hide" src="assets/images/service-section/mobile/read-more-hide.png"></div>
+                        <div class="divider repeat-bar"></div>
+                        <button class="read-more-btn"></button>
                     </div>
                 </div>
     
@@ -501,7 +516,66 @@
             </div>
         </main>
  
-        <div id="footer-section" class="section"></div>
+        <div id="footer-section" class="section">
+            <div id="footer-bg"></div>
+            <div id="footer-cta">
+                <div id="booking">
+                    <img id="footer-logo" src="assets/images/branding/voyager-logo-2.png">
+                    <a class="btn book-now glow-hover">
+                        <img src="assets/images/btns/btn-3-contained.png">
+                        <span>BOOK NOW</span>
+                    </a>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a class="glow-hover" href="#service-section">About</a></li>
+                        <li><a class="glow-hover" href="#project-section">Voycasts</a></li>
+                        <li><a class="glow-hover" href="#project-section">Interactive Development</a></li>
+                        <li><a class="glow-hover" href="#project-section">Custom Projects</a></li>
+                        <li><a class="glow-hover" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="opening-hours">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li><span class="week">Mon</span>00:00 - 00:00</li>
+                        <li><span class="week">Tue</span>00:00 - 00:00</li>
+                        <li><span class="week">Wed</span>00:00 - 00:00</li>
+                        <li><span class="week">Thu</span>00:00 - 00:00</li>
+                        <li><span class="week">Fri</span>00:00 - 00:00</li>
+                        <li><span class="week">Sat</span>00:00 - 00:00</li>
+                        <li><span class="week">Sun</span>00:00 - 00:00</li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <img src="assets/images/contact/contact-location.png">
+                            <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
+                        </li>
+                        <li>
+                            <img src="assets/images/contact/contact-phone.png">
+                            <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
+                        </li>
+                        <li>
+                            <img src="assets/images/contact/contact-email.png">
+                            <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><span class="week">Mon</span>00:00 - 00:00</li>
+                        <li><span class="week">Tue</span>00:00 - 00:00</li>
+                        <li><span class="week">Wed</span>00:00 - 00:00</li>
+                        <li><span class="week">Thu</span>00:00 - 00:00</li>
+                        <li><span class="week">Fri</span>00:00 - 00:00</li>
+                        <li><span class="week">Sat</span>00:00 - 00:00</li>
+                        <li><span class="week">Sun</span>00:00 - 00:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- Persistent Scripts -->
         <script rel="modulepreload" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

@@ -30,7 +30,7 @@ document.addEventListener('mousemove', (e) => {
 // });
 
 function init() {
-    const clickableHoverTargets = document.querySelectorAll('.clickable, .grid-item, .panel-item, .btn, a');
+    const clickableHoverTargets = document.querySelectorAll('.grid-item, .panel-item');
     clickableHoverTargets.forEach(target => {
         window.addManagedEventListener(target, 'mouseenter', () => {
             // if (!cursor.classList.contains('clickable-hovering')) {

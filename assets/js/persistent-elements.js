@@ -141,7 +141,7 @@ const footerHtml =
     </div>
 </div>
 `
-footer.innerHTML = footerHtml;
+// footer.innerHTML = footerHtml;
 
 const preloaderContainer = document.getElementById('preloader-container');
 const preloaderHtml =
@@ -213,4 +213,4 @@ const preloaderHtml =
     </div>
 </div>
 `
-preloaderContainer.innerHTML = preloaderHtml;
+// preloaderContainer.innerHTML = preloaderHtml;
