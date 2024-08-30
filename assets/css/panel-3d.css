@@ -1,20 +1,19 @@
-.panel-3d
-{
-    --rX: 0deg;
-    --rY: 0deg;
-    --bX: 50%;
-    --bY: 80%;
-    -webkit-transform: rotateX(var(--rX)) rotateY(var(--rY)) ;
-            transform: rotateX(var(--rX)) rotateY(var(--rY)) ;
+.panel-3d {
+    --rx: 0;
+    --ry: 0;
+    --bx: 50%;
+    --by: 80%;
+    -webkit-transform: rotateX(var(--rX)) rotateY(var(--rY));
+    transform: rotateX(var(--rX)) rotateY(var(--rY));
     -webkit-transition: scale 1s, -webkit-transform 1s;
     transition: scale 1s, -webkit-transform 1s;
     -o-transition: transform 1s, scale 1s;
     transition: transform 1s, scale 1s;
     transition: transform 1s, scale 1s, -webkit-transform 1s;
     -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-perspective:none;
-            perspective:none;
+    transform-style: preserve-3d;
+    -webkit-perspective: none;
+    perspective: none;
     cursor: pointer;
 }
 
@@ -23,35 +22,30 @@
 }
 
 .panel-3d .panel-3d-pop,
-.panel-3d .panel-3d-push
-{
+.panel-3d .panel-3d-push {
     -webkit-transform-style: inherit;
     transform-style: inherit;
 }
 
-.panel-3d:hover
-{
+.panel-3d:hover {
     scale: 1.1;
     -webkit-transition: 0.15s;
     -o-transition: 0.15s;
     transition: 0.15s;
 }
 
-.panel-3d:hover .panel-3d-pop
-{
+.panel-3d:hover .panel-3d-pop {
     -webkit-transform: translateZ(25px);
-            transform: translateZ(25px);
+    transform: translateZ(25px);
 }
 
-.panel-3d:hover .panel-3d-push
-{
+.panel-3d:hover .panel-3d-push {
     -webkit-transform: translateZ(-25px);
-            transform: translateZ(-25px);
+    transform: translateZ(-25px);
 }
 
 .panel-3d:not(:hover) .panel-3d-pop,
-.panel-3d:not(:hover) .panel-3d-push
-{
+.panel-3d:not(:hover) .panel-3d-push {
     -webkit-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;

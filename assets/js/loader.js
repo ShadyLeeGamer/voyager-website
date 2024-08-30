@@ -1,107 +1,82 @@
-function init() {
-  console.log("loader");
-  // fadeOutPreloader();
-  startObservers();
-}
+// Inital load styling
+document.addEventListener("DOMContentLoaded", () => {
+    let initialLoadStyleElements = [
+        document.getElementById('preloader-container'),
+        document.body
+    ];
+    initialLoadStyleElements.forEach((element) => {
+        element.classList.remove('initial-loading');
+    });
+});
 
-// function fadeOutPreloader() {
-//     const loader = document.getElementById('preloader-container');
-//     var fadeEffect = setInterval(function () {  
-//       if (!loader.style.opacity) {
-//           loader.style.opacity = 1;
-//       }
-//       if (loader.style.opacity > 0) {
-//           loader.style.opacity -= 0.1;
-//       } else {
-//           clearInterval(fadeEffect);
-//           // loader.remove();
-//         loader.style.display = "none";
-//       }
-//     }, 25);
-// }
+function init() {
+    startObservers();
+}
 
 function startObservers()
 {
-    const faders = document.querySelectorAll('.scroll-transition');
-
     const appearOptions = {
-      threshold: 0.5
-      // rootMargin: "0px 0px -200px 0px"
+        threshold: 0.5,
+        rootMargin: "0px 0px 100px 0px"
     };
-    
-    const APPEAR_ON_SCROLL = new IntersectionObserver(function(entries, APPEAR_ON_SCROLL) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          return;
-        } else {
-          let target = entry.target;
-          let isDelayedItemTypes = false;
-          // const delayedItemTypes = ["project-tech-list", "spinner-list", "contact", "tabs"]
-          const delayedItemTypes = [""]
-          delayedItemTypes.every(function(type)
-          {
-            if (target.classList.contains(type))
-            {
-              isDelayedItemTypes = true;
-              return false;
-            }
-            return true;
-          });
-          if (isDelayedItemTypes) {
-            addDelayToListElements(target);
-          }
-          else {
-            target.classList.add("end");
-            
-            var children = target.children;
-            for (var i = 0; i < children.length; i++) {
-              let child = children[i];
-              if (child.hasAttribute("data-src"))
-              {
-                child.src = child.getAttribute("data-src");
-                child.classList.add("scroll-transition");
-                if (!child.closest(".accordion"))
-                {
-                  window.addManagedEventListener(child, child.nodeName == "IMG" ? "load" : "loadeddata", () =>
-                  {
-                    child.classList.add("end");
-                    window.addManagedEventListener(child, "transitionend", () => {
-                      child.classList.remove("scroll-transition");
-                      child.classList.remove("end");
-                    });
-                  });
-                }
-              }
-            }
 
-            window.addManagedEventListener(target, "transitionend", () => {
-              target.classList.remove("scroll-transition");
-              target.classList.remove("end");
-            });
-            APPEAR_ON_SCROLL.unobserve(target);
-          }
-        }
-      });
-    }, appearOptions);
+    const lazyElements = document.querySelectorAll('[data-src]');
+    const transitionElements = document.querySelectorAll('*[scroll-transition]:not([scroll-transition-list])');
+    const transitionLists = document.querySelectorAll('*[scroll-transition-list]');
+
+    const LOAD_ON_SCROLL = buildObserver(appearOptions, (element) => { element.src = element.getAttribute("data-src"); });
+    const TRANSITION_ON_SCROLL = buildObserver(appearOptions, (element) => { endScrollTransition(element); });
+    const TRANSITION_LIST_ON_SCROLL = buildObserver(appearOptions, (element) => { endScrollTransitionList(element); });
     
-    faders.forEach(fader => {
-      APPEAR_ON_SCROLL.observe(fader);
+    lazyElements.forEach(element => {
+        LOAD_ON_SCROLL.observe(element);
     });
+    transitionElements.forEach(element => {
+        TRANSITION_ON_SCROLL.observe(element);
+    });
+    transitionLists.forEach(element => {
+        const transitionType = element.getAttribute("scroll-transition");
+        var items = element.children;
+        for (let i = 0; i < items.length; i++) {
+            items[i].setAttribute("scroll-transition", transitionType);
+        }
+        TRANSITION_LIST_ON_SCROLL.observe(element);
+    });
+
+    function buildObserver(appearOptions, callback) {
+        return new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting)
+                    return;
     
-    async function addDelayToListElements(target) {
-      var listElements = target.getElementsByTagName("li");
-      for (var i = 0; i < listElements.length; i++) {
-        let element = listElements[i];
-        element.classList.add("end");
-        await new Promise(resolve => setTimeout(resolve, 150));
-      }
-      APPEAR_ON_SCROLL.unobserve(target);
+                let element = entry.target;
+                callback(element);
+                observer.unobserve(element);
+            }); 
+        }, appearOptions);
+    }
+    
+    function endScrollTransitionList(element) {
+        const delay = element.getAttribute("scroll-transition-list");
+        var items = element.children;
+        for (let i = 0; i < items.length; i++) {
+            setTimeout(() => {
+                endScrollTransition(items[i]);
+            }, 10 + delay * i);
+        }
+        element.removeAttribute("scroll-transition-list");
+        element.removeAttribute("scroll-transition");
+    }
+
+    function endScrollTransition(element) {
+        element.classList.add("scroll-transition-end");
+
+        window.addManagedEventListener(element, "transitionend", () => {
+            element.removeAttribute("scroll-transition");
+            element.classList.remove("scroll-transition-end");
+        });
     }
 }
 
-function cleanup() {
-  
-}
-
-export default { init, cleanup };
+export default { init };
 

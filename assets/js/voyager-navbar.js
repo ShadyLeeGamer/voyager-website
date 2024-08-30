@@ -1,73 +1,83 @@
-document.addEventListener('DOMContentLoaded', () =>
-{
-    const mover = document.getElementById('voyager-navbar-mover');
-    const navbarTarget = document.getElementById('voyager-navbar-target');
-    const headerTarget = document.getElementById('voyager-header-target');
-    let startRect;
-    let currentTarget;
-    const scrollThreshold = 300;
+const scrollThreshold = 300;
+const mover = document.getElementById('voyager-navbar-mover');
+const navbarTarget = document.getElementById('voyager-navbar-target');
+let headerTarget;
+let startRect;
+let currentTarget;
+let isLocked = false;
 
-    function updateEndMovePosition()
-    {
-        if (!mover.classList.contains('move'))
-            return;
+function init() {
+    headerTarget = document.getElementById('voyager-header-target');
+    isLocked = false;
+    checkForMovement();
+}
 
-        const endRect = currentTarget.getBoundingClientRect();
-        const dx = endRect.left - startRect.left;
-        const dy = endRect.top - startRect.top;
-        mover.style.setProperty('--voyager-move-end-position', `translate(${dx}px, ${dy}px)`);
+function cleanup() {
+    isLocked = true;
+    if (!isInsideTarget(navbarTarget)) {
+        if (isMoving) {
+            mover.classList.remove('move');
+        }
+
+        navbarTarget.appendChild(mover);
     }
+}
 
-    window.addEventListener('scroll', () =>
-    {
-        if (window.scrollY > scrollThreshold)
-        {
-            if (mover.parentElement != navbarTarget)
-            {
-                if (!mover.classList.contains('move'))
-                {
-                    mover.style.setProperty('--voyager-move-start-position', `translate(${0}px, ${0}px)`);
-                    mover.style.setProperty('--voyager-move-start-scale', "1");
-                    mover.style.setProperty('--voyager-move-end-scale', "0.15");
-                    mover.classList.add('move');
-                    startRect = mover.getBoundingClientRect();
-                    currentTarget = navbarTarget;
-                    updateEndMovePosition();
+window.addEventListener('scroll', () => {
+    if (isLocked)
+        return;
 
-                    mover.addEventListener('animationend', function onAnimationEnd()
-                    {
-                        navbarTarget.appendChild(mover);
-                        mover.classList.remove('move');
-                        mover.removeEventListener('animationend', onAnimationEnd);
-                    });
-                }
-            }
-        }
-        else
-        {
-            if (mover.parentElement != headerTarget)
-            {
-                if (!mover.classList.contains('move'))
-                {
-                    mover.style.setProperty('--voyager-move-start-position', `translate(${0}px, ${0}px)`);
-                    mover.style.setProperty('--voyager-move-start-scale', "0.15");
-                    mover.style.setProperty('--voyager-move-end-scale', "1");
-                    startRect = mover.getBoundingClientRect();
-                    currentTarget = headerTarget;
-                    updateEndMovePosition();
-                    mover.classList.add('move');
-
-                    mover.addEventListener('animationend', function onAnimationEnd()
-                    {
-                        headerTarget.appendChild(mover);
-                        mover.classList.remove('move');
-                        mover.removeEventListener('animationend', onAnimationEnd);
-                    });
-                }
-            }
-        }
-    });
-
-    window.addEventListener('scroll', updateEndMovePosition);
-    window.addEventListener('resize', updateEndMovePosition);
+    if (!isMoving()) {
+        checkForMovement();
+    }
+    else {
+        updateEndMovePosition();
+    }
 });
+window.addEventListener('resize', updateEndMovePosition);
+
+function checkForMovement() {
+    if (window.scrollY > scrollThreshold) {
+        if (!isInsideTarget(navbarTarget))
+        {
+            moveTo(navbarTarget, 1, 0.2);
+        }
+    }
+    else {
+        if (!isInsideTarget(headerTarget)) {
+            moveTo(headerTarget, 0.2, 1);
+        }
+    }
+}
+
+function moveTo(target, startScale, targetScale) {
+    mover.style.setProperty('--voyager-move-start-position', `translate(${0}px, ${0}px)`);
+    mover.style.setProperty('--voyager-move-start-scale', startScale);
+    mover.style.setProperty('--voyager-move-end-scale', targetScale);
+    startRect = mover.getBoundingClientRect();
+    currentTarget = target;
+    updateEndMovePosition();
+    mover.classList.add('move');
+
+    window.addManagedEventListener(mover, 'animationend', function onAnimationEnd() {
+        target.appendChild(mover);
+        mover.classList.remove('move');
+    });
+}
+
+function updateEndMovePosition() {
+    if (!isMoving() || isLocked)
+        return;
+
+    const endRect = currentTarget.getBoundingClientRect();
+    const dx = endRect.left - startRect.left;
+    const dy = endRect.top - startRect.top;
+    mover.style.setProperty('--voyager-move-end-position', `translate(${dx}px, ${dy}px)`);
+}
+
+function isInsideTarget(target) { return mover.parentElement == target; }
+
+function isMoving() { return mover.classList.contains('move'); }
+
+export default { init, cleanup };
+

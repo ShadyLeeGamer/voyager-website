@@ -41,43 +41,37 @@
         <link rel="stylesheet" href="assets/css/global.css"/>
 		<link rel="stylesheet" href="assets/css/green-screen-production.css"/>
         <!-- Reusable Elements -->
-		<link rel="stylesheet" href="assets/css/other-header.css"/>
+		<link rel="stylesheet" href="assets/css/other-page.css"/>
 		<link rel="stylesheet" href="assets/css/panel-3d.css"/>
         <!-- Overrites -->
 		<link rel="stylesheet" href="assets/css/display-overrite.css"/>
 
     </head>
-    <body>
-        <div id="preloader-container" class="transition-fade"></div>
-
-        <div id="cursor-glow-wrapper" class="thin-desktop desktop">
-            <div id="cursor-glow" class="thin-desktop desktop"></div>
-        </div>
-        <!-- <div class="cursor thin-desktop desktop"></div> -->
-
-        <nav id="navbar"></nav>
-
-        <div class="thin-desktop desktop">
-            <div class="side-text-left"></div>
-            <div class="side-text-right"></div>            
+    <body class="initial-loading">
+        <div id="before-main">
         </div>
 
         <main id="swup">
             <div id="header">
-                <div id="other-header">
-                    <div class="wrap">
-                        <div class="top-plane"></div>
-                        <div class="bottom-plane"></div>
-                      </div>
-                </div>
                 <div id="header-container">
-                    <h1>Green Screen Production</h1>
+                    <video id="bg-video" autoplay muted loop>
+                        <source src="assets/videos/reel.mp4" type="video/mp4">
+                    </video>
+                    <div class="middle">
+                        <img src="assets/images/other-pages/header-foreground.webp">
+                        <div id="voyager-header-target">
+                            <div id="voyager-navbar-mover">
+                                <div id="voyager"></div>
+                            </div>
+                        </div>
+                        <h1>GREEN SCREEN PRODUCTION</h1>
+                    </div>
                 </div>
             </div>
 
             <div id="body-content">
                 <div id="steps-section" class="section">
-                    <div class="heading-line scroll-transition">
+                    <div class="heading-line" scroll-transition="slide-right">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -87,80 +81,80 @@
                         <h2><span class="highlight">How</span> It Works <span class="highlight">(4 Steps)</span></h2>
                     </div>
                     <ul>
-                        <li>
+                        <li scroll-transition="slide-right">
                             <div>
                                 <div class="panel-container panel-3d">
                                     <div class="overlay panel-3d-push">
-                                        <img class="fill" src="assets/images/green-screen-production-section/panel-fill.png">
+                                        <img class="fill" src="assets/images/green-screen-production-section/panel-fill.webp">
                                     </div>
-                                    <img class="outline glow-hover" src="assets/images/green-screen-production-section/panel-outline.png">
+                                    <img class="outline glow-hover" src="assets/images/green-screen-production-section/panel-outline.webp">
                                     <div class="overlay panel-3d-pop">
-                                        <img class="decor" src="assets/images/green-screen-production-section/panel-decor.png">
+                                        <img class="decor" src="assets/images/green-screen-production-section/panel-decor.webp">
                                         <span class="step-text">step</span>
                                         <span class="step-number">01</span>
                                         <h3 class="highlight">Check Availability</h3>
                                         <span class="description">Begin by checking the availability of our greenscreen studio for your preferred date and time. Our online booking system makes it easy to see what slots are open, allowing you to plan your production with confidence.</span>
                                     </div>
                                 </div>
-                                <img class="geometry" src="assets/images/decor/geometry-1.png">
-                                <img class="media" src="assets/images/slideshow/slide-leicester.png">
+                                <img class="geometry" src="assets/images/decor/wireframes/geometry-3.webp">
+                                <img class="media" src="assets/images/slideshow/slide-leicester.webp">
                             </div>
                         </li>
-                        <li>
+                        <li scroll-transition="slide-left">
                             <div>
                                 <div class="panel-container panel-3d">
                                     <div class="overlay panel-3d-push">
-                                        <img class="fill" src="assets/images/green-screen-production-section/panel-fill.png">
+                                        <img class="fill" src="assets/images/green-screen-production-section/panel-fill.webp">
                                     </div>
-                                    <img class="outline glow-hover" src="assets/images/green-screen-production-section/panel-outline.png">
+                                    <img class="outline glow-hover" src="assets/images/green-screen-production-section/panel-outline.webp">
                                     <div class="overlay panel-3d-pop">
-                                        <img class="decor" src="assets/images/green-screen-production-section/panel-decor.png">
+                                        <img class="decor" src="assets/images/green-screen-production-section/panel-decor.webp">
                                         <span class="step-text">step</span>
                                         <span class="step-number">02</span>
                                         <h3 class="highlight">Confirm Equipment</h3>
                                         <span class="description">Once your booking is confirmed, you can select the equipment you wish to hire. We offer a range of professional-grade cameras, lighting setups, and sound gear tailored to meet the needs of your project. Simply choose the items that best fit your production requirements.</span>
                                     </div>
                                 </div>
-                                <img class="geometry" src="assets/images/decor/geometry-2.png">
-                                <img class="media" src="assets/images/slideshow/slide-leicester.png">
+                                <img class="geometry" src="assets/images/decor/wireframes/geometry-6.webp">
+                                <img class="media" src="assets/images/slideshow/slide-leicester.webp">
                             </div>
                         </li>
-                        <li>
+                        <li scroll-transition="slide-right">
                             <div>
                                 <div class="panel-container panel-3d">
                                     <div class="overlay panel-3d-push">
-                                        <img class="fill" src="assets/images/green-screen-production-section/panel-fill.png">
+                                        <img class="fill" src="assets/images/green-screen-production-section/panel-fill.webp">
                                     </div>
-                                    <img class="outline glow-hover" src="assets/images/green-screen-production-section/panel-outline.png">
+                                    <img class="outline glow-hover" src="assets/images/green-screen-production-section/panel-outline.webp">
                                     <div class="overlay panel-3d-pop">
-                                        <img class="decor" src="assets/images/green-screen-production-section/panel-decor.png">
+                                        <img class="decor" src="assets/images/green-screen-production-section/panel-decor.webp">
                                         <span class="step-text">step</span>
                                         <span class="step-number">03</span>
                                         <h3 class="highlight">Choose Support Services</h3>
                                         <span class="description">To enhance your production, you can choose from a variety of support services provided by our network of collaborators through Creative Collaborators. Whether you need assistance with camera operation, lighting, sound engineering, or creative direction, we connect you with experienced professionals who can help bring your vision to life.</span>
                                     </div>
                                 </div>
-                                <img class="geometry" src="assets/images/decor/geometry-1.png">
-                                <img class="media" src="assets/images/slideshow/slide-leicester.png">
+                                <img class="geometry" src="assets/images/decor/wireframes/geometry-5.webp">
+                                <img class="media" src="assets/images/slideshow/slide-leicester.webp">
                             </div>
                         </li>
-                        <li>
+                        <li scroll-transition="slide-left">
                             <div>
                                 <div class="panel-container panel-3d">
                                     <div class="overlay panel-3d-push">
-                                        <img class="fill" src="assets/images/green-screen-production-section/panel-fill.png">
+                                        <img class="fill" src="assets/images/green-screen-production-section/panel-fill.webp">
                                     </div>
-                                    <img class="outline glow-hover" src="assets/images/green-screen-production-section/panel-outline.png">
+                                    <img class="outline glow-hover" src="assets/images/green-screen-production-section/panel-outline.webp">
                                     <div class="overlay panel-3d-pop">
-                                        <img class="decor" src="assets/images/green-screen-production-section/panel-decor.png">
+                                        <img class="decor" src="assets/images/green-screen-production-section/panel-decor.webp">
                                         <span class="step-text">step</span>
                                         <span class="step-number">04</span>
                                         <h3 class="highlight">Production Day</h3>
                                         <span class="description">On the day of your shoot, our team will have everything prepared according to your selections. You'll have access to the greenscreen studio, the equipment you've chosen, and the support services you’ve requested, ensuring a smooth and efficient production process.</span>
                                     </div>
                                 </div>
-                                <img class="geometry" src="assets/images/decor/geometry-2.png">
-                                <img class="media" src="assets/images/slideshow/slide-leicester.png">
+                                <img class="geometry" src="assets/images/decor/wireframes/geometry-4.webp">
+                                <img class="media" src="assets/images/slideshow/slide-leicester.webp">
                             </div>
                         </li>
                     </ul>
@@ -168,27 +162,28 @@
             </div>
         </main>
  
-        <div id="footer-section" class="section"></div>
+        <div id="after-main">
+        </div>
 
         <!-- Persistent Scripts -->
-        <script rel="modulepreload" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script rel="modulepreload" src="assets/js/persistent-elements.js"></script>
         
-        <script type="module" src="assets/js/persistent-elements.js"></script>
+        <script rel="modulepreload" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script rel="modulepreload" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        
+        <script type="module" src="assets/js/main.js"></script>
 
         <script type="module" src="assets/js/db-connect.js"></script>
         <script type="module" src="assets/js/notice-board.js"></script>
         <script type="module" src="assets/js/booking-system.js"></script>
 
-        <script rel="modulepreload" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
-        <script type="module" src="assets/js/voyager-render.js"></script>
-        <script type="module" src="assets/js/voyager-navbar.js"></script>
-
         <script type="module" src="assets/js/ham-menu.js"></script>
-
-        <script type="module" src="assets/js/main.js"></script>
 
         <div id="modules">
             <script type="module" src="assets/js/loader.js"></script>
+
+            <script type="module" src="assets/js/voyager-render.js"></script>
+            <script type="module" src="assets/js/voyager-navbar.js"></script>
 
             <script type="module" src="assets/js/panel-3d.js"></script>
 

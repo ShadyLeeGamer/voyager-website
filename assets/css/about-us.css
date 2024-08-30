@@ -1,10 +1,5 @@
-#header {
-    height: 100vh;
-}
-
 #about-us-container.content-container {
-    background-image: url("../images/container/container-3.png");
-
+    background-image: url("../images/container/container-3.webp");
 }
 
 #about-us-container .content-wrapper {
@@ -14,12 +9,13 @@
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 75px;
-    padding-right: 75px;
+    margin: 0 auto;
+    max-width: 1000px;
     gap: 50px;
-    font-size: 40px;
+    font-size: 20px;
+    text-align: center;
 }
 
 #about-us-container img {
-    width: 332px;
+    width: 200px;
 }

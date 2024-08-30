@@ -40,75 +40,71 @@
         <link rel="stylesheet" href="assets/css/global.css"/>
 		<link rel="stylesheet" href="assets/css/about-us.css"/>
         <!-- Reusable Elements -->
-		<link rel="stylesheet" href="assets/css/other-header.css"/>
+		<link rel="stylesheet" href="assets/css/other-page.css"/>
         <!-- Overrites -->
 		<link rel="stylesheet" href="assets/css/display-overrite.css"/>
     </head>
-    <body>
-        <div id="preloader-container" class="transition-fade"></div>
-
-        <div id="cursor-glow-wrapper" class="thin-desktop desktop">
-            <div id="cursor-glow" class="thin-desktop desktop"></div>
-        </div>
-        <!-- <div class="cursor thin-desktop desktop"></div> -->
-
-        <nav id="navbar"></nav>
-
-        <div class="thin-desktop desktop">
-            <div class="side-text-left"></div>
-            <div class="side-text-right"></div>            
+    <body class="initial-loading">
+        <div id="before-main">
         </div>
 
         <main id="swup">
             <div id="header">
-                <div id="other-header">
-                    <div class="wrap">
-                        <div class="top-plane"></div>
-                        <div class="bottom-plane"></div>
-                      </div>
-                </div>
                 <div id="header-container">
-                    <h1>ABOUT US</h1>
+                    <video id="bg-video" autoplay muted loop>
+                        <source src="assets/videos/reel.mp4" type="video/mp4">
+                    </video>
+                    <div class="middle">
+                        <img src="assets/images/other-pages/header-foreground.webp">
+                        <div id="voyager-header-target">
+                            <div id="voyager-navbar-mover">
+                                <div id="voyager"></div>
+                            </div>
+                        </div>
+                        <h1>ABOUT US</h1>
+                    </div>
                 </div>
             </div>
 
             <div id="body-content">
                 <div class="section">
-                    <div id="about-us-container" class="content-container">
-                        <div class="content-wrapper">
+                    
+                    <div id="about-us-container">
+                        <div class="content-wrapper" scroll-transition="fade-in">
                             <span>
                                 We believe immersive media is the future of entertainment. We empower creators, influencers, and business to craft experiences that leave a lasting impact. Our greenscreen studio, combined with expert support from our Creative Collaborators network, provides everything needed to bring visionary projects to life.
                                 <br>
                                 <br>We make high-quality production accessible and streamlined, enabling you to create content that people will talk about long after the experience is over.
                             </span>
-                            <img src="assets/images/branding/voyager-logo-3.png">
+                            <img src="assets/images/branding/voyager-logo-3.webp">
                         </div>
                     </div>
                 </div>
             </div>
         </main>
  
-        <div id="footer-section" class="section"></div>
+        <div id="after-main">
+        </div>
 
         <!-- Persistent Scripts -->
-        <script rel="modulepreload" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script rel="modulepreload" src="assets/js/persistent-elements.js"></script>
         
-        <script type="module" src="assets/js/persistent-elements.js"></script>
+        <script rel="modulepreload" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script rel="modulepreload" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        
+        <script type="module" src="assets/js/main.js"></script>
 
         <script type="module" src="assets/js/db-connect.js"></script>
         <script type="module" src="assets/js/notice-board.js"></script>
         <script type="module" src="assets/js/booking-system.js"></script>
 
-        <script type="modulepreload" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
-        <script type="module" src="assets/js/voyager-render.js"></script>
-        <script type="module" src="assets/js/voyager-navbar.js"></script>
-
         <script type="module" src="assets/js/ham-menu.js"></script>
-
-        <script type="module" src="assets/js/main.js"></script>
 
         <div id="modules">
             <script type="module" src="assets/js/loader.js"></script>
+
+            <script type="module" src="assets/js/voyager-render.js"></script>
+            <script type="module" src="assets/js/voyager-navbar.js"></script>
 
             <script type="module" src="assets/js/cursor.js"></script>
         </div>

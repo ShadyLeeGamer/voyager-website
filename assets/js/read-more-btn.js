@@ -3,7 +3,7 @@ function init() {
     const container = document.querySelector(".grid-container");
     const hide = document.querySelector(".read-more-container .hide");
     const btn = document.querySelector(".read-more-btn");
-    const heightOpen = 1575;
+    const heightOpen = 1600;
     // const heightOpen = container.offsetHeight;
     const heightClosed = 780;
     

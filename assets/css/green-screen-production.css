@@ -1,19 +1,14 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 #steps-section ul {
     position: relative;
-    width: 100%;
+    width: 100vw;
+    max-width: 1440px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 0;
 }
 
 #steps-section li {
     position: relative;
-
     display: inline-block;
     width: 100%;
 }
@@ -39,12 +34,6 @@
     position: relative;
 }
 
-#steps-section .panel-container .fill {
-    /* backdrop-filter: blur(10px); */
-    /* mask: radial-gradient( circle at calc(var(--x, .5) * 100% )  calc(var(--y, .5) * 100% ), transparent 50px, red 51px); */
-    /* mask-size: 100% 100%; */
-}
-
 #steps-section .overlay {
     position: absolute;
     top: 0;
@@ -65,8 +54,8 @@
 #steps-section .panel-container .description {
     top: 50%;
     -webkit-transform: translateY(calc(-50% + 35px));
-        -ms-transform: translateY(calc(-50% + 35px));
-            transform: translateY(calc(-50% + 35px));
+    -ms-transform: translateY(calc(-50% + 35px));
+    transform: translateY(calc(-50% + 35px));
     width: 308px;
     left: 8.5%;
     font-size: 20px;
@@ -89,14 +78,14 @@
 
 #steps-section .step-text {
     font-size: 24px;
-    top: 0.5%;
-    left: 4%
+    top: 1.75%;
+    left: 4%;
 }
 
 #steps-section .step-number {
     font-size: 50px;
-    top: 3.5%;
-    left: 4%
+    top: 6.5%;
+    left: 4%;
 }
 
 #steps-section .panel-container.panel-3d {
@@ -111,12 +100,12 @@
 
 #steps-section li:nth-child(1n) .geometry {
     top: -15%;
-    left: -2.5%;
+    left: 50.5%;
 }
 
 #steps-section li:nth-child(2n) .geometry {
-    top: -25%;
-    left: -50.5%;
+    top: -15%;
+    left: -20%;
 }
 
 #steps-section li .media {
@@ -132,84 +121,82 @@
     left: 65%;
     bottom: 10%;
     -webkit-transform: perspective(800px) rotateZ(-5deg) rotateY(-35deg);
-            transform: perspective(800px) rotateZ(-5deg) rotateY(-35deg);
+    transform: perspective(800px) rotateZ(-5deg) rotateY(-35deg);
 }
 
 #steps-section li:nth-child(even) .media {
     left: -100%;
     bottom: 10%;
     -webkit-transform: perspective(800px) rotateZ(5deg) rotateY(35deg);
-            transform: perspective(800px) rotateZ(5deg) rotateY(35deg);
+    transform: perspective(800px) rotateZ(5deg) rotateY(35deg);
 }
 
 @media (min-width: 1024px) {
     #steps-section li:nth-child(odd) > div {
-        float: left;
-        margin-left: 100px;
+    float: left;
+    margin-left: 100px;
     }
 
     #steps-section li:nth-child(even) > div {
-        float: right;
-        margin-right: 100px;
+    float: right;
+    margin-right: 100px;
     }
 }
 
 @media (max-width: 1024px) {
     #steps-section ul {
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     }
-    
+
     #steps-section li {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        place-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-content: center;
     }
 
     #steps-section li > div {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        /* left: 50%; */
-        /* transform: translateX(-50%); */
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     }
 
     #steps-section li:nth-child(odd) .media,
     #steps-section li:nth-child(even) .media {
-        position: relative;
-        top: -35px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
-        width: 400px;
+    position: relative;
+    top: -35px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    width: 400px;
     }
 }
 
 @media (max-width: 430px) {
     #steps-section li > div {
-        scale: 0.8;
+    scale: 0.8;
     }
 }

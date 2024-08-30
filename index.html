@@ -44,196 +44,30 @@
         <!-- Overrites -->
         <link rel="stylesheet" href="assets/css/display-overrite.css"/>
     </head>
-    <body>
-        <div id="preloader-container" class="transition-fade">
-            <img src="assets/gifs/loading.gif" alt="this slowpoke moves"  width="250" />
-        </div>
-
-        <div id="cursor-glow-wrapper" class="thin-desktop desktop">
-            <div id="cursor-glow" class="thin-desktop desktop"></div>
-        </div>
-        <!-- <div class="cursor thin-desktop desktop"></div> -->
-
-        <!-- Popups -->
-        <form id="booking-form" class="popup">
-            <div class="content-container">
-                <div class="form-wrapper">
-                    <div class="close-btn glow-hover"></div>
-
-                    <img src="assets/images/branding/voyager-logo-3.png">
-
-                    <div class="side-decor-heading">
-                        <span></span>
-                        <h2>Aboard The List</h2>
-                        <span></span>
-                    </div>
-
-                    <div class="input-field">
-                        <input id="name" type="text" required="required">
-                        <span>Name</span>
-                    </div>
-                    <div class="input-field">
-                        <input id="email" type="email" required="required">
-                        <span>Email</span>
-                    </div>
-                    <div class="input-field">
-                        <input id="phone-number" type="number" required="required">
-                        <span>Phone Number</span>
-                    </div>
-
-                    <a class="btn submit glow-hover" href="#">
-                        <img src="assets/images/btns/btn-3-contained.png">
-                        <span>Book Now</span>
-                    </a>
-                </div>
-            </div>
-        </form>
-
-        <nav id="navbar">
-            <div id="voyager-navbar-target">
-            </div>
-            <div class="desktop thin-desktop">
-                <a class="navbar-logo" href="index.html">
-                    <img src="assets/images/branding/voyager-logo-1.png">
-                </a>
-                <!-- <img class="navbar-bg" src="assets/images/navbar/navbar.png"> -->
-                <div class="navbar-bg">
-                    <img class="navbar-bg-left" src="assets/images/navbar/navbar-left.png">
-                    <img class="navbar-bg-right" src="assets/images/navbar/navbar-right.png">
-                </div>
-                <div class="notice-board">
-                    <span>NOTICE BOARD</span>
-                    <div class="list-wrapper">
-                        <ul>
-                            <li>
-                                Voyager launches on September 20th
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="navbar-tab-container">
-                    <a class="glow-hover" href="about-us.html">About</a>
-                    <div class="dropdown">
-                        <button class="dropbtn"><a href="#service-section">Services</a></button>
-                        <div class="dropdown-content">
-                            <a class="glow-hover" href="about-us.html">Virtual Exhibits</a>
-                            <a class="glow-hover" href="#project-section">Immersive/3D Website</a>
-                            <a class="glow-hover" href="#footer-section">Virtual Experiences</a>
-                            <a class="glow-hover" href="#footer-section">Augmented Reality (AR)</a>
-                            <a class="glow-hover" href="#footer-section">Mobile Apps</a>
-                            <a class="glow-hover" href="green-screen-production.html">Green Screen Production</a>
-                        </div>
-                        <img src="assets/images/dropdown/icon.png">
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn main"><a href="#project-section">Podcasts</a></button>
-                        <div class="dropdown-content">
-                            <a class="glow-hover" href="about-us.html">Interactive Development</a>
-                            <a class="glow-hover" href="#project-section">Podcasts</a>
-                            <a class="glow-hover" href="#footer-section">Custom Projects</a>
-                        </div>
-                        <img src="assets/images/dropdown/icon.png">
-                    </div>
-                    <a class="glow-hover" href="#slideshow-section">Gallery</a>
-                    <a class="glow-hover" href="#footer-section">Contact</a>
-                </div>
-            </div>
-            <div class="mobile">
-                <div class="off-screen-menu">
-                    <div class="off-screen-menu-content">
-                        <div class="navbar-tab-container">
-                            <a class="navbar-tab glow-hover" href="about-us.html">About</a>
-                            <a class="navbar-tab glow-hover" href="#project-section">Services</a>
-                            <a class="navbar-tab glow-hover" href="#footer-section">Contact</a>
-                        </div>
-                        <img class="white-bar" src="assets/images/decor/white-line.png">
-                        <div class="details-container">
-                            <div class="contact">
-                                <h4>Contact</h4>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/contact/contact-location.png">
-                                        <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/contact/contact-phone.png">
-                                        <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/contact/contact-email.png">
-                                        <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="opening-hours">
-                                <h4>Opening Hours</h4>
-                                <ul>
-                                    <li><span class="week">Mon</span>00:00 - 00:00</li>
-                                    <li><span class="week">Tue</span>00:00 - 00:00</li>
-                                    <li><span class="week">Wed</span>00:00 - 00:00</li>
-                                    <li><span class="week">Thu</span>00:00 - 00:00</li>
-                                    <li><span class="week">Fri</span>00:00 - 00:00</li>
-                                    <li><span class="week">Sat</span>00:00 - 00:00</li>
-                                    <li><span class="week">Sun</span>00:00 - 00:00</li>
-                                </ul>
-                            </div>
-                        </div>
-        
-                    </div>
-                </div>
-                <div class="navbar-bg repeat-bar"></div>
-                <a class="navbar-logo" href="index.html">
-                    <img src="assets/images/branding/voyager-logo-1.png">
-                </a>
-                <div class="ham-menu glow-hover">
-                    <img src="assets/images/navbar/mobile/hamburger-bar.png">
-                    <img src="assets/images/navbar/mobile/hamburger-bar.png">
-                    <img src="assets/images/navbar/mobile/hamburger-bar.png">
-                </div>
-                <!-- <div class="language-dropdown glow-hover">
-                    EN
-                    <img src="assets/images/navbar/mobile/dropdown-icon.png">
-                </div> -->
-            </div>
-        </nav>
-
-        <div class="thin-desktop desktop">
-            <div class="side-text-left"></div>
-            <div class="side-text-right"></div>            
+    <body class="initial-loading">
+        <div id="before-main">
         </div>
 
         <main id="swup">
             <div id="header">
                 <div id="header-container">
-                    <!-- <img id="header-media" src="assets/images/oasis..jpeg"> -->
                     <video id="bg-video" autoplay muted loop>
                         <source src="assets/videos/reel.mp4" type="video/mp4">
                     </video>
+                    <img class="border" src="assets/images/slideshow/outline.webp">
+                    <div class="middle" scroll-transition="slide-up">
+                        <img src="assets/images/header-section/middle-bg.webp">
 
-                    <div id="voyager-header-target">
-                        <div id="voyager-navbar-mover">
-                            <div id="voyager"></div>
+                        <div id="voyager-header-target">
+                            <div id="voyager-navbar-mover">
+                                <div id="voyager"></div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="decor-container">
                         <h2 class="catchphrase thin-desktop desktop">REALITY REIMAGINED</h2>
-                        <a class="btn book-now glow-hover">
-                            <img src="assets/images/btns/btn-3-contained.png">
+                        <a class="btn book-now glow-hover thin-desktop desktop">
+                            <img src="assets/images/btns/btn-3-contained.webp">
                             <span>Book Now</span>
                         </a>
-                        <div class="mouse-move-parallax" parallax-offset="8">
-                            <!-- <div class="panel-item desktop thin-desktop">
-                                <img class="panel-item-img" src="assets/images/header-section/panel-img.png">
-                                <img class="panel-item-outline" src="assets/images/header-section/panel-outline.png">
-                                <div class="panel-item-overlay">
-                                    <a class="btn book-now glow-hover">
-                                        <img src="assets/images/btns/btn-3-contained.png">
-                                        <span>Book Now</span>
-                                    </a>
-                                </div>
-                            </div> -->
-                        </div>
                         <div class="mouse-move-parallax" parallax-offset="15">
                             <span id="header-bg-text-1">VOYAGER X  VIDEO<br>VOLUMETRIC CAPTURE<br>3D VIRTUAL CONTENT<br>CREATIVE COLLABS</span>
                         </div>
@@ -248,7 +82,7 @@
                 <div id="header-outside" class="mobile">
                     <h2 class="catchphrase mobile">REALITY REIMAGINED</h2>
                     <a class="btn book-now glow-hover mobile">
-                        <img src="assets/images/btns/mobile/book-now.png">
+                        <img data-src="assets/images/btns/mobile/book-now.webp">
                         <span>Book Now</span>
                     </a>
                 </div>
@@ -256,33 +90,28 @@
                 <div id="client-section" class="section">
                     <div class="bg repeat-bar mobile"></div>
                     <div class="section-divider top repeat-bar"></div>
-                    <div class="client-btn-container">
-                        <a class="client-btn scroll-transition" href="https://www.dmu.ac.uk/home.aspx" target="_blank">
-                            <img class="hovered" src="assets/images/clients/dmu-colour.png">
-                            <img class="unhovered" src="assets/images/clients/dmu-mono.png">
+                    <div class="client-btn-container" scroll-transition-list="200" scroll-transition="slide-right">
+                        <a class="client-btn" href="https://www.dmu.ac.uk/home.aspx" target="_blank">
+                            <img data-src="assets/images/clients/dmu-colour.webp">
                         </a>
-                        <a class="client-btn scroll-transition" href="https://www.creativecollaborators.co.uk/" target="_blank">
-                            <img class="hovered" src="assets/images/clients/creative-collaborators-colour.png">
-                            <img class="unhovered" src="assets/images/clients/creative-collaborators-mono.png">
+                        <a class="client-btn" href="https://www.creativecollaborators.co.uk/" target="_blank">
+                            <img data-src="assets/images/clients/creative-collaborators-colour.webp">
                         </a>
-                        <a class="client-btn scroll-transition" href="https://www.everythingbranded.co.uk/" target="_blank">
-                            <img class="hovered" src="assets/images/clients/everything-branded-colour.png">
-                            <img class="unhovered" src="assets/images/clients/everything-branded-mono.png">
+                        <a class="client-btn" href="https://www.everythingbranded.co.uk/" target="_blank">
+                            <img data-src="assets/images/clients/everything-branded-colour.webp">
                         </a>
-                        <a class="client-btn scroll-transition" href="https://lcbdepot.co.uk/" target="_blank">
-                            <img class="hovered" src="assets/images/clients/lcb-colour.png">
-                            <img class="unhovered" src="assets/images/clients/lcb-mono.png">
+                        <a class="client-btn" href="https://lcbdepot.co.uk/" target="_blank">
+                            <img data-src="assets/images/clients/lcb-colour.webp">
                         </a>
-                        <a class="client-btn scroll-transition" href="https://www.hqrecording.co.uk/" target="_blank">
-                            <img class="hovered" src="assets/images/clients/hq-recording-studio-colour.png">
-                            <img class="unhovered" src="assets/images/clients/hq-recording-studio-mono.png">
+                        <a class="client-btn" href="https://www.hqrecording.co.uk/" target="_blank">
+                            <img data-src="assets/images/clients/hq-recording-studio-colour.webp">
                         </a>
                     </div>
                     <div class="section-divider bottom repeat-bar"></div>
                 </div>
 
                 <div id="project-section" class="section">
-                    <div class="heading-line scroll-transition">
+                    <div class="heading-line" scroll-transition="slide-right">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -293,73 +122,75 @@
                     </div>
     
                     <div class="content-container">
+                        <img class="geometry" data-src="assets/images/decor/wireframes/geometry-3.webp">
+                        <img class="geometry" data-src="assets/images/decor/wireframes/geometry-4.webp">
                         <div class="project-container slider-container">
                             <button class="prev-btn">
-                                <img src="assets/images/slider/btn-arrow-prev.png">
-                                <img src="assets/images/slider/btn-arrow-prev.png">
+                                <img data-src="assets/images/slider/btn-arrow-prev.webp">
+                                <img data-src="assets/images/slider/btn-arrow-prev.webp">
                             </button>
                             <button class="next-btn">
-                                <img src="assets/images/slider/btn-arrow-next.png">
-                                <img src="assets/images/slider/btn-arrow-next.png">
+                                <img data-src="assets/images/slider/btn-arrow-next.webp">
+                                <img data-src="assets/images/slider/btn-arrow-next.webp">
                             </button>
-                            <img class="wire-decor" src="assets/images/decor/wires-top.png">
-                            <div id="project-slider">
+                            <img class="wire-decor" data-src="assets/images/decor/wires-top.webp">
+                            <div id="project-slider" scroll-transition="slide-up">
                                 <div class="column">
-                                    <img class="wire-decor" src="assets/images/decor/wires-top.png">
+                                    <img class="wire-decor" data-src="assets/images/decor/wires-top.webp">
                                     <div class="panel-item panel-3d">
-                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
-                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
+                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.webp">
+                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.webp">
                                         <div class="panel-item-overlay panel-3d-pop">
                                             <h4>Virtual Worlds</h4>
                                             <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
                                             <a href="#" class="btn">
-                                                <img src="assets/images/btns/btn-3-contained.png">
+                                                <img data-src="assets/images/btns/btn-3-contained.webp">
                                                 <span>READ MORE</span>
                                             </a>
                                         </div>
                                     </div>
-                                    <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                                    <img class="wire-decor" data-src="assets/images/decor/wires-bottom.webp">
                                 </div>
                                 <div class="column">
-                                    <img class="wire-decor" src="assets/images/decor/wires-top.png">
+                                    <img class="wire-decor" data-src="assets/images/decor/wires-top.webp">
                                     <div class="panel-item panel-3d">
-                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
-                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
+                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.webp">
+                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.webp">
                                         <div class="panel-item-overlay panel-3d-pop">
                                             <h4>Podcasts</h4>
                                             <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
                                             <a href="#" class="btn">
-                                                <img src="assets/images/btns/btn-3-contained.png">
+                                                <img data-src="assets/images/btns/btn-3-contained.webp">
                                                 <span>READ MORE</span>
                                             </a>
                                         </div>
                                     </div>
-                                    <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                                    <img class="wire-decor" data-src="assets/images/decor/wires-bottom.webp">
                                 </div>
                                 <div class="column">
-                                    <img class="wire-decor" src="assets/images/decor/wires-top.png">
+                                    <img class="wire-decor" data-src="assets/images/decor/wires-top.webp">
                                     <div class="panel-item panel-3d">
-                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.png">
-                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.png">
+                                        <img class="panel-item-img panel-3d-push" src="assets/images/project-section/panel-img.webp">
+                                        <img class="panel-item-outline glow-hover" src="assets/images/project-section/panel-outline.webp">
                                         <div class="panel-item-overlay panel-3d-pop">
                                             <h4>Virtual Production</h4>
                                             <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. Molestie nostra curabitur faucibus accumsan purus mus molestie. </span>
                                             <a href="#" class="btn">
-                                                <img src="assets/images/btns/btn-3-contained.png">
+                                                <img data-src="assets/images/btns/btn-3-contained.webp">
                                                 <span>READ MORE</span>
                                             </a>
                                         </div>
                                     </div>
-                                    <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                                    <img class="wire-decor" data-src="assets/images/decor/wires-bottom.webp">
                                 </div>
                             </div>
-                            <img class="wire-decor" src="assets/images/decor/wires-bottom.png">
+                            <img class="wire-decor" data-src="assets/images/decor/wires-bottom.webp">
                         </div>
                     </div>
                 </div>
     
-                <div id="service-section" class="section scroll-transition">
-                    <div class="heading-line scroll-transition">
+                <div id="service-section" class="section" scroll-transition="slide-up">
+                    <div class="heading-line" scroll-transition="slide-right">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -368,9 +199,9 @@
                         <span></span>
                         <h2><span class="highlight">Our</span> Services</h2>
                     </div>
-                    <div class="content-container">
-                        <div class="grid-container">
-                            <a class="grid-item panel-3d scroll-transition" href="green-screen-production.html">
+                    <ul class="grid-container" scroll-transition-list="200" scroll-transition="slide-up">
+                        <li>
+                            <a class="grid-item panel-3d" href="green-screen-production.html">
                                 <div class="service-img panel-3d-push"></div>
                                 <div class="grid-item-bg glow-hover"></div>
                                 <div class="grid-item-decor panel-3d-pop"></div>
@@ -378,7 +209,9 @@
                                 <h3 class="panel-3d-pop highlight">Green Screen Production</h3>
                                 <span class="description panel-3d-pop">Elevate your content creation with our professional greenscreen production services. Whether for video content, live events, or virtual environments, we provide the expertise to bring your vision to life.</span>
                             </a>
-                            <a class="grid-item panel-3d scroll-transition">
+                        </li>
+                        <li>
+                            <a class="grid-item panel-3d">
                                 <div class="service-img panel-3d-push"></div>
                                 <div class="grid-item-bg glow-hover"></div>
                                 <div class="grid-item-decor panel-3d-pop"></div>
@@ -386,15 +219,19 @@
                                 <h3 class="panel-3d-pop highlight">Virtual Exhibits</h3>
                                 <span class="description panel-3d-pop">Step into the future of exhibitions. Our virtual exhibits offer an interactive platform where your audience can explore curated spaces, view artwork or products, and engage with content in a fully immersive environment.</span>
                             </a>
-                            <a class="grid-item panel-3d scroll-transition">
+                        </li>
+                        <li>
+                            <a class="grid-item panel-3d">
                                 <div class="service-img panel-3d-push"></div>
                                 <div class="grid-item-bg glow-hover"></div>
                                 <div class="grid-item-decor panel-3d-pop"></div>
                                 <span class="service-no panel-3d-pop">03</span>
                                 <h3 class="panel-3d-pop highlight">Virtual Experiences</h3>
-                                <span class="description panel-3d-pop">Whether it's a virtual event, a product launch, or a digital tour, we craft virtual experiences that resonate with your audience, offering unparalleled levels of interaction and engagement asd d.</span>
+                                <span class="description panel-3d-pop">Whether it's a virtual event, a product launch, or a digital tour, we craft virtual experiences that resonate with your audience, offering unparalleled levels of interaction and engagement.</span>
                             </a>
-                            <a class="grid-item panel-3d scroll-transition">
+                        </li>
+                        <li>
+                            <a class="grid-item panel-3d">
                                 <div class="service-img panel-3d-push"></div>
                                 <div class="grid-item-bg glow-hover"></div>
                                 <div class="grid-item-decor panel-3d-pop"></div>
@@ -402,7 +239,9 @@
                                 <h3 class="panel-3d-pop highlight">Augmented Reality (AR)</h3>
                                 <span class="description panel-3d-pop">Enhance your real-world interactions with our innovative AR solutions. From product visualisation to interactive marketing campaigns, our AR services bring digital elements into the physical world, creating a seamless and engaging user experience.</span>
                             </a>
-                            <a class="grid-item panel-3d scroll-transition">
+                        </li>
+                        <li>
+                            <a class="grid-item panel-3d">
                                 <div class="service-img panel-3d-push"></div>
                                 <div class="grid-item-bg glow-hover"></div>
                                 <div class="grid-item-decor panel-3d-pop"></div>
@@ -410,7 +249,9 @@
                                 <h3 class="panel-3d-pop highlight">Mobile Apps</h3>
                                 <span class="description panel-3d-pop">We design and develop mobile applications that integrate immersive technologies, making it easy for users to connect with your brand anytime, anywhere.</span>
                             </a>
-                            <a class="grid-item panel-3d scroll-transition">
+                        </li>
+                        <li>
+                            <a class="grid-item panel-3d">
                                 <div class="service-img panel-3d-push"></div>
                                 <div class="grid-item-bg glow-hover"></div>
                                 <div class="grid-item-decor panel-3d-pop"></div>
@@ -418,41 +259,41 @@
                                 <h3 class="panel-3d-pop highlight">Immersive/3D Websites</h3>
                                 <span class="description panel-3d-pop">Take your online presence to the next level with our immersive 3D websites. These digital spaces are designed to captivate and engage visitors, providing them with a memorable and interactive browsing experience.</span>
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                     <div class="read-more-container mobile">
-                        <div class="hide" src="assets/images/service-section/mobile/read-more-hide.png"></div>
+                        <div class="hide" data-src="assets/images/service-section/mobile/read-more-hide.webp"></div>
                         <div class="divider repeat-bar"></div>
                         <button class="read-more-btn"></button>
                     </div>
                 </div>
     
-                <div id="slideshow-section" class="section">
+                <div id="slideshow-section" class="section" scroll-transition="fade-in">
                     <div class="section-divider top repeat-bar"></div>
                     
                     <div class="slider-img-bg"></div>
-                    <img class="slider-img-bg-overlay" src="assets/images/slideshow/outline-sides.png">
+                    <img class="slider-img-bg-overlay" data-src="assets/images/slideshow/outline-sides.webp">
     
                     <div class="slideshow-container slider-container">
                         <div class="thin-desktop desktop">
-                            <img class="outline" src="assets/images/slideshow/outline.png">
+                            <img class="outline" data-src="assets/images/slideshow/outline.webp">
                             <h2>CAPTION</h2>
                             <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                         </div>
                         <button class="prev-btn">
-                            <img src="assets/images/slider/btn-arrow-prev.png">
-                            <img src="assets/images/slider/btn-arrow-prev.png">
+                            <img data-src="assets/images/slider/btn-arrow-prev.webp" data-src="">
+                            <img data-src="assets/images/slider/btn-arrow-prev.webp">
                         </button>
                         <button class="next-btn">
-                            <img src="assets/images/slider/btn-arrow-next.png">
-                            <img src="assets/images/slider/btn-arrow-next.png">
+                            <img data-src="assets/images/slider/btn-arrow-next.webp">
+                            <img data-src="assets/images/slider/btn-arrow-next.webp">
                         </button>
                         <div id="slideshow-slider">
                             <div class="slide">
-                                <img src="assets/images/slideshow/slide-leicester.png">
+                                <img data-src="assets/images/slideshow/slide-leicester.webp">
                             </div>
                             <div class="slide">
-                                <img src="assets/images/bg.png">
+                                <img data-src="assets/images/bg.webp">
                             </div>
                         </div>
                     </div>
@@ -460,8 +301,8 @@
                     <div class="section-divider bottom repeat-bar"></div>
                 </div>
                 
-                <div id="testimonial-section" class="section">
-                    <div class="heading-line scroll-transition">
+                <div id="testimonial-section" class="section" scroll-transition="slide-up">
+                    <div class="heading-line" scroll-transition="slide-right">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -472,41 +313,41 @@
                     </div>
                     <div class="slider-container">
                         <button class="prev-btn">
-                            <img src="assets/images/slider/btn-arrow-prev.png">
-                            <img src="assets/images/slider/btn-arrow-prev.png">
+                            <img data-src="assets/images/slider/btn-arrow-prev.webp">
+                            <img data-src="assets/images/slider/btn-arrow-prev.webp">
                         </button>
                         <button class="next-btn">
-                            <img src="assets/images/slider/btn-arrow-next.png">
-                            <img src="assets/images/slider/btn-arrow-next.png">
+                            <img data-src="assets/images/slider/btn-arrow-next.webp">
+                            <img data-src="assets/images/slider/btn-arrow-next.webp">
                         </button>
                         <div id="testimonial-slider">
                             <div class="card panel-3d">
-                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.webp">
                                 <h4 class="highlight panel-3d-pop">Anonymous</h4>
                                 <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                             </div>
                             <div class="card panel-3d">
-                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.webp">
                                 <h4 class="highlight panel-3d-pop">Anonymous</h4>
                                 <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                             </div>
                             <div class="card panel-3d">
-                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.webp">
                                 <h4 class="highlight panel-3d-pop">Anonymous</h4>
                                 <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                             </div>
                             <div class="card panel-3d">
-                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.webp">
                                 <h4 class="highlight panel-3d-pop">Anonymous</h4>
                                 <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                             </div>
                             <div class="card panel-3d">
-                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.webp">
                                 <h4 class="highlight panel-3d-pop">Anonymous</h4>
                                 <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                             </div>
                             <div class="card panel-3d">
-                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.png">
+                                <img class="card-outline" src="assets/images/testimonal-section/panel-outline.webp">
                                 <h4 class="highlight panel-3d-pop">Anonymous</h4>
                                 <span class="panel-3d-pop">Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                             </div>
@@ -516,87 +357,29 @@
             </div>
         </main>
  
-        <div id="footer-section" class="section">
-            <div id="footer-bg"></div>
-            <div id="footer-cta">
-                <div id="booking">
-                    <img id="footer-logo" src="assets/images/branding/voyager-logo-2.png">
-                    <a class="btn book-now glow-hover">
-                        <img src="assets/images/btns/btn-3-contained.png">
-                        <span>BOOK NOW</span>
-                    </a>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a class="glow-hover" href="#service-section">About</a></li>
-                        <li><a class="glow-hover" href="#project-section">Voycasts</a></li>
-                        <li><a class="glow-hover" href="#project-section">Interactive Development</a></li>
-                        <li><a class="glow-hover" href="#project-section">Custom Projects</a></li>
-                        <li><a class="glow-hover" href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="opening-hours">
-                    <h4>Opening Hours</h4>
-                    <ul>
-                        <li><span class="week">Mon</span>00:00 - 00:00</li>
-                        <li><span class="week">Tue</span>00:00 - 00:00</li>
-                        <li><span class="week">Wed</span>00:00 - 00:00</li>
-                        <li><span class="week">Thu</span>00:00 - 00:00</li>
-                        <li><span class="week">Fri</span>00:00 - 00:00</li>
-                        <li><span class="week">Sat</span>00:00 - 00:00</li>
-                        <li><span class="week">Sun</span>00:00 - 00:00</li>
-                    </ul>
-                </div>
-                <div class="contact">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li>
-                            <img src="assets/images/contact/contact-location.png">
-                            <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
-                        </li>
-                        <li>
-                            <img src="assets/images/contact/contact-phone.png">
-                            <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
-                        </li>
-                        <li>
-                            <img src="assets/images/contact/contact-email.png">
-                            <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li><span class="week">Mon</span>00:00 - 00:00</li>
-                        <li><span class="week">Tue</span>00:00 - 00:00</li>
-                        <li><span class="week">Wed</span>00:00 - 00:00</li>
-                        <li><span class="week">Thu</span>00:00 - 00:00</li>
-                        <li><span class="week">Fri</span>00:00 - 00:00</li>
-                        <li><span class="week">Sat</span>00:00 - 00:00</li>
-                        <li><span class="week">Sun</span>00:00 - 00:00</li>
-                    </ul>
-                </div>
-            </div>
+        <div id="after-main">
         </div>
 
         <!-- Persistent Scripts -->
-        <script rel="modulepreload" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script rel="modulepreload" src="assets/js/persistent-elements.js"></script>
         
-        <script type="module" src="assets/js/persistent-elements.js"></script>
+        <script rel="modulepreload" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script rel="modulepreload" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        
+        <script type="module" src="assets/js/main.js"></script>
 
         <script type="module" src="assets/js/db-connect.js"></script>
         <script type="module" src="assets/js/notice-board.js"></script>
         <script type="module" src="assets/js/booking-system.js"></script>
 
-        <script type="module" src="assets/js/voyager-render.js"></script>
-        <script type="module" src="assets/js/voyager-navbar.js"></script>
-
         <script type="module" src="assets/js/ham-menu.js"></script>
-
-        <script type="module" src="assets/js/main.js"></script>
 
         <div id="modules">
             <script type="module" src="assets/js/loader.js"></script>
 
-            <script rel="modulepreload" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script type="module" src="assets/js/voyager-render.js"></script>
+            <script type="module" src="assets/js/voyager-navbar.js"></script>
+
             <script type="module" src="assets/js/slider-inits/index-sliders.js"></script>
     
             <script type="module" src="assets/js/panel-3d.js"></script>
