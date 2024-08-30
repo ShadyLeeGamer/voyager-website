@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 body {
 	background: #000;
 }
@@ -19,7 +26,8 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	pointer-events: none;
 	left: 0;
 	top: 0;
@@ -27,12 +35,21 @@ body {
 
 #header .middle {
 	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	width: 100%;
 	height: 100%;
-	align-items: center;
-	justify-content: end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: end;
 	z-index: 1;
 }
 
@@ -40,25 +57,51 @@ body {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
 }
+
+/* #header-container > .middle {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    z-index: 1;
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+#header-container > .middle > img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    translate: 0 20px;
+} */
 
 #header h1 {
 	position: relative;
 	z-index: 1;
 	font-size: 50px;
 	padding-bottom: 15px;
+	text-align: center;
 }
 
 #voyager-header-target {
-	transform: translateY(50px);
+	-webkit-transform: translateY(50px);
+	    -ms-transform: translateY(50px);
+	        transform: translateY(50px);
 }
 
 #header::before {
 	position: absolute;
 	content: "";
 	bottom: 0;
-	transform: translateY(calc(100% - 1px));
+	-webkit-transform: translateY(calc(100% - 1px));
+	    -ms-transform: translateY(calc(100% - 1px));
+	        transform: translateY(calc(100% - 1px));
 	width: 100%;
 	height: 50px;
 	background-color: #000;
@@ -69,9 +112,13 @@ body {
 	position: absolute;
 	content: "";
 	bottom: 0;
-	transform: translateY(calc(48px + 100%));
+	-webkit-transform: translateY(calc(48px + 100%));
+	    -ms-transform: translateY(calc(48px + 100%));
+	        transform: translateY(calc(48px + 100%));
 	width: 100%;
 	height: 100px;
+	background: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+	background: -o-linear-gradient(black, transparent);
 	background: linear-gradient(black, transparent);
 	z-index: 1;
 }

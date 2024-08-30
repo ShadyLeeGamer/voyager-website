@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .slideshow-container {
     position: relative;
     margin: 0 auto;
@@ -50,13 +57,17 @@
 .slideshow-container .prev-btn {
     top: 50%;
     left: 0.8%;
-    transform: translateY(calc(-50% + 4px));
+    -webkit-transform: translateY(calc(-50% + 4px));
+        -ms-transform: translateY(calc(-50% + 4px));
+            transform: translateY(calc(-50% + 4px));
 }
 
 .slideshow-container .next-btn {
     top: 50%;
     right: -0.3%;
-    transform: translateY(calc(-50% + 3px));
+    -webkit-transform: translateY(calc(-50% + 3px));
+        -ms-transform: translateY(calc(-50% + 3px));
+            transform: translateY(calc(-50% + 3px));
 }
 
 @media (max-width: 1440px) {

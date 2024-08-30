@@ -5,13 +5,17 @@ hamMenu.addEventListener('click', () => {
     offScreenMenu.classList.toggle('active');
 });
 
-const navTabs = offScreenMenu.querySelectorAll('.navbar-tab');
+const navTabs = offScreenMenu.querySelectorAll('.navbar-tab-container > *');
 navTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        if (hamMenu.classList.contains('active'))
-        {
-            hamMenu.classList.remove('active');
-            offScreenMenu.classList.remove('active');
-        }
-    });
+    tab.addEventListener('click', closeMenu);
 });
+
+document.querySelector('.mobile .navbar-logo').addEventListener('click', closeMenu);
+
+function closeMenu() {
+    if (hamMenu.classList.contains('active'))
+    {
+        hamMenu.classList.remove('active');
+        offScreenMenu.classList.remove('active');
+    }
+}

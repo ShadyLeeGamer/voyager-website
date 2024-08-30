@@ -96,28 +96,61 @@ const beforeMainHtml =
         <div class="off-screen-menu">
             <div class="off-screen-menu-content">
                 <div class="navbar-tab-container">
-                    <a class="navbar-tab glow-hover" href="about-us.html">About</a>
-                    <a class="navbar-tab glow-hover" href="#project-section">Services</a>
-                    <a class="navbar-tab glow-hover" href="#footer-section">Contact</a>
+                    <a class="glow-hover" href="about-us.html">About</a>
+                    <div class="dropdown">
+                        <button class="dropbtn"><a href="index.html#service-section">Services</a></button>
+                        <div class="dropdown-content">
+                            <a class="glow-hover" href="about-us.html">Virtual Exhibits</a>
+                            <a class="glow-hover" href="#project-section">Immersive/3D Website</a>
+                            <a class="glow-hover" href="#footer-section">Virtual Experiences</a>
+                            <a class="glow-hover" href="#footer-section">Augmented Reality (AR)</a>
+                            <a class="glow-hover" href="#footer-section">Mobile Apps</a>
+                            <a class="glow-hover" href="green-screen-production.html">Green Screen Production</a>
+                        </div>
+                        <img src="assets/images/dropdown/icon.webp">
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn main"><a href="index.html#project-section">Podcasts</a></button>
+                        <div class="dropdown-content">
+                            <a class="glow-hover" href="about-us.html">Virtual Worlds</a>
+                            <a class="glow-hover" href="#project-section">Podcasts</a>
+                            <a class="glow-hover" href="#footer-section">Virtual Production</a>
+                        </div>
+                        <img src="assets/images/dropdown/icon.webp">
+                    </div>
+                    <a class="glow-hover" href="#slideshow-section">Gallery</a>
+                    <a class="glow-hover" href="#footer-section">Contact</a>
                 </div>
                 <img class="white-bar" data-src="assets/images/decor/white-line.webp">
                 <div class="details-container">
-                    <div class="contact">
-                        <h4>Contact</h4>
-                        <ul>
-                            <li>
-                                <img data-src="assets/images/contact/contact-location.webp">
-                                <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
-                            </li>
-                            <li>
-                                <img data-src="assets/images/contact/contact-phone.webp">
-                                <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
-                            </li>
-                            <li>
-                                <img data-src="assets/images/contact/contact-email.webp">
-                                <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
-                            </li>
-                        </ul>
+                    <div class="column">
+                        <div class="contact">
+                            <h4>Contact</h4>
+                            <ul>
+                                <li>
+                                    <img data-src="assets/images/contact/contact-location.webp">
+                                    <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
+                                </li>
+                                <li>
+                                    <img data-src="assets/images/contact/contact-phone.webp">
+                                    <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
+                                </li>
+                                <li>
+                                    <img data-src="assets/images/contact/contact-email.webp">
+                                    <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/linkedin-colour.webp"></a></li>
+                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/whatsapp-colour.webp"></a></li>
+                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/tiktok-colour.webp"></a></li>
+                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/twitter-colour.webp"></a></li>
+                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/instagram-colour.webp"></a></li>
+                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/facebook-colour.webp"></a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="opening-hours">
                         <h4>Opening Hours</h4>
