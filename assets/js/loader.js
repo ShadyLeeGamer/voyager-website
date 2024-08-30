@@ -15,7 +15,11 @@ function init() {
 
 function startObservers()
 {
-    const appearOptions = {
+    const lazyElementAppearOptions = {
+        threshold: 0.5,
+        rootMargin: "0px 0px 200px 0px"
+    };
+    const scrollTransitionAppearOptions = {
         threshold: 0.5,
         rootMargin: "0px 0px 100px 0px"
     };
@@ -24,9 +28,9 @@ function startObservers()
     const transitionElements = document.querySelectorAll('*[scroll-transition]:not([scroll-transition-list])');
     const transitionLists = document.querySelectorAll('*[scroll-transition-list]');
 
-    const LOAD_ON_SCROLL = buildObserver(appearOptions, (element) => { element.src = element.getAttribute("data-src"); });
-    const TRANSITION_ON_SCROLL = buildObserver(appearOptions, (element) => { endScrollTransition(element); });
-    const TRANSITION_LIST_ON_SCROLL = buildObserver(appearOptions, (element) => { endScrollTransitionList(element); });
+    const LOAD_ON_SCROLL = buildObserver(lazyElementAppearOptions, (element) => { element.src = element.getAttribute("data-src"); });
+    const TRANSITION_ON_SCROLL = buildObserver(scrollTransitionAppearOptions, (element) => { endScrollTransition(element); });
+    const TRANSITION_LIST_ON_SCROLL = buildObserver(scrollTransitionAppearOptions, (element) => { endScrollTransitionList(element); });
     
     lazyElements.forEach(element => {
         LOAD_ON_SCROLL.observe(element);
