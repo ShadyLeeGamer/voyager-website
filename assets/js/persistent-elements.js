@@ -88,7 +88,7 @@ const beforeMainHtml =
                 </div>
                 <img src="assets/images/dropdown/icon.webp">
             </div>
-            <a class="glow-hover" href="#slideshow-section">Gallery</a>
+            <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
             <a class="glow-hover" href="#footer-section">Contact</a>
         </div>
     </div>
@@ -118,7 +118,7 @@ const beforeMainHtml =
                         </div>
                         <img src="assets/images/dropdown/icon.webp">
                     </div>
-                    <a class="glow-hover" href="#slideshow-section">Gallery</a>
+                    <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
                     <a class="glow-hover" href="#footer-section">Contact</a>
                 </div>
                 <img class="white-bar" data-src="assets/images/decor/white-line.webp">
