@@ -65,6 +65,7 @@ body {
     margin: 0;
     font-family: "Exo 2";
     background-image: url(../images/bg.webp);
+    /* background-color: black; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -443,7 +444,8 @@ input[type="number"] {
     padding: 15px 30px;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown.hover .dropdown-content {
     opacity: 1;
     pointer-events: auto;
 }
@@ -588,8 +590,8 @@ input[type="number"] {
 
 #voyager-navbar-target {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: -17.5px;
+    left: -15px;
     width: 40px;
     height: 40px;
     z-index: 10;
@@ -599,12 +601,13 @@ input[type="number"] {
     position: relative;
     left: 0;
     top: 0;
-    width: calc(300px);
-    height: calc(300px);
+    width: 600px;
+    height: 600px;
     z-index: 4;
-    -webkit-transform: translateY(75px);
-        -ms-transform: translateY(75px);
-            transform: translateY(75px);
+    pointer-events: none;
+    -webkit-transform: translateY(225px);
+        -ms-transform: translateY(225px);
+            transform: translateY(225px);
 }
 
 #voyager-navbar-mover.move {
@@ -1565,11 +1568,32 @@ html.is-animating body {
     opacity: 1;
 }
 
+@media (min-width: 768px) {
+    [scroll-transition="slide-left"]:not([scroll-transition-list]) {
+        --slide-offset: 400px;
+        transform: translateX(var(--slide-offset));
+    }
+
+    [scroll-transition="slide-right"]:not([scroll-transition-list]) {
+        --slide-offset: -400px;
+        transform: translateX(var(--slide-offset));
+    }
+}
+
+@media (max-width: 768px) {
+    [scroll-transition="slide-left"]:not([scroll-transition-list]) {
+        --slide-offset: 200px;
+        transform: translateX(var(--slide-offset));
+    }
+
+    [scroll-transition="slide-right"]:not([scroll-transition-list]) {
+        --slide-offset: -200px;
+        transform: translateX(var(--slide-offset));
+    }
+}
+
 [scroll-transition="slide-left"]:not([scroll-transition-list]) {
     opacity: 0;
-    -webkit-transform: translateX(400px);
-        -ms-transform: translateX(400px);
-            transform: translateX(400px);
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
@@ -1586,9 +1610,6 @@ html.is-animating body {
 
 [scroll-transition="slide-right"]:not([scroll-transition-list]) {
     opacity: 0;
-    -webkit-transform: translateX(-400px);
-        -ms-transform: translateX(-400px);
-            transform: translateX(-400px);
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;

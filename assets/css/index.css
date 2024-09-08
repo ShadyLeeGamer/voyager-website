@@ -221,16 +221,16 @@
 
 #project-section .slider-container .prev-btn {
     left: 50%;
-    -webkit-transform: translateX(-190px);
-    -ms-transform: translateX(-190px);
-    transform: translateX(-190px);
+    -webkit-transform: translateX(-180px);
+    -ms-transform: translateX(-180px);
+    transform: translateX(-180px);
 }
 
 #project-section .slider-container .next-btn {
     right: 50%;
-    -webkit-transform: translateX(200px);
-    -ms-transform: translateX(200px);
-    transform: translateX(200px);
+    -webkit-transform: translateX(190px);
+    -ms-transform: translateX(190px);
+    transform: translateX(190px);
 }
 
 .panel-item {
@@ -360,9 +360,6 @@
     justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-transition: height 0.5s ease-in-out;
-    -o-transition: height 0.5s ease-in-out;
-    transition: height 0.5s ease-in-out;
     -ms-flex-line-pack: start;
     align-content: flex-start;
 }
@@ -675,8 +672,8 @@
 
 @media (max-width: 768px) {
     #voyager-header-target {
-    width: 200px;
-    height: 200px;
+    width: 1250px;
+    height: 1250px;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;

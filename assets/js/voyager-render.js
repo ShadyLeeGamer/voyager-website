@@ -1,5 +1,11 @@
-import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import * as THREE from "three";
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { vertexShader } from '../shaders/bloom/vertex-shader.js';
+import { fragmentShader } from '../shaders/bloom/fragment-shader.js';
 
 const element = document.getElementById("voyager");
 
@@ -10,23 +16,37 @@ let mouseX = width / 2;
 let mouseY = height / 2;
 let wasUnderNavbar = false;
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-camera.position.z = 0.6;
-scene.add(camera);
+const BLOOM_SCENE = 1;
+
+const bloomLayer = new THREE.Layers();
+bloomLayer.set( BLOOM_SCENE );
+
+const darkMaterial = new THREE.MeshBasicMaterial( { color: 'black' } );
+const materials = {};
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
-renderer.setSize(width, height);
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setClearColor(0x000000, 0);
+renderer.setSize(width, height);
+renderer.toneMapping = THREE.ReinhardToneMapping;
 element.appendChild(renderer.domElement);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(0, -1, 1);
-scene.add(directionalLight);
+const scene = new THREE.Scene();
 
-const ambientLight = new THREE.AmbientLight(0x333333, 1);
-scene.add(ambientLight);
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+camera.position.z = 0.6;
+camera.position.z = 1;
+scene.add(camera);
+
+const rightPointLight = new THREE.PointLight(0xe79023, 2, 100);
+rightPointLight.position.set(3, -0.6, 2);
+scene.add(rightPointLight);
+
+const leftPointLight = new THREE.PointLight(0x6e1f00, 0.5, 100);
+leftPointLight.position.set(-3, -0.6, 2);
+scene.add(leftPointLight);
+
+// const ambientLight = new THREE.AmbientLight(0x333333, 1);
+// scene.add(ambientLight);
 
 const textureCube = generateCubeMap();
 scene.environment = textureCube;
@@ -37,14 +57,60 @@ loader.load(
   'assets/models/branding/voyager.glb',
   (gltf) => {
     object = gltf.scene;
+    object.traverse((child) => {
+      if (child.isMesh) {
+        child.layers.enable(BLOOM_SCENE);
+      }
+    });
     scene.add(object);
   },
-  (xhr) => {
-  },
+  (xhr) => {},
   (error) => {
     console.error(error);
   }
 );
+
+const renderScene = new RenderPass( scene, camera );
+
+// const params = {
+//     strength: 2,
+//     radius: 1,
+//     threshold: 0.05
+//   };
+// const params = {
+//     strength: .7,
+//     radius: -5,
+//     threshold: 0.04
+//   };
+  const params = {
+    strength: 0.17,
+    radius: -40,
+    threshold: 0.04
+  };
+
+const bloomPass = new UnrealBloomPass( new THREE.Vector2( width, height ), params.strength, params.radius, params.threshold);
+
+const bloomComposer = new EffectComposer( renderer );
+bloomComposer.renderToScreen = false;
+bloomComposer.addPass( renderScene );
+bloomComposer.addPass( bloomPass );
+
+const finalPass = new ShaderPass(
+  new THREE.ShaderMaterial( {
+    uniforms: {
+      baseTexture: { value: null },
+      bloomTexture: { value: bloomComposer.renderTarget2.texture }
+    },
+    vertexShader: vertexShader,
+    fragmentShader: fragmentShader,
+    defines: {}
+  } ), 'baseTexture'
+);
+finalPass.needsSwap = true;
+
+const finalComposer = new EffectComposer( renderer );
+finalComposer.addPass(renderScene);
+finalComposer.addPass(finalPass);
 
 function generateCubeMap() {
   const images = [];
@@ -53,7 +119,7 @@ function generateCubeMap() {
   c.height = 1;
   const ctx = c.getContext("2d");
 
-  ctx.fillStyle = "#ffd20a";
+  ctx.fillStyle = "#1a1817";
   ctx.fillRect(0, 0, c.width, c.height);
 
   const whiteImage = c.toDataURL();
@@ -72,7 +138,7 @@ let rotationYSpinOffset = 0;
 
 const spinSpeed = 0.0035;
 const rotationSpeed = 0.02;
-const maxRotX = 0.3;
+const maxRotX = -0.5;
 const minRotX = -0.5;
 
 function animate() {
@@ -87,7 +153,11 @@ function animate() {
     object.rotation.y += (targetRotationY - object.rotation.y) * rotationSpeed;
   }
 
-  renderer.render(scene, camera);
+  // renderer.render(scene, camera);
+  scene.traverse( darkenNonBloomed );
+  bloomComposer.render();
+  scene.traverse( restoreMaterial );
+  finalComposer.render();
 }
 
 window.addEventListener("resize", () => {
@@ -118,6 +188,23 @@ function updateSize() {
   renderer.setSize(width, height);
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
+  bloomComposer.setSize(width, height);
+  finalComposer.setSize(width, height);
+}
+
+
+function darkenNonBloomed( obj ) {
+        if ( obj.isMesh && bloomLayer.test( obj.layers ) === false ) {
+        materials[ obj.uuid ] = obj.material;
+        obj.material = darkMaterial;
+    }
+}
+
+function restoreMaterial( obj ) {
+    if ( materials[ obj.uuid ] ) {
+        obj.material = materials[ obj.uuid ];
+        delete materials[ obj.uuid ];
+    }
 }
 
 function init() {

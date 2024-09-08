@@ -30,9 +30,7 @@ function init() {
                 };
         
                 eventListeners.push(
-                    window.addManagedEventListener(item, 'mousemove', handleMouseMove)
-                );
-                eventListeners.push(
+                    window.addManagedEventListener(item, 'mousemove', handleMouseMove),
                     window.addManagedEventListener(item, 'mouseout', handleMouseOut)
                 );
             });

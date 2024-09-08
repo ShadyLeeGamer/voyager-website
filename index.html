@@ -360,12 +360,21 @@
         <div id="after-main">
         </div>
 
-        <!-- Persistent Scripts -->
+        <!-- Persistent One-Time -->
         <script rel="modulepreload" src="assets/js/persistent-elements.js"></script>
         
         <script rel="modulepreload" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script rel="modulepreload" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.129.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/"
+              }
+            }
+        </script>
+
         <script type="module" src="assets/js/main.js"></script>
 
         <script type="module" src="assets/js/db-connect.js"></script>
@@ -375,18 +384,21 @@
         <script type="module" src="assets/js/ham-menu.js"></script>
 
         <div id="modules">
+            <!-- Persistent with Reinitialisation -->
             <script type="module" src="assets/js/loader.js"></script>
 
             <script type="module" src="assets/js/voyager-render.js"></script>
             <script type="module" src="assets/js/voyager-navbar.js"></script>
+            
+            <script type="module" src="assets/js/dropdowns.js"></script>
 
+            <script type="module" src="assets/js/cursor.js"></script>
+
+            <!-- Page Specific -->
             <script type="module" src="assets/js/slider-inits/index-sliders.js"></script>
-    
             <script type="module" src="assets/js/panel-3d.js"></script>
             <script type="module" src="assets/js/mouse-move-parallax.js"></script>
             <script type="module" src="assets/js/read-more-btn.js"></script>
-            
-            <script type="module" src="assets/js/cursor.js"></script>
         </div>
     </body>
 </html>

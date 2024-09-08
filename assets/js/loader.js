@@ -16,12 +16,12 @@ function init() {
 function startObservers()
 {
     const lazyElementAppearOptions = {
-        threshold: 0.5,
+        threshold: 0,
         rootMargin: "0px 0px 200px 0px"
     };
     const scrollTransitionAppearOptions = {
-        threshold: 0.5,
-        rootMargin: "0px 0px 100px 0px"
+        threshold: 0.25,
+        // rootMargin: "0px 0px 100px 0px"
     };
 
     const lazyElements = document.querySelectorAll('[data-src]');
@@ -66,7 +66,7 @@ function startObservers()
         for (let i = 0; i < items.length; i++) {
             setTimeout(() => {
                 endScrollTransition(items[i]);
-            }, 10 + delay * i);
+            }, 100 + delay * i);
         }
         element.removeAttribute("scroll-transition-list");
         element.removeAttribute("scroll-transition");
