@@ -14,6 +14,7 @@ function init()
 
 function cleanup()
 {
+    updateRendererSize(); // May not be necessary
     cleanupScrollAnimation();
 }
 
