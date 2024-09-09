@@ -17,7 +17,7 @@ function startObservers()
 {
     const lazyElementAppearOptions = {
         threshold: 0,
-        rootMargin: "0px 0px 200px 0px"
+        rootMargin: "0px 0px 350px 0px"
     };
     const scrollTransitionAppearOptions = {
         threshold: 0.25,

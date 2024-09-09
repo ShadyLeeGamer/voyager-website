@@ -674,9 +674,7 @@
     #voyager-header-target {
     width: 1250px;
     height: 1250px;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
+    transform: translateY(90px);
     }
 
     #voyager {
