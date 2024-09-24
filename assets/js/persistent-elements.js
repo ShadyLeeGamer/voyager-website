@@ -59,9 +59,6 @@ const beforeMainHtml =
             <span>NOTICE BOARD</span>
             <div class="list-wrapper">
                 <ul>
-                    <li>
-                        Voyager launches on September 20th
-                    </li>
                 </ul>
             </div>
         </div>
@@ -70,25 +67,23 @@ const beforeMainHtml =
             <div class="dropdown">
                 <button class="dropbtn"><a href="index.html#service-section">Services</a></button>
                 <div class="dropdown-content">
-                    <a class="glow-hover" href="about-us.html">Virtual Exhibits</a>
-                    <a class="glow-hover" href="#project-section">Immersive/3D Website</a>
-                    <a class="glow-hover" href="#footer-section">Virtual Experiences</a>
-                    <a class="glow-hover" href="#footer-section">Augmented Reality (AR)</a>
-                    <a class="glow-hover" href="#footer-section">Mobile Apps</a>
-                    <a class="glow-hover" href="green-screen-production.html">Green Screen Production</a>
+                    <a class="glow-hover" href="green-screen-production.html">Virtual Production</a>
+                    <a class="glow-hover" href="index.html">Virtual Exhibitions</a>
+                    <a class="glow-hover" href="index.html">VR Experiences</a>
+                    <a class="glow-hover" href="index.html">AR Apps</a>
+                    <a class="glow-hover" href="index.html">Imersive Web Development</a>
+                    <a class="glow-hover" href="index.html">Software & Apps</a>
                 </div>
                 <img src="assets/images/dropdown/icon.webp">
             </div>
             <div class="dropdown">
-                <button class="dropbtn main"><a href="index.html#project-section">Podcasts</a></button>
+                <button class="dropbtn main"><a href="index.html#project-section">Productions</a></button>
                 <div class="dropdown-content">
-                    <a class="glow-hover" href="about-us.html">Virtual Worlds</a>
-                    <a class="glow-hover" href="#project-section">Podcasts</a>
-                    <a class="glow-hover" href="#footer-section">Virtual Production</a>
+                    <a class="glow-hover" href="green-screen-production.html">Book Now!</a>
                 </div>
                 <img src="assets/images/dropdown/icon.webp">
             </div>
-            <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
+            <!-- <a class="glow-hover" href="index.html#slideshow-section">Gallery</a> -->
             <a class="glow-hover" href="#footer-section">Contact</a>
         </div>
     </div>
@@ -100,25 +95,23 @@ const beforeMainHtml =
                     <div class="dropdown">
                         <button class="dropbtn"><a href="index.html#service-section">Services</a></button>
                         <div class="dropdown-content">
-                            <a class="glow-hover" href="about-us.html">Virtual Exhibits</a>
-                            <a class="glow-hover" href="#project-section">Immersive/3D Website</a>
-                            <a class="glow-hover" href="#footer-section">Virtual Experiences</a>
-                            <a class="glow-hover" href="#footer-section">Augmented Reality (AR)</a>
-                            <a class="glow-hover" href="#footer-section">Mobile Apps</a>
-                            <a class="glow-hover" href="green-screen-production.html">Green Screen Production</a>
+                            <a class="glow-hover" href="green-screen-production.html">Virtual Production</a>
+                            <a class="glow-hover" href="index.html">Virtual Exhibitions</a>
+                            <a class="glow-hover" href="index.html">VR Experiences</a>
+                            <a class="glow-hover" href="index.html">AR Apps</a>
+                            <a class="glow-hover" href="index.html">Imersive Web Development</a>
+                            <a class="glow-hover" href="index.html">Software & Apps</a>
                         </div>
                         <img src="assets/images/dropdown/icon.webp">
                     </div>
                     <div class="dropdown">
                         <button class="dropbtn main"><a href="index.html#project-section">Podcasts</a></button>
                         <div class="dropdown-content">
-                            <a class="glow-hover" href="about-us.html">Virtual Worlds</a>
-                            <a class="glow-hover" href="#project-section">Podcasts</a>
-                            <a class="glow-hover" href="#footer-section">Virtual Production</a>
+                            <a class="glow-hover" href="green-screen-production.html">Book Now!</a>
                         </div>
                         <img src="assets/images/dropdown/icon.webp">
                     </div>
-                    <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
+                    <!-- <a class="glow-hover" href="index.html#slideshow-section">Gallery</a> -->
                     <a class="glow-hover" href="#footer-section">Contact</a>
                 </div>
                 <img class="white-bar" data-src="assets/images/decor/white-line.webp">
@@ -129,39 +122,36 @@ const beforeMainHtml =
                             <ul>
                                 <li>
                                     <img data-src="assets/images/contact/contact-location.webp">
-                                    <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
+                                    <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58a Granby Street, Leicester LE1 1DH</a>
                                 </li>
                                 <li>
                                     <img data-src="assets/images/contact/contact-phone.webp">
-                                    <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
+                                    <a class="glow-hover" href="tel:777-296-0308">(+44) 777 296 0308</a>
                                 </li>
                                 <li>
                                     <img data-src="assets/images/contact/contact-email.webp">
-                                    <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
+                                    <a class="glow-hover" href="mailto:connect@voyagervrlab.co.uk">connect@voyagervrlab.co.uk</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="social">
                             <ul>
-                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/linkedin-colour.webp"></a></li>
-                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/whatsapp-colour.webp"></a></li>
-                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/tiktok-colour.webp"></a></li>
-                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/twitter-colour.webp"></a></li>
-                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/instagram-colour.webp"></a></li>
-                                <li><a href="" target="_blank"><img data-src="assets/images/social-media/facebook-colour.webp"></a></li>
+                                <li><a href="https://www.linkedin.com/company/voyager-vr-lab" target="_blank"><img data-src="assets/images/social-media/linkedin-colour.webp"></a></li>
+                                <li><a href="https://www.tiktok.com/@voyager.vr" target="_blank"><img data-src="assets/images/social-media/tiktok-colour.webp"></a></li>
+                                <li><a href="https://www.instagram.com/voyager_vr_lab_uk" target="_blank"><img data-src="assets/images/social-media/instagram-colour.webp"></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="opening-hours">
                         <h4>Opening Hours</h4>
                         <ul>
-                            <li><span class="week">Mon</span>00:00 - 00:00</li>
-                            <li><span class="week">Tue</span>00:00 - 00:00</li>
-                            <li><span class="week">Wed</span>00:00 - 00:00</li>
-                            <li><span class="week">Thu</span>00:00 - 00:00</li>
-                            <li><span class="week">Fri</span>00:00 - 00:00</li>
-                            <li><span class="week">Sat</span>00:00 - 00:00</li>
-                            <li><span class="week">Sun</span>00:00 - 00:00</li>
+                            <li><span class="week">Mon</span> 8:30 AM – 5:30 PM</li>
+                            <li><span class="week">Tue</span> 8:30 AM – 5:30 PM</li>
+                            <li><span class="week">Wed</span> 8:30 AM – 5:30 PM</li>
+                            <li><span class="week">Thu</span> 8:30 AM – 5:30 PM</li>
+                            <li><span class="week">Fri</span> 8:30 AM – 5:30 PM</li>
+                            <li><span class="week">Sat</span>10:00 AM – 4:00 PM</li>
+                            <li><span class="week">Sun</span>10:00 AM – 4:00 PM</li>
                         </ul>
                     </div>
                 </div>
@@ -201,29 +191,29 @@ const afterMainHtml =
             <img id="footer-logo" data-src="assets/images/branding/voyager-logo-2.webp">
             <a class="btn book-now glow-hover">
                 <img data-src="assets/images/btns/btn-3-contained.webp">
-                <span>BOOK NOW</span>
+                <span>Book Your Slot</span>
             </a>
         </div>
         <div>
             <h4>Quick Links</h4>
             <ul>
                 <li><a class="glow-hover" href="about-us.html">About</a></li>
-                <li><a class="glow-hover" href="#project-section">Voycasts</a></li>
-                <li><a class="glow-hover" href="#project-section">Interactive Development</a></li>
-                <li><a class="glow-hover" href="#project-section">Custom Projects</a></li>
-                <li><a class="glow-hover" href="#">Contact</a></li>
+                <li><a class="glow-hover" href="#project-section">Productions</a></li>
+                <li><a class="glow-hover" href="#project-section">Virtual Reality</a></li>
+                <li><a class="glow-hover" href="#project-section">Augmented Reality</a></li>
+                <li><a class="glow-hover" href="#">Web Development</a></li>
             </ul>
         </div>
         <div class="opening-hours">
             <h4>Opening Hours</h4>
             <ul>
-                <li><span class="week">Mon</span>00:00 - 00:00</li>
-                <li><span class="week">Tue</span>00:00 - 00:00</li>
-                <li><span class="week">Wed</span>00:00 - 00:00</li>
-                <li><span class="week">Thu</span>00:00 - 00:00</li>
-                <li><span class="week">Fri</span>00:00 - 00:00</li>
-                <li><span class="week">Sat</span>00:00 - 00:00</li>
-                <li><span class="week">Sun</span>00:00 - 00:00</li>
+                <li><span class="week">Mon</span> 8:30 AM – 5:30 PM</li>
+                <li><span class="week">Tue</span> 8:30 AM – 5:30 PM</li>
+                <li><span class="week">Wed</span> 8:30 AM – 5:30 PM</li>
+                <li><span class="week">Thu</span> 8:30 AM – 5:30 PM</li>
+                <li><span class="week">Fri</span> 8:30 AM – 5:30 PM</li>
+                <li><span class="week">Sat</span>10:00 AM – 4:00 PM</li>
+                <li><span class="week">Sun</span>10:00 AM – 4:00 PM</li>
             </ul>
         </div>
         <div class="column">
@@ -232,26 +222,23 @@ const afterMainHtml =
                 <ul>
                     <li>
                         <img data-src="assets/images/contact/contact-location.webp">
-                        <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58 Granby St, Leicester LE1 1DH</a>
+                        <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58a Granby Street, Leicester LE1 1DH</a>
                     </li>
                     <li>
                         <img data-src="assets/images/contact/contact-phone.webp">
-                        <a class="glow-hover" href="tel:000-000-0000">0000 000 0000</a>
+                        <a class="glow-hover" href="tel:777-296-0308">(+44) 777 296 0308</a>
                     </li>
                     <li>
                         <img data-src="assets/images/contact/contact-email.webp">
-                        <a class="glow-hover" href="mailto:email@address.com">email@address.com</a>
+                        <a class="glow-hover" href="mailto:connect@voyagervrlab.co.uk">connect@voyagervrlab.co.uk</a>
                     </li>
                 </ul>
             </div>
             <div class="social">
                 <ul>
-                    <li><a href="" target="_blank"><img data-src="assets/images/social-media/linkedin-colour.webp"></a></li>
-                    <li><a href="" target="_blank"><img data-src="assets/images/social-media/whatsapp-colour.webp"></a></li>
-                    <li><a href="" target="_blank"><img data-src="assets/images/social-media/tiktok-colour.webp"></a></li>
-                    <li><a href="" target="_blank"><img data-src="assets/images/social-media/twitter-colour.webp"></a></li>
-                    <li><a href="" target="_blank"><img data-src="assets/images/social-media/instagram-colour.webp"></a></li>
-                    <li><a href="" target="_blank"><img data-src="assets/images/social-media/facebook-colour.webp"></a></li>
+                    <li><a href="https://www.linkedin.com/company/voyager-vr-lab" target="_blank"><img data-src="assets/images/social-media/linkedin-colour.webp"></a></li>
+                    <li><a href="https://www.tiktok.com/@voyager.vr" target="_blank"><img data-src="assets/images/social-media/tiktok-colour.webp"></a></li>
+                    <li><a href="https://www.instagram.com/voyager_vr_lab_uk" target="_blank"><img data-src="assets/images/social-media/instagram-colour.webp"></a></li>
                 </ul>
             </div>
         </div>

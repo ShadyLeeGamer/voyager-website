@@ -254,9 +254,17 @@
 
 .panel-item-img {
     position: absolute;
-    height: 98%;
+    height: 97.5%;
+    width: 94.5%;
     margin: 0 auto;
     top: 7px;
+    left: 5px;
+    object-fit: cover;
+    mask-image: url(../images/project-section/panel-img.webp);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    transition: none;
+    filter: brightness(0.5);
 }
 
 .panel-item-overlay {
@@ -304,6 +312,8 @@
     position: relative;
     width: 100%;
     z-index: 1;
+    margin-top: 60px;
+    padding: 0;
 }
 
 #slideshow-section .slider-img-bg {
@@ -410,6 +420,7 @@
 #client-section {
     position: relative;
     margin: 0 auto;
+    padding-top: 0;
     width: 100%;
     background: #000;
 }
@@ -549,9 +560,8 @@
     height: 179.6px;
     left: 14px;
     top: 5px;
-    background-image: url(../images/service-section/panel-img.webp);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    mask-image: url(../images/service-section/panel-img.webp);
+    object-fit: cover;
 }
 
 #service-section .content-container {
@@ -616,11 +626,11 @@
     }
 
     .service-img {
-    width: 303.43px;
-    height: 153.81px;
-    left: 0;
-    top: 7px;
-    background-image: url(../images/service-section/mobile/panel-img.webp);
+    width: 305px;
+    height: 156px;
+    left: 2px;
+    top: 0px;
+    mask-image: url(../images/service-section/mobile/panel-img.webp);
     }
 
     .grid-item-decor {

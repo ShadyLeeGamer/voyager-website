@@ -479,8 +479,8 @@ input[type="number"] {
     display: -ms-inline-flexbox;
     display: inline-flex;
     left: 0;
-    -webkit-animation: notice-bar-scroll 15s infinite linear;
-    animation: notice-bar-scroll 15s infinite linear;
+    -webkit-animation: notice-bar-scroll 25s infinite linear;
+    animation: notice-bar-scroll 25s infinite linear;
 }
 
 .notice-board ul li {
@@ -1045,7 +1045,8 @@ input[type="number"] {
 
 .section {
     width: var(--section-width);
-    margin-top: 60px;
+    padding-top: 60px;
+    /* margin-top: 60px; */
     margin-bottom: 60px;
 }
 

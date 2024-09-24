@@ -32,7 +32,7 @@
     height: 100%;
 }
 
-.slideshow-container .slide img {
+.slideshow-container .slide > * {
     position: relative;
     width: 100%;
 }
@@ -41,7 +41,7 @@
     position: absolute;
     bottom: 20%;
     left: 6%;
-    z-index: 2;
+    z-index: 322;
 }
 
 .slideshow-container span {
