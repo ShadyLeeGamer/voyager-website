@@ -147,6 +147,8 @@ p {
 .other-heading-line h3 {
 	font-size: 34px;
 	text-align: center;
+	text-transform: none;
+	font-family: "Exo 2";
 }
 
 .other-heading-line > div {
@@ -156,6 +158,28 @@ p {
 	background-image: url(../images/lines/other-heading-line.png);
 	background-size: 100% 100%;
 	background-position: top;
+}
+
+.other-line-botton {
+	position: relative;
+	width: 90%;
+	height: 25px;
+	background-image: url(../images/lines/other-heading-line.png);
+	background-size: 100% 100%;
+	background-position: top;
+	left: 50%;
+	transform: translateX(-50%) rotate(180deg);
+	margin-bottom: 25px;
+}
+
+.other-line-botton + h3 {
+	text-align: center;
+	width: 85%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	font-family: "Exo 2";
+	text-transform: none;
 }
 
 @media (max-width: 768px) {
@@ -169,4 +193,9 @@ p {
 	.other-heading-line h3 {
 		font-size: 25px;
 	}
+
+	.other-line-botton + h3 {
+		font-size: 25px;
+	}
 }
+

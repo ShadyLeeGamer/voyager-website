@@ -236,6 +236,232 @@
 }
 
 
+/* #region Dry Hire */
+.dry-hire-list {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+.dry-hire-list th {
+    text-align: left;
+    font-family: "Code Font Bold";
+}
+
+.dry-hire-list td {
+    font-family: "Exo 2";
+}
+
+.dry-hire-list tr > * {
+    padding: 10px;
+}
+
+.dry-hire-list tr > th {
+    padding-top: 25px;
+}
+
+.dry-hire-list tr > th:nth-child(2) {
+    background-image: url("../images/shared/logo-white.png");
+    background-size: auto 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dry-hire-list th:nth-child(2) {
+    width: 20%;
+    text-align: center;
+}
+
+.dry-hire-list tr td:nth-child(2) {
+    text-align: center;
+}
+
+.dry-hire-list tr:nth-child(odd) > *:nth-child(1) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dry-hire-list tr:nth-child(odd) > *:nth-child(2) {
+    background-color: rgba(255, 162, 0, 0.1);
+}
+
+.dry-hire-list tr:nth-child(even) > *:nth-child(2) {
+    background-color: rgba(255, 162, 0, 0.05);
+}
+
+.dry-hire-list tr:nth-child(even) td:nth-child(2) {
+    text-align: center;
+}
+/* #endregion */
+
+/* #region Production Packages */
+.pricing-plan-list {
+    position: relative;
+    padding: 40px;
+    width: 85%;
+    display: block;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+ul.pricing-plan-list > li {
+    background-image: url(../images/green-screen-production-section/pricing-plan-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 200px;
+    position: relative;
+    padding: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding-right: 150px;
+    border-radius: 2em;
+}
+
+ul.pricing-plan-list > li > h4 {
+    position: absolute;
+    color: black;
+    text-shadow: none;
+    font-family: "Quantum";
+    font-size: 50px;
+    right: 0;
+    top: 10%;
+    transform: translate(calc(100% - 7vw - 50%));
+}
+
+ul.pricing-plan-list > li > .type {
+    position: absolute;
+    height: 150px;
+    width: 250px;
+    top: 0;
+    right: 0;
+    background-image: url(../images/green-screen-production-section/pricing-plan-corner.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+ul.pricing-plan-list > li > .type h4 {
+    color: black;
+    text-shadow: none;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 0%);
+}
+
+ul.pricing-plan-list > li > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+ul.pricing-plan-list > li > div:nth-child(1) {
+}
+
+ul.pricing-plan-list > li > div:nth-child(1) h5 {
+	font-size: 40px;
+    font-family: "Exo 2";
+    text-wrap: nowrap;
+}
+
+ul.pricing-plan-list > li > div:nth-child(1) > span:nth-child(2) {
+    color: black;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+ul.pricing-plan-list > li > div:nth-child(1) > h4 {
+    font-size: 90px;
+    margin-top: -25px;
+}
+
+ul.pricing-plan-list > li > div:nth-child(2) {
+    color: black;
+    text-shadow: none;
+}
+
+ul.pricing-plan-list > li > div:nth-child(2) h6 {
+    font-size: 24px;
+    text-transform: none;
+    font-family: "Exo 2";
+}
+
+ul.pricing-plan-list > li > div:nth-child(2) ul {
+    position: relative;
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto;
+}
+
+ul.pricing-plan-list > li > div:nth-child(2) ul li {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-wrap: nowrap;
+}
+
+ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
+    content: "";
+    background-image: url(../images/shared/tick.png);
+    display: inline-block;
+    background-size: 100% 100%;
+    width: 15px;
+    height: 10px;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+@media (max-width: 1440px) {
+    ul.pricing-plan-list > li {
+    gap: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+}
+
+@media (max-width: 1280px) {
+    ul.pricing-plan-list > li {
+        flex-direction: column;
+        height: auto;
+    }
+
+    ul.pricing-plan-list > li > div:nth-child(1) {
+        padding-top: 50px;
+    }
+
+    ul.pricing-plan-list > li > div:nth-child(2) ul {
+        column-gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    ul.pricing-plan-list > li {
+        align-items: center;
+    }
+
+    ul.pricing-plan-list > li > div:nth-child(1) {
+        text-align: center;
+    }
+
+    ul.pricing-plan-list > li > div:nth-child(2) ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.pricing-plan-list > li > .type {
+        scale: 0.75;
+    }
+}
+/* #endregion */
+
+
 /* #region Equipment Hire */
 #equipment-hire-section {
     position: relative;
@@ -393,3 +619,89 @@
     }
 }
 /* #endregion */
+
+
+/* #region Additional Support */
+.support-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 75px;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    font-size: 24px;
+    transform: translate(-50%);
+    width: 600px;
+    left: 50%;
+    gap: 20px;
+}
+
+.support-list > li {
+}
+
+.left-right-text {
+
+}
+
+.cc-link-line {
+    position: relative;
+    font-size: 20px;
+    max-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 100px;
+}
+
+.cc-link-line a {
+	color: var(--primary-brand);
+}
+
+.left-right-list > li > span:nth-child(1) {
+    float: left;
+}
+
+.left-right-list > li > span:nth-child(2) {
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .support-list {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .cc-link-line {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 430px) {
+    .left-right-list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-right-list span {
+        display: flex;
+        float: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-right-list > li > span:nth-child(1) {
+        float: none;
+    }
+    
+    .left-right-list > li > span:nth-child(2) {
+        float: none;
+        color: var(--secondary-white);
+    }
+}
+/* #endregion */
+
+.btn {
+    width: 300px;
+    margin: 0 auto;
+}
