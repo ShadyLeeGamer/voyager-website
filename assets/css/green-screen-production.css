@@ -185,7 +185,7 @@
     -ms-flex-align: center;
     align-items: center;
     }
-
+    
     #steps-section li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -194,43 +194,105 @@
     }
 
     #steps-section li > div {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     #steps-section li:nth-child(odd) .media,
     #steps-section li:nth-child(even) .media {
-    position: relative;
-    top: -35px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-    width: 400px;
-    height: auto;
+        position: relative;
+        top: -35px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        width: 400px;
+        height: auto;
     }
 }
 
 @media (max-width: 430px) {
     #steps-section li > div {
-    scale: 0.8;
+        scale: 0.8;
     }
 }
+
+
+/* Equipment Section */
+
+#equipment-hire-section {
+    position: relative;
+}
+
+
+#equipment-hire-section .equipment-range-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    margin: 50px;
+}
+
+#equipment-hire-section .equipment-range-grid > div {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#equipment-hire-section .equipment-img-container {
+    height: 250px;
+    aspect-ratio: 1;
+    display: flex;
+    place-content: center;
+    justify-content: center;
+}
+
+#equipment-hire-section .equipment-img-container > img {
+    height: 100%;
+    filter: drop-shadow(0rem 0rem 10px #ffffff80);
+}
+
+#equipment-hire-section .equipment-range-grid .price-list {
+    display: flex;
+    gap: 25px;
+}
+
+#equipment-hire-section .equipment-range-grid .price-list > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#equipment-hire-section .equipment-range-grid .price-list > li > span:nth-child(1) {
+    font-size: 16px;
+    color: var(--secondary-white)
+}
+
+/* @media (max-width: 756px) {
+    #equipment-hire-section .equipment-range-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+} */

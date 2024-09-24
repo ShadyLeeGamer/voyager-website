@@ -124,12 +124,6 @@ body {
 	z-index: 1;
 }
 
-@media (max-width: 768px) {
-	#header h1 {
-		font-size: 35px;
-	}
-}
-
 p {
 	position: relative;
 	text-align: justify;
@@ -139,5 +133,40 @@ p {
 }
 
 .section {
-	
+}
+
+.other-heading-line {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	gap: 10px;
+	padding-top: 25px;
+}
+
+.other-heading-line h3 {
+	font-size: 34px;
+	text-align: center;
+}
+
+.other-heading-line > div {
+	position: relative;
+	width: 90%;
+	height: 25px;
+	background-image: url(../images/lines/other-heading-line.png);
+	background-size: 100% 100%;
+	background-position: top;
+}
+
+@media (max-width: 768px) {
+	#header h1 {
+		font-size: 35px;
+	}
+
+	.other-heading-line {
+	}
+
+	.other-heading-line h3 {
+		font-size: 25px;
+	}
 }
