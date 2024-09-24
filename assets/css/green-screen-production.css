@@ -343,6 +343,7 @@
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(1) span {
     font-size: 20px;
+    color: var(--secondary-white);
 }
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) {
