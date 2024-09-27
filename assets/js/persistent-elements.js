@@ -64,18 +64,7 @@ const beforeMainHtml =
         </div>
         <div class="navbar-tab-container">
             <a class="glow-hover" href="about-us.html">About</a>
-            <div class="dropdown">
-                <button class="dropbtn"><a href="index.html#service-section">Services</a></button>
-                <div class="dropdown-content">
-                    <a class="glow-hover" href="green-screen-production.html">Virtual Production</a>
-                    <a class="glow-hover" href="index.html">Virtual Exhibitions</a>
-                    <a class="glow-hover" href="index.html">VR Experiences</a>
-                    <a class="glow-hover" href="index.html">AR Apps</a>
-                    <a class="glow-hover" href="index.html">Imersive Web Development</a>
-                    <a class="glow-hover" href="index.html">Software & Apps</a>
-                </div>
-                <img src="assets/images/dropdown/icon.webp">
-            </div>
+            <a class="glow-hover" href="index.html#service-section">Services</a>
             <div class="dropdown">
                 <button class="dropbtn main"><a href="index.html#project-section">Productions</a></button>
                 <div class="dropdown-content">
@@ -83,7 +72,7 @@ const beforeMainHtml =
                 </div>
                 <img src="assets/images/dropdown/icon.webp">
             </div>
-            <!-- <a class="glow-hover" href="index.html#slideshow-section">Gallery</a> -->
+            <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
             <a class="glow-hover" href="#footer-section">Contact</a>
         </div>
     </div>
@@ -92,18 +81,7 @@ const beforeMainHtml =
             <div class="off-screen-menu-content">
                 <div class="navbar-tab-container">
                     <a class="glow-hover" href="about-us.html">About</a>
-                    <div class="dropdown">
-                        <button class="dropbtn"><a href="index.html#service-section">Services</a></button>
-                        <div class="dropdown-content">
-                            <a class="glow-hover" href="green-screen-production.html">Virtual Production</a>
-                            <a class="glow-hover" href="index.html">Virtual Exhibitions</a>
-                            <a class="glow-hover" href="index.html">VR Experiences</a>
-                            <a class="glow-hover" href="index.html">AR Apps</a>
-                            <a class="glow-hover" href="index.html">Imersive Web Development</a>
-                            <a class="glow-hover" href="index.html">Software & Apps</a>
-                        </div>
-                        <img src="assets/images/dropdown/icon.webp">
-                    </div>
+                     <a class="glow-hover" href="index.html#service-section">Services</a>
                     <div class="dropdown">
                         <button class="dropbtn main"><a href="index.html#project-section">Podcasts</a></button>
                         <div class="dropdown-content">
@@ -111,7 +89,7 @@ const beforeMainHtml =
                         </div>
                         <img src="assets/images/dropdown/icon.webp">
                     </div>
-                    <!-- <a class="glow-hover" href="index.html#slideshow-section">Gallery</a> -->
+                    <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
                     <a class="glow-hover" href="#footer-section">Contact</a>
                 </div>
                 <img class="white-bar" data-src="assets/images/decor/white-line.webp">

@@ -107,7 +107,24 @@
     position: absolute;
     bottom: 0;
     z-index: -1;
-    translate: 0 20px;
+
+    height: 250px;
+    width: 1400px;
+}
+
+.company-description {
+    font-family: "Exo 2";
+    text-transform: none;
+    color: var(--secondary-white);
+}
+
+#header-container > .middle .company-description {
+    font-size: 20px;
+    transform: translateY(-40px);
+}
+
+#header-container > .middle .btn {
+    transform: translateY(-20px);
 }
 
 #header-container .border {
@@ -125,7 +142,7 @@
 #header .catchphrase {
     font-size: 35px;
     text-shadow: 0 0 20px var(--secondary-brand);
-    padding: 20px;
+    transform: translateY(-45px);
 }
 
 #header-bg-text-1,
@@ -193,6 +210,11 @@
     gap: 15px;
 }
 
+#project-section .wire-decor {
+    position: relative;
+    display: block;
+}
+
 #project-section .panel-item {
     width: 275.81px;
     height: 500.81px;
@@ -245,11 +267,14 @@
     justify-content: center;
     height: 500.81px;
     width: 275.81px;
+    position: relative;
 }
 
 .panel-item-outline {
     position: absolute;
     height: 100%;
+    width: 100%;
+    left: 0
 }
 
 .panel-item-img {
@@ -287,6 +312,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    pointer-events: none;
     bottom: 1em;
 }
 
@@ -509,13 +535,25 @@
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: end;
+    background-color: #fff;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    flex-direction: column;
     -webkit-transform: translateY(-20px);
     -ms-transform: translateY(-20px);
     transform: translateY(-20px);
+}
+
+#header-outside .company-description {
+    position: relative;
+    font-size: 16px;
+    text-wrap: nowrap;
+}
+
+#header-outside .btn.book-now {
+    transformt: y;
 }
 
 #header-outside .btn.book-now img {
@@ -528,10 +566,6 @@
 }
 
 #body-content .catchphrase {
-    position: absolute;
-    -webkit-transform: translate(0, -200%);
-    -ms-transform: translate(0, -200%);
-    transform: translate(0, -200%);
     text-shadow: 0 0 10px var(--secondary-brand);
     font-size: 20px;
 }
@@ -676,7 +710,7 @@
     }
 
     #header {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     }
 }
 
@@ -723,7 +757,7 @@
     }
 
     #header-container > .middle > img {
-    height: 150px;
+    height: 125px;
     }
 
     #header-container .decor-container {

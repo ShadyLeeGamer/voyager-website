@@ -605,9 +605,7 @@ input[type="number"] {
     height: 600px;
     z-index: 4;
     pointer-events: none;
-    -webkit-transform: translateY(225px);
-        -ms-transform: translateY(225px);
-            transform: translateY(225px);
+            transform: translateY(180px);
 }
 
 #voyager-navbar-mover.move {
