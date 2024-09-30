@@ -37,8 +37,8 @@ function init() {
           infinite: true,
           centerMode: true,
           centerPadding: "475px",
-          autoplay: true,
-          autoplaySpeed: 4000,
+          // autoplay: true,
+          // autoplaySpeed: 4000,
           responsive:[
           {
             breakpoint: 768,

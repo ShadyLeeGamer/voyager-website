@@ -67,7 +67,7 @@ function cleanupPageModules() {
     // Clear the array after cleanup
     pageModules = [];
 
-    // window.scrollTo({ top:50, left:0, behavior: "instant"});
+    window.scrollTo({ top:50, left:0, behavior: "instant"});
 }
 
 window.addManagedEventListener = function addManagedEventListener(element, eventName, callback) {
