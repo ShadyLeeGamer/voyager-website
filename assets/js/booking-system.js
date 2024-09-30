@@ -1,12 +1,13 @@
-const bookingForm = document.getElementById('booking-form');
-const openFormBtns = document.querySelectorAll('.book-now');
-openFormBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        if (!bookingForm.classList.contains('open')) {
-            bookingForm.classList.add('open');
-        }
-    });
-});
+// const bookingForm = document.getElementById('booking-form');
+// const openFormBtns = document.querySelectorAll('.book-now');
+// openFormBtns.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         if (!bookingForm.classList.contains('open')) {
+//             bookingForm.classList.add('open');
+//         }
+//     });
+// });
+
 
 // bookingForm
 //     .querySelector('.submit')
@@ -31,9 +32,10 @@ openFormBtns.forEach(btn => {
 //         }
 //     });
 
-const closeBtn = bookingForm.querySelector('.close-btn');
-closeBtn.addEventListener('click', () => {
-    if (bookingForm.classList.contains('open')) {
-        bookingForm.classList.remove('open');
-    }
-});
+
+// const closeBtn = bookingForm.querySelector('.close-btn');
+// closeBtn.addEventListener('click', () => {
+//     if (bookingForm.classList.contains('open')) {
+//         bookingForm.classList.remove('open');
+//     }
+// });

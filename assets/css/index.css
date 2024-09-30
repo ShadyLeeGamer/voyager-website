@@ -212,7 +212,7 @@
 
 #project-section .wire-decor {
     position: relative;
-    display: block;
+    /* display: block; */
 }
 
 #project-section .panel-item {
@@ -527,7 +527,7 @@
 }
 
 #header-outside {
-    width: 0;
+    width: 80vw;
     height: 0;
     z-index: 1;
     display: -webkit-box;
@@ -535,25 +535,30 @@
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: end;
+    justify-content: start;
     background-color: #fff;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     flex-direction: column;
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    transform: translateY(-20px);
+    transform: translateY(-90px);
 }
 
 #header-outside .company-description {
     position: relative;
     font-size: 16px;
+    text-align: center;
     text-wrap: nowrap;
 }
 
+@media (max-width: 430px) {
+    #header-outside .company-description {
+        font-size: 12px;
+    }
+}
+
 #header-outside .btn.book-now {
-    transformt: y;
+    top: 10px;
 }
 
 #header-outside .btn.book-now img {
@@ -716,9 +721,9 @@
 
 @media (max-width: 768px) {
     #voyager-header-target {
-    width: 1250px;
-    height: 1250px;
-    transform: translateY(90px);
+    width: 200px;
+    height: 200px;
+    transform: translateY(10px);
     }
 
     #voyager {
@@ -757,7 +762,8 @@
     }
 
     #header-container > .middle > img {
-    height: 125px;
+    height: 110px;
+    width: 1000px;
     }
 
     #header-container .decor-container {
@@ -928,6 +934,12 @@
     #project-slider .slick-track > div:not(.slick-center) .panel-item {
     pointer-events: none;
     }
+}
+
+@media (max-width: 430px) {
+    #header-container > .middle > img {
+        width: 800px;
+        }
 }
 
 #testimonial-slider {

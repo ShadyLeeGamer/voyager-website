@@ -25,7 +25,7 @@ let height = element.clientHeight;
 //#region Scene Setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-camera.position.z = 1;
+camera.position.z = 0.6;
 scene.add(camera);
 
 // Load 3D Voyager
@@ -183,12 +183,12 @@ function checkForMovement() {
     if (window.scrollY > scrollThreshold) {
         if (!isInsideTarget(navbarTarget))
         {
-            moveTo(navbarTarget, 1, 0.2);
+            moveTo(navbarTarget, 1, 0.25);
         }
     }
     else {
         if (!isInsideTarget(headerTarget)) {
-            moveTo(headerTarget, 0.2, 1);
+            moveTo(headerTarget, 0.25, 1);
         }
     }
 }

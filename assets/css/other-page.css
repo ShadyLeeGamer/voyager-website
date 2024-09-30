@@ -91,9 +91,7 @@ body {
 }
 
 #voyager-header-target {
-	-webkit-transform: translateY(175px);
-	    -ms-transform: translateY(175px);
-	        transform: translateY(175px);
+	        transform: translateY(50px);
 }
 
 #header::before {

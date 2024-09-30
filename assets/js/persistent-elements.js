@@ -9,7 +9,7 @@ const beforeMainHtml =
     <div id="cursor-glow" class="thin-desktop desktop"></div>
 </div>
 
-<form id="booking-form" class="popup">
+<!--<form id="booking-form" class="popup">
     <div class="content-container">
         <div class="form-wrapper">
             <div class="close-btn glow-hover"></div>
@@ -41,7 +41,7 @@ const beforeMainHtml =
             </a>
         </div>
     </div>
-</form>
+</form>-->
 
 <div id="navbar">
     <div id="voyager-navbar-target">
@@ -66,14 +66,14 @@ const beforeMainHtml =
             <a class="glow-hover" href="about-us.html">About</a>
             <a class="glow-hover" href="index.html#service-section">Services</a>
             <div class="dropdown">
-                <button class="dropbtn main"><a href="index.html#project-section">Productions</a></button>
+                <button class="dropbtn main"><a href="green-screen-production.html">Productions</a></button>
                 <div class="dropdown-content">
-                    <a class="glow-hover" href="green-screen-production.html">Book Now!</a>
+                    <a class="glow-hover" href="#footer">Book Now!</a>
                 </div>
                 <img src="assets/images/dropdown/icon.webp">
             </div>
             <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
-            <a class="glow-hover" href="#footer-section">Contact</a>
+            <a class="glow-hover" href="#footer">Contact</a>
         </div>
     </div>
     <div class="mobile">
@@ -90,7 +90,7 @@ const beforeMainHtml =
                         <img src="assets/images/dropdown/icon.webp">
                     </div>
                     <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
-                    <a class="glow-hover" href="#footer-section">Contact</a>
+                    <a class="glow-hover" href="#footer">Contact</a>
                 </div>
                 <img class="white-bar" data-src="assets/images/decor/white-line.webp">
                 <div class="details-container">
@@ -117,6 +117,7 @@ const beforeMainHtml =
                                 <li><a href="https://www.linkedin.com/company/voyager-vr-lab" target="_blank"><img data-src="assets/images/social-media/linkedin-colour.webp"></a></li>
                                 <li><a href="https://www.tiktok.com/@voyager.vr" target="_blank"><img data-src="assets/images/social-media/tiktok-colour.webp"></a></li>
                                 <li><a href="https://www.instagram.com/voyager_vr_lab_uk" target="_blank"><img data-src="assets/images/social-media/instagram-colour.webp"></a></li>
+                                <li><a href="https://www.facebook.com/people/Voyager-VR/61563781002032" target="_blank"><img data-src="assets/images/social-media/facebook-colour.webp"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -176,10 +177,10 @@ const afterMainHtml =
             <h4>Quick Links</h4>
             <ul>
                 <li><a class="glow-hover" href="about-us.html">About</a></li>
-                <li><a class="glow-hover" href="#project-section">Productions</a></li>
-                <li><a class="glow-hover" href="#project-section">Virtual Reality</a></li>
-                <li><a class="glow-hover" href="#project-section">Augmented Reality</a></li>
-                <li><a class="glow-hover" href="#">Web Development</a></li>
+                <li><a class="glow-hover" href="index.html#project-section">Productions</a></li>
+                <li><a class="glow-hover" href="index.html#project-section">Virtual Reality</a></li>
+                <li><a class="glow-hover" href="index.html#project-section">Augmented Reality</a></li>
+                <li><a class="glow-hover" href="index.html#project-section">Web Development</a></li>
             </ul>
         </div>
         <div class="opening-hours">
@@ -217,6 +218,7 @@ const afterMainHtml =
                     <li><a href="https://www.linkedin.com/company/voyager-vr-lab" target="_blank"><img data-src="assets/images/social-media/linkedin-colour.webp"></a></li>
                     <li><a href="https://www.tiktok.com/@voyager.vr" target="_blank"><img data-src="assets/images/social-media/tiktok-colour.webp"></a></li>
                     <li><a href="https://www.instagram.com/voyager_vr_lab_uk" target="_blank"><img data-src="assets/images/social-media/instagram-colour.webp"></a></li>
+                    <li><a href="https://www.facebook.com/people/Voyager-VR/61563781002032" target="_blank"><img data-src="assets/images/social-media/facebook-colour.webp"></a></li>
                 </ul>
             </div>
         </div>
