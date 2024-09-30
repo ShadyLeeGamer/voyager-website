@@ -82,35 +82,6 @@
     pointer-events: none;
 }
 
-#header-container > .middle {
-    position: relative;
-    bottom: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 1;
-    padding-bottom: 20px;
-    height: 100%;
-}
-
-#header-container > .middle > img {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-
-    height: 250px;
-    width: 1400px;
-}
 
 .company-description {
     font-family: "Exo 2";
@@ -720,19 +691,6 @@
 }
 
 @media (max-width: 768px) {
-    #voyager-header-target {
-    width: 200px;
-    height: 200px;
-    transform: translateY(10px);
-    }
-
-    #voyager {
-    left: 50%;
-    -webkit-transform: translate(-50%, -10%);
-    -ms-transform: translate(-50%, -10%);
-    transform: translate(-50%, -10%);
-    }
-
     #header {
     height: 50vh;
     min-height: 350px;
@@ -761,10 +719,7 @@
     z-index: 10;
     }
 
-    #header-container > .middle > img {
-    height: 110px;
-    width: 1000px;
-    }
+
 
     #header-container .decor-container {
     height: 50vh;
@@ -936,11 +891,7 @@
     }
 }
 
-@media (max-width: 430px) {
-    #header-container > .middle > img {
-        width: 800px;
-        }
-}
+
 
 #testimonial-slider {
     display: -webkit-box;

@@ -605,8 +605,50 @@ input[type="number"] {
     height: 300px;
     z-index: 4;
     pointer-events: none;
-    transform: translateY(20px);
 }
+
+#header-container > .middle {
+    position: relative;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 1;
+    height: 100%;
+}
+
+#header-container > .middle > img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+
+    height: 250px;
+    width: 1400px;
+}
+
+@media (max-width: 768px) {
+    #header-container > .middle > img {
+        height: 110px;
+        width: 1000px;
+    }
+}
+
+@media (max-width: 430px) {
+    #header-container > .middle > img {
+        width: 800px;
+        }
+}
+
 
 #voyager-navbar-mover.move {
     -webkit-animation: move 0.35s ease-out;
@@ -1094,6 +1136,7 @@ input[type="number"] {
     top: 0;
 }
 
+
 .highlight {
     color: var(--primary-brand);
 }
@@ -1212,7 +1255,6 @@ input[type="number"] {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 50px;
-    width: 300px;
 }
 
 .off-screen-menu-content {
@@ -1230,7 +1272,6 @@ input[type="number"] {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
-    gap: 70px;
 }
 
 .off-screen-menu h4 {
@@ -1243,8 +1284,11 @@ input[type="number"] {
     margin-top: 20px;
 }
 
+.off-screen-menu .opening-hours {
+}
+
 .off-screen-menu .opening-hours .week {
-    width: 100px;
+    width: 50px;
 }
 
 .off-screen-menu .contact li {
@@ -1268,6 +1312,7 @@ input[type="number"] {
     -webkit-transform: translateX(-20px);
         -ms-transform: translateX(-20px);
             transform: translateX(-20px);
+            
 }
 
 .off-screen-menu .navbar-tab-container > * {
@@ -1279,7 +1324,7 @@ input[type="number"] {
 
 .off-screen-menu .white-bar {
     position: absolute;
-    left: 175px;
+    left: 100px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -1336,8 +1381,23 @@ input[type="number"] {
     padding-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+    #booking-form .content-container {
+        background-image: none;
+        background-color: hsla(0, 0%, 0%, 0.75);
+        backdrop-filter: blur(5px);
+        width: 100vw;
+        height: 100vh;
+        place-content: center;
+    }
+}
+
 #booking-form .btn {
-    margin: 20px;
+    padding: 15px;
+}
+
+#booking-form .logo {
+    width: 200px;
 }
 
 .form-wrapper {
@@ -1393,6 +1453,68 @@ input[type="number"] {
     rotate: 180deg;
 }
 
+@media (max-width: 768px) {
+    .side-decor-heading h2 {
+        text-wrap: wrap;
+    }
+
+    .side-decor-heading span {
+        display: none;
+    }
+}
+
+
+.form-wrapper .screenshot {
+    height: 200px;
+    object-fit: cover;
+}
+
+.form-wrapper > .double-column {
+    display: flex;
+}
+
+.form-wrapper > .double-column > div {
+    display: flex;
+    flex-direction: column;
+    padding: 12.5px;
+}
+
+.form-wrapper > .double-column .contact li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-wrapper > .double-column > div:nth-child(1) {
+}
+
+@media (max-width: 1024px) {
+    .popup {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup {
+        width: 100vw;
+    }
+
+    .form-wrapper > .double-column {
+        flex-direction: column;
+    }
+
+    .popup .close-btn {
+        top: 50px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 430px) {
+    .popup {
+        width: 100%;
+    }
+}
+
+
 @media (max-width: 1440px) {
     .section {
     margin-bottom: 15px;
@@ -1441,6 +1563,12 @@ input[type="number"] {
     margin: 0 auto;
     width: 50px;
     height: 50px;
+    }
+
+    #voyager-header-target {
+        width: 200px;
+        height: 200px;
+        transform: translateY(-25px);
     }
 
     .heading-line {

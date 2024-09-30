@@ -1,4 +1,39 @@
 const beforeMain = document.getElementById('before-main');
+
+/* <form id="booking-form" class="popup">
+<div class="content-container">
+    <div class="form-wrapper">
+        <div class="close-btn glow-hover"></div>
+
+        <img data-src="assets/images/branding/voyager-logo-3.webp">
+
+        <div class="side-decor-heading">
+            <span></span>
+            <h2>Aboard The List</h2>
+            <span></span>
+        </div>
+
+        <div class="input-field">
+            <input id="name" type="text" required="required">
+            <span>Name</span>
+        </div>
+        <div class="input-field">
+            <input id="email" type="email" required="required">
+            <span>Email</span>
+        </div>
+        <div class="input-field">
+            <input id="phone-number" type="number" required="required">
+            <span>Phone Number</span>
+        </div>
+
+        <a class="btn submit glow-hover" href="#">
+            <img data-src="assets/images/btns/btn-3-contained.webp">
+            <span>Book Now</span>
+        </a>
+    </div>
+</div>
+</form> */
+
 const beforeMainHtml =
 `
 <div id="preloader-container" class="transition-fade initial-loading">
@@ -9,39 +44,48 @@ const beforeMainHtml =
     <div id="cursor-glow" class="thin-desktop desktop"></div>
 </div>
 
-<!--<form id="booking-form" class="popup">
+<form id="booking-form" class="popup">
     <div class="content-container">
         <div class="form-wrapper">
             <div class="close-btn glow-hover"></div>
 
-            <img data-src="assets/images/branding/voyager-logo-3.webp">
+            <img class="logo" data-src="assets/images/branding/voyager-logo-3.webp">
 
             <div class="side-decor-heading">
                 <span></span>
-                <h2>Aboard The List</h2>
+                <h2>Contact Us To Book</h2>
                 <span></span>
             </div>
 
-            <div class="input-field">
-                <input id="name" type="text" required="required">
-                <span>Name</span>
+            <div class="double-column">
+                <div>
+                    <img class="screenshot" data-src="assets/images/shared/virtual-productions.jpg">
+                    <a class="btn submit glow-hover" href="green-screen-production.html">
+                        <img data-src="assets/images/btns/btn-3-contained.webp">
+                        <span>Productions</span>
+                    </a>
+                </div>
+                <div class="contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <img data-src="assets/images/contact/contact-location.webp">
+                            <a class="glow-hover" href="https://maps.app.goo.gl/zeJmLpcKPMoWV8D17" target="_blank">58a Granby Street, Leicester LE1 1DH</a>
+                        </li>
+                        <li>
+                            <img data-src="assets/images/contact/contact-phone.webp">
+                            <a class="glow-hover" href="tel:747-036-1585">(+44) 747 036 1585</a>
+                        </li>
+                        <li>
+                            <img data-src="assets/images/contact/contact-email.webp">
+                            <a class="glow-hover" href="mailto:connect@voyagervrlab.co.uk">connect@voyagervrlab.co.uk</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="input-field">
-                <input id="email" type="email" required="required">
-                <span>Email</span>
-            </div>
-            <div class="input-field">
-                <input id="phone-number" type="number" required="required">
-                <span>Phone Number</span>
-            </div>
-
-            <a class="btn submit glow-hover" href="#">
-                <img data-src="assets/images/btns/btn-3-contained.webp">
-                <span>Book Now</span>
-            </a>
         </div>
     </div>
-</form>-->
+</form>
 
 <div id="navbar">
     <div id="voyager-navbar-target">
@@ -68,7 +112,7 @@ const beforeMainHtml =
             <div class="dropdown">
                 <button class="dropbtn main"><a href="green-screen-production.html">Productions</a></button>
                 <div class="dropdown-content">
-                    <a class="glow-hover" href="#footer">Book Now!</a>
+                    <a class="glow-hover book-now" href="">Book Now!</a>
                 </div>
                 <img src="assets/images/dropdown/icon.webp">
             </div>
@@ -81,14 +125,8 @@ const beforeMainHtml =
             <div class="off-screen-menu-content">
                 <div class="navbar-tab-container">
                     <a class="glow-hover" href="about-us.html">About</a>
-                     <a class="glow-hover" href="index.html#service-section">Services</a>
-                    <div class="dropdown">
-                        <button class="dropbtn main"><a href="index.html#project-section">Podcasts</a></button>
-                        <div class="dropdown-content">
-                            <a class="glow-hover" href="green-screen-production.html">Book Now!</a>
-                        </div>
-                        <img src="assets/images/dropdown/icon.webp">
-                    </div>
+                    <a class="glow-hover" href="index.html#service-section">Services</a>
+                    <a class="glow-hover main" href="green-screen-production.html">Productions</a>
                     <a class="glow-hover" href="index.html#slideshow-section">Gallery</a>
                     <a class="glow-hover" href="#footer">Contact</a>
                 </div>
@@ -186,13 +224,13 @@ const afterMainHtml =
         <div class="opening-hours">
             <h4>Opening Hours</h4>
             <ul>
-                <li><span class="week">Mon</span> 8:30 AM – 5:30 PM</li>
-                <li><span class="week">Tue</span> 8:30 AM – 5:30 PM</li>
-                <li><span class="week">Wed</span> 8:30 AM – 5:30 PM</li>
-                <li><span class="week">Thu</span> 8:30 AM – 5:30 PM</li>
-                <li><span class="week">Fri</span> 8:30 AM – 5:30 PM</li>
-                <li><span class="week">Sat</span>10:00 AM – 4:00 PM</li>
-                <li><span class="week">Sun</span>10:00 AM – 4:00 PM</li>
+                <li><span class="week">Mon</span> 8:00 AM – 6:00 PM</li>
+                <li><span class="week">Tue</span> 8:00 AM – 6:00 PM</li>
+                <li><span class="week">Wed</span> 8:00 AM – 6:00 PM</li>
+                <li><span class="week">Thu</span> 8:00 AM – 6:00 PM</li>
+                <li><span class="week">Fri</span> 8:00 AM – 6:00 PM</li>
+                <li><span class="week">Sat</span> 6:00 PM – 10:00 PM</li>
+                <li><span class="week">Sun</span> 6:00 PM – 10:00 PM</li>
             </ul>
         </div>
         <div class="column">
@@ -205,7 +243,7 @@ const afterMainHtml =
                     </li>
                     <li>
                         <img data-src="assets/images/contact/contact-phone.webp">
-                        <a class="glow-hover" href="tel:777-296-0308">(+44) 777 296 0308</a>
+                        <a class="glow-hover" href="tel:747-036-1585">(+44) 747 036 1585</a>
                     </li>
                     <li>
                         <img data-src="assets/images/contact/contact-email.webp">

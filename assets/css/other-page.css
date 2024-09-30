@@ -18,7 +18,6 @@ body {
 #header {
 	position: relative;
 	width: 100%;
-	height: 600px;
 	margin-bottom: 75px;
 }
 
@@ -34,52 +33,15 @@ body {
 }
 
 #header .middle {
-	position: absolute;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	width: 100%;
-	height: 100%;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: end;
-	z-index: 1;
+    height: 600px;
 }
 
-#header .middle img {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	        transform: translateX(-50%);
+@media (min-width: 768px) {
+	#header .middle > img {
+		height: 150px;
+	}
 }
 
-/* #header-container > .middle {
-    position: relative;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    z-index: 1;
-    padding-bottom: 20px;
-    height: 100%;
-}
-
-#header-container > .middle > img {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    translate: 0 20px;
-} */
 
 #header h1 {
 	position: relative;
@@ -182,7 +144,11 @@ p {
 
 @media (max-width: 768px) {
 	#header h1 {
-		font-size: 35px;
+		font-size: 32px;
+	}
+
+	#header .middle {
+		height: 400px;
 	}
 
 	.other-heading-line {
@@ -193,6 +159,12 @@ p {
 	}
 
 	.other-line-botton + h3 {
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 430px) {
+	#header h1 {
 		font-size: 25px;
 	}
 }
