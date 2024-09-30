@@ -59,7 +59,7 @@ const beforeMainHtml =
 
             <div class="double-column">
                 <div>
-                    <img class="screenshot" data-src="assets/images/shared/virtual-productions.jpg">
+                    <img class="screenshot" data-src="assets/images/shared/virtual-productions.webp">
                     <a class="btn submit glow-hover" href="green-screen-production.html">
                         <img data-src="assets/images/btns/btn-3-contained.webp">
                         <span>Productions</span>
