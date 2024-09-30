@@ -264,7 +264,7 @@
 }
 
 .dry-hire-list tr > th:nth-child(2) {
-    background-image: url("../images/shared/logo-white.png");
+    background-image: url("../images/shared/logo-white.webp");
     background-size: auto 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -409,7 +409,7 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li {
 
 ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     content: "";
-    background-image: url(../images/shared/tick.png);
+    background-image: url(../images/shared/tick.webp);
     display: inline-block;
     background-size: 100% 100%;
     width: 15px;
@@ -457,6 +457,9 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 
     ul.pricing-plan-list > li > .type {
         scale: 0.75;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
     }
 }
 /* #endregion */
@@ -595,7 +598,7 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul li::before {
     content: "";
-    background-image: url(../images/shared/logo-white.png);
+    background-image: url(../images/shared/logo-white.webp);
     background-size: 100% 100%;
     height: 30px;
     aspect-ratio: 1;
