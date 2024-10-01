@@ -383,7 +383,7 @@ input[type="number"] {
     }
 }
 
-.desktop .navbar-bg {
+.desktop-navbar .navbar-bg {
     width: 100%;
     height: 81px;
     display: -webkit-box;
@@ -391,25 +391,25 @@ input[type="number"] {
     display: flex;
 }
 
-.desktop .navbar-bg-left {
+.desktop-navbar .navbar-bg-left {
     position: relative;
     height: 100%;
     left: 0;
 }
 
-.desktop .navbar-bg-right {
+.desktop-navbar .navbar-bg-right {
     position: relative;
     width: 100%;
 }
 
-.desktop .navbar-logo {
+.desktop-navbar .navbar-logo {
     position: absolute;
     left: 75px;
     top: 5px;
     z-index: 1;
 }
 
-.desktop .navbar-logo img {
+.desktop-navbar .navbar-logo img {
     width: 269px;
 }
 
@@ -516,7 +516,7 @@ input[type="number"] {
     }
 }
 
-.desktop .navbar-tab-container {
+.desktop-navbar .navbar-tab-container {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: -webkit-box;
@@ -525,7 +525,7 @@ input[type="number"] {
     position: absolute;
     top: 23px;
     width: 100%;
-    min-width: 1400px;
+    min-width: 1520px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -538,22 +538,35 @@ input[type="number"] {
     justify-content: center;
 
     text-transform: uppercase;
-    font-size: 4;
+    font-size: 16px;
 }
 
-.desktop .navbar-tab-container a {
+.desktop-navbar .navbar-tab-container a {
     text-wrap: nowrap;
 }
 
 
 .navbar-tab-container > * {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
-.desktop .navbar-tab-container .main {
+.desktop-navbar .navbar-tab-container .main {
     font-size: 20px;
 }
+
+@media (max-width: 1440px) {
+    .desktop-navbar .navbar-tab-container {
+        min-width: 1400px;
+    }
+
+    .navbar-tab-container > * {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
 
 #header::after {
     content: "";
@@ -1529,7 +1542,7 @@ input[type="number"] {
     margin-bottom: 15px;
     }
 
-    .mobile .navbar-logo {
+    .mobile-navbar .navbar-logo {
     position: absolute;
     top: 5px;
     left: 0;
@@ -1542,7 +1555,7 @@ input[type="number"] {
     width: 100%;
     }
 
-    .mobile .navbar-bg {
+    .mobile-navbar .navbar-bg {
     position: absolute;
     left: 0;
     right: 0;
@@ -1553,8 +1566,8 @@ input[type="number"] {
     background-size: 100% 100%;
     }
 
-    .mobile .navbar-bg::before,
-    .mobile .navbar-bg::after {
+    .mobile-navbar .navbar-bg::before,
+    .mobile-navbar .navbar-bg::after {
     background-image: url(../images/navbar/mobile/navbar-sides.webp);
     }
 
@@ -1564,16 +1577,31 @@ input[type="number"] {
     }
 }
 
-@media (max-width: 768px) {
-    #voyager-navbar-target {
-    top: 50px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 50px;
-    height: 50px;
+@media (min-width: 1024px) {
+    .mobile-navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .desktop-navbar {
+        display: none;
+    }
+    
+    .mobile-navbar {
+        display: auto;
     }
 
+    #voyager-navbar-target {
+        top: 50px;
+        right: 0;
+        margin: 0 auto;
+        width: 85px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
     #voyager-header-target {
         width: 200px;
         height: 200px;

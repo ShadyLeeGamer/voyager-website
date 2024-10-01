@@ -10,7 +10,7 @@ navTabs.forEach(tab => {
     tab.addEventListener('click', closeMenu);
 });
 
-document.querySelector('.mobile .navbar-logo').addEventListener('click', closeMenu);
+document.querySelector('.mobile-navbar .navbar-logo').addEventListener('click', closeMenu);
 
 function closeMenu() {
     if (hamMenu.classList.contains('active'))

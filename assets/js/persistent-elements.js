@@ -90,7 +90,7 @@ const beforeMainHtml =
 <div id="navbar">
     <div id="voyager-navbar-target">
     </div>
-    <div class="desktop thin-desktop">
+    <div class="desktop-navbar">
         <a class="navbar-logo" href="index.html">
             <img src="assets/images/branding/voyager-logo-1.webp">
         </a>
@@ -120,7 +120,7 @@ const beforeMainHtml =
             <a class="glow-hover" href="#footer">Contact</a>
         </div>
     </div>
-    <div class="mobile">
+    <div class="mobile-navbar">
         <div class="off-screen-menu">
             <div class="off-screen-menu-content">
                 <div class="navbar-tab-container">

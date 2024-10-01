@@ -147,6 +147,10 @@
     transform: perspective(800px) rotateZ(5deg) rotateY(35deg);
 }
 
+#steps-section li:nth-child(1) .media {
+    left: 70%;
+}
+
 #steps-section li:nth-child(2) .media {
     right: 80%;
     height: 400px;
@@ -226,6 +230,8 @@
         transform: none;
         width: 400px;
         height: auto;
+        max-height: 250px;
+        object-fit: contain;
     }
 }
 
@@ -313,19 +319,18 @@
 }
 
 ul.pricing-plan-list > li {
-    background-image: url(../images/green-screen-production-section/pricing-plan-bg.png);
+    /* background-image: url(../images/green-screen-production-section/pricing-plan-bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 200px;
+    background-size: 100% 100%; */
+    background: var(--primary-brand);
+    height: 275px;
     position: relative;
-    padding: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-bottom: 25px;
+    margin-top: 200px;
+    padding-bottom: 50px;
+    padding-right: 150px;
     display: flex;
     gap: 100px;
     justify-content: center;
-    padding-right: 150px;
     border-radius: 2em;
 }
 
@@ -337,7 +342,7 @@ ul.pricing-plan-list > li > h4 {
     font-size: 50px;
     right: 0;
     top: 10%;
-    transform: translate(calc(100% - 7vw - 50%));
+    transform: translate(calc(100% - 50%));
 }
 
 ul.pricing-plan-list > li > .type {
@@ -346,6 +351,7 @@ ul.pricing-plan-list > li > .type {
     width: 250px;
     top: 0;
     right: 0;
+    transform: translate(17%, calc(-100% + 39px));
     background-image: url(../images/green-screen-production-section/pricing-plan-corner.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -462,10 +468,12 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     }
 
     ul.pricing-plan-list > li > .type {
-        scale: 0.75;
-        right: 0;
-        left: 0;
-        margin: 0 auto;
+        width: 200px;
+    }
+
+    
+    ul.pricing-plan-list > li > .type h4 {
+        /* font-size: 20px; */
     }
 }
 /* #endregion */
