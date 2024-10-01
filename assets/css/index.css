@@ -201,11 +201,15 @@
     transition: 0.5s ease-in-out;
 }
 
-#project-slider .slick-track > div:not(.slick-center) {
-    -webkit-transform: scale(0.75);
-    -ms-transform: scale(0.75);
+/* #project-slider .slick-track > div {
     transform: scale(0.75);
 }
+
+#project-slider .slick-track > div.slick-current,
+#project-slider .slick-track > div.slick-active,
+#project-slider .slick-track > div.slick-center {
+    transform: scale(1);
+} */
 
 #project-section .slider-container .prev-btn,
 #project-section .slider-container .next-btn {

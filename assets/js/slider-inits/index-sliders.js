@@ -36,14 +36,16 @@ function init() {
           nextArrow: $('#project-section .next-btn'),
           infinite: true,
           centerMode: true,
-          centerPadding: "475px",
+          // centerPadding: "475px",
+          centerPadding: "450px",
           // autoplay: true,
           // autoplaySpeed: 4000,
           responsive:[
           {
             breakpoint: 768,
             settings: {
-              centerPadding: "80px"
+              // centerPadding: "80px"
+              centerPadding: "65px"
             }
           }]
         });
