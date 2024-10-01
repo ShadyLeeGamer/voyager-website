@@ -12,16 +12,13 @@ function init() {
     updateHeight();
     window.addManagedEventListener(btn, "click", toggleHeight);
 
-    function toggleHeight()
-    {
+    function toggleHeight()  {
         isOpen = !isOpen;
         updateHeight();
     }
 
-    function updateHeight()
-    {
-        if (x.matches)
-        {
+    function updateHeight() {
+        if (x.matches) {
             container.style.height = "auto";
             return;
         }
@@ -29,12 +26,19 @@ function init() {
         container.style.height = (isOpen ? heightOpen : heightClosed) + "px";
         hide.style.display = isOpen ? "none" : "inline";
         btn.textContent = isOpen ? "Read Less" : "Read More";
+        if (isOpen) {
+            if (!btn.classList.contains("opened")) {
+                btn.classList.add("opened");
+            }
+        }
+        else {
+            if (btn.classList.contains("opened")) {
+                btn.classList.remove("opened");
+            }
+        }
     }
 
-    window.addManagedEventListener(window, 'resize', () =>
-    {
-        updateHeight();
-    });
+    window.addManagedEventListener(window, 'resize', updateHeight);
 }
 
 export default { init };

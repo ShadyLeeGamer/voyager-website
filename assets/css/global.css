@@ -886,6 +886,7 @@ input[type="number"] {
     z-index: 10;
 }
 
+
 .heading-line {
     position: relative;
     width: var(--section-width);
@@ -959,12 +960,15 @@ input[type="number"] {
     }
 }
 
+
+
 #footer {
     position: absolute;
     width: 100%;
     margin: 0 auto;
     margin-top: -150px;
     z-index: 56;
+    background-color: #000;
 }
 
 #footer-bg {
@@ -1609,7 +1613,7 @@ input[type="number"] {
         top: 50px;
         right: 0;
         margin: 0 auto;
-        width: 85px;
+        width: 60px;
         height: 50px;
     }
 }
