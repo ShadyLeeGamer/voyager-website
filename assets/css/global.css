@@ -1003,7 +1003,7 @@ input[type="number"] {
     -ms-flex-align: start;
     align-items: start;
     margin-top: 150px;
-    padding-bottom: 75px;
+    padding-bottom: 25px;
     color: #fff;
     background-color: #000;
 }
@@ -1076,6 +1076,13 @@ input[type="number"] {
     display: flex;
     gap: 32.5px;
 }
+
+@media (max-width: 768px) {
+    #footer-cta > div {
+        padding: 20px;
+    }
+}
+
 
 .week {
     display: block;
