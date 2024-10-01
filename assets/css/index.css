@@ -692,7 +692,7 @@
 
 @media (max-width: 768px) {
     #header {
-    height: 50vh;
+    height: 55vh;
     min-height: 350px;
     }
 
@@ -714,7 +714,7 @@
     align-items: end;
     position: fixed;
     top: 0;
-    height: 50vh;
+    height: calc(55vh + 11px);
     min-height: 350px;
     z-index: 10;
     }

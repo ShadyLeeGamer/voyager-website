@@ -14,7 +14,7 @@ function init()
 
 function cleanup()
 {
-    updateRendererSize(); // May not be necessary
+    // updateRendererSize(); // May not be necessary
     cleanupScrollAnimation();
 }
 
@@ -46,11 +46,11 @@ loader.load(
 
 // Lighting setup
 const leftPointLight = new THREE.PointLight(0x6e1f00, 0.5, 100);
-leftPointLight.position.set(-3, -0.6, 2);
+leftPointLight.position.set(-3, -0.1, 2);
 scene.add(leftPointLight);
 
 const rightPointLight = new THREE.PointLight(0xe79023, 2, 100);
-rightPointLight.position.set(3, -0.6, 2);
+rightPointLight.position.set(3, -0.1, 2);
 scene.add(rightPointLight);
 
 // Environment texture
@@ -138,16 +138,16 @@ mouseX = e.clientX;
 };
 
 function animate() {
-requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
 
-if (object) {
-    rotationYSpinOffset += spinSpeed;
-    targetRotationY = -3.075 + (mouseX / width) * 3 + rotationYSpinOffset;
-    object.rotation.y += (targetRotationY - object.rotation.y) * rotationSpeed;
-}
+    if (object) {
+        rotationYSpinOffset += spinSpeed;
+        targetRotationY = -3.075 + (mouseX / width) * 3 + rotationYSpinOffset;
+        object.rotation.y += (targetRotationY - object.rotation.y) * rotationSpeed;
+    }
 
-bloomComposer.render();
-finalComposer.render();
+    bloomComposer.render();
+    finalComposer.render();
 }
 
 animate();
