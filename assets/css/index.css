@@ -323,8 +323,7 @@
     width: 100vw;
     height: 100%;
     z-index: -1;
-    -webkit-filter: blur(3.5px);
-    filter: blur(3.5px);
+    filter: blur(10px);
     background-size: cover;
     background-position: center;
 }
@@ -336,7 +335,8 @@
     z-index: -1;
     -o-object-fit: cover;
     object-fit: cover;
-    opacity: 50%;
+    opacity: 70%;
+    pointer-events: none;
 }
 
 #header-container .decor-container {

@@ -80,7 +80,20 @@ function init() {
       const slideDescriptionData = currentSlideElement.getAttribute("data-description");
       slideshowCaption.innerHTML = slideCaptionData;
       slideshowDescription.innerHTML = slideDescriptionData;
-      slideshowBackgroundImg.style.backgroundImage = 'url(' + currentSlideElement.firstElementChild.getAttribute("poster") + ')';
+      
+      let bgSource = null;
+      const slideContentElement = currentSlideElement.firstElementChild;
+      switch (slideContentElement.tagName.toLowerCase()) {
+        case 'img':
+          bgSource = slideContentElement.getAttribute("data-src");
+          break;
+        case 'video':
+          bgSource = slideContentElement.getAttribute("thumbnail-src");
+          break;
+      }
+      if (bgSource != null) {
+        slideshowBackgroundImg.style.backgroundImage = 'url(' + bgSource + ')';
+      }
     }
   
     onSlideUpdate(1);
