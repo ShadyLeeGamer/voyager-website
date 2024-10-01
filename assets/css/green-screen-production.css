@@ -294,6 +294,12 @@
 .dry-hire-list tr:nth-child(even) td:nth-child(2) {
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .dry-hire-list {
+        font-size: 16px;
+    }
+}
 /* #endregion */
 
 /* #region Production Packages */
@@ -476,7 +482,7 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
     gap: 10px;
     justify-content: center;
-    margin: 75px;
+    margin: 60px;
 }
 
 #equipment-hire-section .equipment-range-grid > div {
@@ -517,6 +523,18 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 #equipment-hire-section .equipment-range-grid .price-list > li > span:nth-child(1) {
     font-size: 16px;
     color: var(--secondary-white)
+}
+
+@media (max-width: 1024px) {
+    #equipment-hire-section .equipment-range-grid {
+        margin-left: 0;
+        margin-right: 0;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+    #equipment-hire-section .equipment-range-grid .img-container {
+        height: 150px;
+    }
 }
 
 /* @media (max-width: 756px) {
@@ -586,6 +604,8 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 }
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul {
+    display: flex;
+    flex-direction: column;
 }
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul li {
@@ -607,10 +627,19 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 }
 
 @media (max-width: 768px) {
+    #equipment-hire-section .hardware-software-grid {
+        justify-content: center;
+        align-items: center;
+    }
+
     #equipment-hire-section .hardware-software-grid > div {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    #equipment-hire-section .hardware-software-grid > div > div {
+        margin: 10px;
     }
 
     #equipment-hire-section .hardware-software-grid > div > div:nth-child(1) {
@@ -620,6 +649,37 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) {
         width: auto;
     }
+
+    #equipment-hire-section .hardware-software-grid > div > div:nth-child(1) span {
+        text-align: center;
+    }
+
+    #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) h5 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul li::before {
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul li {
+        font-size: 18px;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+
 }
 /* #endregion */
 

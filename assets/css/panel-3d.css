@@ -34,26 +34,28 @@
     transform-style: inherit;
 }
 
-.panel-3d:hover {
-    scale: 1.1;
-    -webkit-transition: 0.15s;
-    -o-transition: 0.15s;
-    transition: 0.15s;
-}
-
-.panel-3d:hover .panel-3d-pop {
-    -webkit-transform: translateZ(25px);
-    transform: translateZ(25px);
-}
-
-.panel-3d:hover .panel-3d-push {
-    -webkit-transform: translateZ(-25px);
-    transform: translateZ(-25px);
-}
-
-.panel-3d:not(:hover) .panel-3d-pop,
-.panel-3d:not(:hover) .panel-3d-push {
-    -webkit-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
+@media (min-width: 768px) {
+    .panel-3d:hover {
+        scale: 1.1;
+        -webkit-transition: 0.15s;
+        -o-transition: 0.15s;
+        transition: 0.15s;
+    }
+    
+    .panel-3d:hover .panel-3d-pop {
+        -webkit-transform: translateZ(25px);
+        transform: translateZ(25px);
+    }
+    
+    .panel-3d:hover .panel-3d-push {
+        -webkit-transform: translateZ(-25px);
+        transform: translateZ(-25px);
+    }
+    
+    .panel-3d:not(:hover) .panel-3d-pop,
+    .panel-3d:not(:hover) .panel-3d-push {
+        -webkit-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+    }
 }

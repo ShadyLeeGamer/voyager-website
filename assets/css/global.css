@@ -356,6 +356,7 @@ input[type="number"] {
     width: 100%;
     -webkit-animation: navbar-enter 1.15s ease;
             animation: navbar-enter 1.15s ease;
+    top: -1px;
 }
 
 @-webkit-keyframes navbar-enter {
