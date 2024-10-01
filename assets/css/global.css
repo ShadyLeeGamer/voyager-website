@@ -264,33 +264,6 @@ input[type="number"] {
     animation: glow-rotate 15s infinite;
 }
 
-#cursor-glow::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-    z-index: 100;
-    background: -o-linear-gradient(
-    left,
-    var(--primary-brand),
-    var(--secondary-brand)
-    );
-    background: -webkit-gradient(
-    linear,
-    left top, right top,
-    from(var(--primary-brand)),
-    to(var(--secondary-brand))
-    );
-    background: linear-gradient(
-    to right,
-    var(--primary-brand),
-    var(--secondary-brand)
-    );
-}
 
 #cursor-glow-wrapper.clickable-hovering {
     opacity: 0;
@@ -1376,6 +1349,46 @@ input[type="number"] {
     transition: transform 0.5s ease-out;
     transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
+
+
+.slideshow-container .prev-btn {
+    top: 50%;
+    left: 0.8%;
+    -webkit-transform: translateY(calc(-50% + 4px));
+        -ms-transform: translateY(calc(-50% + 4px));
+            transform: translateY(calc(-50% + 4px));
+}
+
+.slideshow-container .next-btn {
+    top: 50%;
+    right: -0.3%;
+    -webkit-transform: translateY(calc(-50% + 3px));
+        -ms-transform: translateY(calc(-50% + 3px));
+            transform: translateY(calc(-50% + 3px));
+}
+
+.slider-container .prev-btn,
+.slider-container .next-btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+}
+
+.slider-container .prev-btn {
+    left: 0;
+}
+
+.slider-container .next-btn {
+    right: 0;
+}
+
+.prev-btn > img:nth-of-type(2),
+.next-btn > img:nth-of-type(2) {
+    -webkit-transform: translateX(-14px);
+    -ms-transform: translateX(-14px);
+    transform: translateX(-14px);
+}
+
 
 .popup {
     position: fixed;

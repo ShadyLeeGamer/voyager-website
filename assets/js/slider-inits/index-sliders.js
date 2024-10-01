@@ -70,8 +70,8 @@ function init() {
   
     // Sync background image
     const slideshowBackgroundImg = document.querySelector('#slideshow-section .slider-img-bg');
-    const slideshowCaption = document.querySelector('#slideshow-section h2');
-    const slideshowDescription = document.querySelector('#slideshow-section span');
+    const slideshowCaption = document.querySelector('#slideshow-section .overlay-text h2');
+    const slideshowDescription = document.querySelector('#slideshow-section .overlay-text span');
   
     function onSlideUpdate(slideIdx)
     {

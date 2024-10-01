@@ -41,7 +41,6 @@
 		<link rel="stylesheet" href="assets/css/index.css"/>
         <!-- Reusable Elements -->
 		<link rel="stylesheet" href="assets/css/panel-3d.css"/>
-		<link rel="stylesheet" href="assets/css/slideshow.css"/>
         <!-- Overrites -->
         <link rel="stylesheet" href="assets/css/display-overrite.css"/>
 
@@ -284,56 +283,68 @@
                 </div>
     
                 <div id="slideshow-section" class="section" scroll-transition="fade-in">
+                    <div class="heading-line" scroll-transition="slide-right">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h2>Voyager <span class="highlight">Gallery</span></h2>
+                    </div>
+
                     <div class="section-divider top repeat-bar"></div>
-                    
-                    <div class="slider-img-bg"></div>
-                    <img class="slider-img-bg-overlay" data-src="assets/images/slideshow/outline-sides.webp">
-    
-                    <div class="slideshow-container slider-container">
-                        <div class="thin-desktop desktop">
-                            <img class="outline" data-src="assets/images/slideshow/outline.webp">
-                            <h2>CAPTION</h2>
-                            <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
-                        </div>
-                        <button class="prev-btn">
-                            <img data-src="assets/images/slider/btn-arrow-prev.webp">
-                            <img data-src="assets/images/slider/btn-arrow-prev.webp">
-                        </button>
-                        <button class="next-btn">
-                            <img data-src="assets/images/slider/btn-arrow-next.webp">
-                            <img data-src="assets/images/slider/btn-arrow-next.webp">
-                        </button>
-                        <div id="slideshow-slider">
-                            <div class="slide" data-caption="Automaton" data-description="The Voyager Automaton, best in-class robotics. Our Automaton was crafted for our users in our Virtual Reality experiences. Designed to be inclusive of all users, the Automaton is here to stay!">
-                                <video src="assets/videos/shared/automaton-running.mp4" thumbnail-src="assets/images/video-thumbnails/automaton-running-thumbnail.webp" playsinline autoplay muted loop onloadedmetadata="this.muted = true"></video>
+                    <div class="slideshow-wrapper">
+                        <div class="slider-img-bg"></div>
+                        <img class="slider-img-bg-overlay" data-src="assets/images/slideshow/outline-sides.webp">
+
+                        <div class="slideshow-container slider-container">
+                            <div class="thin-desktop desktop">
+                                <img class="outline" data-src="assets/images/slideshow/outline.webp">
                             </div>
-                            <div class="slide" data-caption="Director Cam" data-description="Smile for the Camera! Our innovative Director cams are used for navigation and directed content within our virtual worlds,With all the equipment you would ever need, our studio is ready for your production now! "">
-                                <video src="assets/videos/shared/director-cam-entrance.mp4" thumbnail-src="assets/images/video-thumbnails/director-cam-thumbnail.webp" playsinline autoplay muted loop onloadedmetadata="this.muted = true"></video>
+                            <div class="overlay-text">
+                                <h2>CAPTION</h2>
+                                <span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh nulla ex in at nostra erat tincidunt senectus. Donec facilisis nostra facilisi curabitur potenti ad. </span>
                             </div>
-                            <div class="slide" data-caption="Futuristic Leicester City" data-description="Welcome to the Leicester of the future, take a glimpse into what our beautiful city will become in just a few decades!"">
-                                <img data-src="assets/images/global/futuristic-leicester.webp">
+                            <button class="prev-btn">
+                                <img data-src="assets/images/slider/btn-arrow-prev.webp">
+                                <img data-src="assets/images/slider/btn-arrow-prev.webp">
+                            </button>
+                            <button class="next-btn">
+                                <img data-src="assets/images/slider/btn-arrow-next.webp">
+                                <img data-src="assets/images/slider/btn-arrow-next.webp">
+                            </button>
+                            <div id="slideshow-slider">
+                                <div class="slide" data-caption="Automaton" data-description="The Voyager Automaton, best in-class robotics. Our Automaton was crafted for our users in our Virtual Reality experiences. Designed to be inclusive of all users, the Automaton is here to stay!">
+                                    <video src="assets/videos/shared/automaton-running.mp4" thumbnail-src="assets/images/video-thumbnails/automaton-running-thumbnail.webp" playsinline autoplay muted loop onloadedmetadata="this.muted = true"></video>
+                                </div>
+                                <div class="slide" data-caption="Director Cam" data-description="Smile for the Camera! Our innovative Director cams are used for navigation and directed content within our virtual worlds,With all the equipment you would ever need, our studio is ready for your production now! "">
+                                    <video src="assets/videos/shared/director-cam-entrance.mp4" thumbnail-src="assets/images/video-thumbnails/director-cam-thumbnail.webp" playsinline autoplay muted loop onloadedmetadata="this.muted = true"></video>
+                                </div>
+                                <div class="slide" data-caption="Futuristic Leicester City" data-description="Welcome to the Leicester of the future, take a glimpse into what our beautiful city will become in just a few decades!"">
+                                    <img data-src="assets/images/global/futuristic-leicester.webp">
+                                </div>
+                                <div class="slide" data-caption="Cozy Room" data-description="Our Virtual Production Studio is equipped with a comfy and cozy green room for all the talent to kick back and relax, or get some work done!">
+                                    <img data-src="assets/images/slideshow/image017.webp">
+                                </div>
+                                <div class="slide" data-caption="Film-Grade Equipment" data-description="With all the equipment you would ever need, our studio is ready for your production now! "">
+                                    <img data-src="assets/images/slideshow/image019.webp">
+                                </div>
+                                <!-- <div class="slide" data-caption="Caption 1" data-description="Our Virtual Production Studio is equipped with a comfy and cozy green room for all the talent to kick back and relax, or get some work done!">
+                                    <img data-src="assets/images/slideshow/image017.webp">
+                                </div>
+                                <div class="slide" data-caption="Film-Grade Equipment" data-description="With all the equipment you would ever need, our studio is ready for your production now! "">
+                                    <img data-src="assets/images/slideshow/image019.webp">
+                                </div>
+                                <div class="slide" data-caption="Podcast" data-description="Our Podcast setup was designed with your podcast in mind, supporting up to 4 speakers in a whole new virtual world."">
+                                    <img data-src="assets/images/global/podcasts.webp">
+                                </div>
+                                <div class="slide" data-caption="Futuristic Leicester" data-description="Our favourite virtual world. Picture your next production set here, or a VR experience in a totally different location. The choice is yours."">
+                                    <img data-src="assets/images/global/futuristic-leicester.webp">
+                                </div> -->
                             </div>
-                            <div class="slide" data-caption="Cozy Room" data-description="Our Virtual Production Studio is equipped with a comfy and cozy green room for all the talent to kick back and relax, or get some work done!">
-                                <img data-src="assets/images/slideshow/image017.webp">
-                            </div>
-                            <div class="slide" data-caption="Film-Grade Equipment" data-description="With all the equipment you would ever need, our studio is ready for your production now! "">
-                                <img data-src="assets/images/slideshow/image019.webp">
-                            </div>
-                            <!-- <div class="slide" data-caption="Caption 1" data-description="Our Virtual Production Studio is equipped with a comfy and cozy green room for all the talent to kick back and relax, or get some work done!">
-                                <img data-src="assets/images/slideshow/image017.webp">
-                            </div>
-                            <div class="slide" data-caption="Film-Grade Equipment" data-description="With all the equipment you would ever need, our studio is ready for your production now! "">
-                                <img data-src="assets/images/slideshow/image019.webp">
-                            </div>
-                            <div class="slide" data-caption="Podcast" data-description="Our Podcast setup was designed with your podcast in mind, supporting up to 4 speakers in a whole new virtual world."">
-                                <img data-src="assets/images/global/podcasts.webp">
-                            </div>
-                            <div class="slide" data-caption="Futuristic Leicester" data-description="Our favourite virtual world. Picture your next production set here, or a VR experience in a totally different location. The choice is yours."">
-                                <img data-src="assets/images/global/futuristic-leicester.webp">
-                            </div> -->
                         </div>
                     </div>
-    
                     <div class="section-divider bottom repeat-bar"></div>
                 </div>
                 
@@ -390,6 +401,7 @@
                         </div>
                     </div>
                 </div>   -->
+            
             </div>
         </main>
  
