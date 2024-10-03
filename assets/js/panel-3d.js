@@ -1,6 +1,4 @@
 function init() {
-    console.log("panel-3d");
-
     let eventListeners = [];
     let items = document.querySelectorAll('.panel-3d');
     const strength = 0.25;

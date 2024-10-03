@@ -1,6 +1,4 @@
 function init() {
-    console.log('dropdowns');
-
     let eventListeners = [];
     const dropdowns = document.querySelectorAll('.dropdown');
     
