@@ -1076,7 +1076,7 @@ input[type="number"] {
 
 .week {
     display: block;
-    width: 12em;
+    width: 150px;
 }
 
 .contact li {
